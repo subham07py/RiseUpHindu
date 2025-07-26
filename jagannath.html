@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Jagannath Ashtakam - Sacred Hymn by Adi Shankaracharya</title>
+    <style>
+        :root {
+            --jagannath-red: #E53E3E;
+            --jagannath-yellow: #F6E05E;
+            --jagannath-blue: #3182CE;
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --jagannath-glow: 0 0 15px rgba(229, 62, 62, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            background: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+            border-bottom: 3px solid var(--jagannath-red);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--jagannath-yellow);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo::before {
+            content: "🕉️";
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--jagannath-red), var(--jagannath-yellow));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--jagannath-yellow);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger:hover {
+            transform: rotate(90deg);
+            color: var(--jagannath-yellow);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: var(--surface);
+            position: fixed;
+            left: 0;
+            top: 80px;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+            padding: 2rem 1rem;
+            border-right: 1px solid var(--divider);
+            transition: transform 0.3s ease;
+            z-index: 900;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 1rem;
+        }
+
+        .sidebar a {
+            color: var(--text);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius-sm);
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background: rgba(229, 62, 62, 0.2);
+            color: var(--jagannath-yellow);
+        }
+
+        .sidebar a.active {
+            background: var(--jagannath-red);
+            color: white;
+        }
+
+        /* Main Content */
+        .main-container {
+            display: flex;
+            margin-left: 280px;
+            flex: 1;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h1 {
+            color: var(--jagannath-yellow);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text {
+            background: rgba(26, 26, 26, 0.7);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--jagannath-red);
+        }
+
+        .ashtakam-container {
+            background: rgba(26, 26, 26, 0.7);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--jagannath-red);
+        }
+
+        .verse {
+            margin-bottom: 3rem;
+            scroll-margin-top: 120px;
+        }
+
+        .sanskrit {
+            font-family: 'Sanskrit Text', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.4rem;
+            color: var(--jagannath-yellow);
+            line-height: 2;
+            margin-bottom: 1rem;
+        }
+
+        .transliteration {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .translation {
+            background: rgba(49, 130, 206, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--jagannath-blue);
+        }
+
+        .verse-number {
+            display: inline-block;
+            background: var(--jagannath-red);
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            box-shadow: var(--jagannath-glow);
+        }
+
+        .jagannath-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .jagannath-image img {
+            max-width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--jagannath-glow);
+        }
+
+        .phala-sruti {
+            background: rgba(246, 224, 94, 0.1);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-top: 3rem;
+            border: 1px solid var(--jagannath-yellow);
+            font-style: italic;
+        }
+
+        .conclusion {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            border-top: 1px solid var(--jagannath-red);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .sidebar {
+                transform: translateX(-100%);
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 280px;
+                height: calc(100vh - 80px);
+                z-index: 800;
+                background: var(--surface);
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .main-container {
+                margin-left: 0;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .sanskrit {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links">
+                <a href="home.html#home">Home</a>
+                <a href="home.html#reading-path">Reading Path</a>
+                <a href="home.html#mission">Mission</a>
+                <a href="home.html#articles">Articles</a>
+                <a href="home.html#join">Join Us</a>
+                <a href="disclamer.html">Disclaimer</a>
+                <a href="about_riseuphindu.html">About Us</a>
+            </div>
+            <div class="hamburger" id="sidebarToggle">☰</div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="#intro" class="active">Introduction</a></li>
+                <li><a href="#verse1">Verse 1</a></li>
+                <li><a href="#verse2">Verse 2</a></li>
+                <li><a href="#verse3">Verse 3</a></li>
+                <li><a href="#verse4">Verse 4</a></li>
+                <li><a href="#verse5">Verse 5</a></li>
+                <li><a href="#verse6">Verse 6</a></li>
+                <li><a href="#verse7">Verse 7</a></li>
+                <li><a href="#verse8">Verse 8</a></li>
+                <li><a href="#phala-sruti">Phala Sruti</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <header id="intro">
+                <h1>श्री जगन्नाथाष्टकम्</h1>
+                <p class="subtitle">Shri Jagannath Ashtakam - Composed by Adi Shankaracharya</p>
+                <div class="jagannath-image">
+                    <img src="https://i.imgur.com/JQZ1l0a.jpg" alt="Lord Jagannath" width="300">
+                </div>
+            </header>
+
+            <main>
+                <div class="intro-text">
+                    <p>Shri Jagannath Ashtakam was composed by Adi Shankaracharya in praise of Lord Jagannath on his visit to Puri. The most important of hymns of Lord Jagannath, the Ashtakam was recited by Sri Chaitanya Mahaprabhu on his visit to Jagannath temple.</p>
+                    <p>The merit of reciting the sacred Jagannath ashtakam carefully is such that, one becomes sinless and pure hearted and gains entrance to Vishnuloka.</p>
+                </div>
+
+                <div class="ashtakam-container">
+                    <!-- Verse 1 -->
+                    <div class="verse" id="verse1">
+                        <div class="verse-number">1</div>
+                        <div class="sanskrit">
+                            कदाचित् कालिन्दी तट विपिन सङ्गीत तरलो<br>
+                            मुदाभीरी नारी वदन कमला स्वाद मधुपः<br>
+                            रमा शम्भु ब्रह्मामरपति गणेशार्चित पदो<br>
+                            जगन्नाथः स्वामी नयन पथ गामी भवतु मे ॥१॥
+                        </div>
+                        <div class="transliteration">
+                            kadācit kālindī-taṭa-vipina-saṅgīta ta ralo<br>
+                            mudābhīrī-nārī-vadana-kamalāśvāda-madhupaḥ<br>
+                            ramā-śambhu-brahmāmara-pati-gaṇeśārcita-pado<br>
+                            jagannāthaḥ svāmī nayana-patha-gāmī bhavatu me (1)
+                        </div>
+                        <div class="translation">
+                            Sometimes in great happiness Lord Jagannatha, with His flute, makes a loud concert in the groves on the banks of the Yamuna. He is like a bumblebee who tastes the beautiful lotus-like faces of the cowherd damsels of Vraja, and His lotus feet are worshiped by great personalities such as Lakshmi, Siva, Brahma, Indra and Ganesa. May that Jagannatha Swami be the object of my vision.
+                        </div>
+                    </div>
+
+                    <!-- Verse 2 -->
+                    <div class="verse" id="verse2">
+                        <div class="verse-number">2</div>
+                        <div class="sanskrit">
+                            भुजे सव्ये वेणुं शिरसि शिखिपिच्छं कटितटे<br>
+                            दुकूलं नेत्रान्ते सहचर-कटाक्षं विदधते ।<br>
+                            सदा श्रीमद्‍-वृन्दावन-वसति-लीला-परिचयो<br>
+                            जगन्नाथः स्वामी नयन-पथ-गामी भवतु मे ॥२॥
+                        </div>
+                        <div class="transliteration">
+                            bhuje savye veṇuṁ śirasi śikhi-picchaṁ kaṭitaṭe<br>
+                            dukūlaṁ netrānte sahacara-kaṭākṣaṁ ca vidadhat<br>
+                            sadā śrīmad-vṛndāvana-vasati-līlā-paricayo<br>
+                            jagannāthaḥ svāmī nayana-patha-gāmī bhavatu me (2)
+                        </div>
+                        <div class="translation">
+                            In His left hand Lord Jagannatha holds a flute. On His head He wears the feathers of peacocks and on His hips He wears fine yellow silken cloth. Out of the corners of His eyes He bestows sidelong glances upon His loving devotees and He always reveals Himself through His pastimes in His divine abode of Vrindavana. May that Jagannatha Swami be the object of my vision.
+                        </div>
+                    </div>
+
+                    <!-- Verse 3 -->
+                    <div class="verse" id="verse3">
+                        <div class="verse-number">3</div>
+                        <div class="sanskrit">
+                            महाम्भोधेस्तीरे कनक रुचिरे नील शिखरे<br>
+                            वसन् प्रासादान्तः सहज बलभद्रेण बलिना ।<br>
+                            सुभद्रा मध्यस्थः सकलसुर सेवावसरदो<br>
+                            जगन्नाथः स्वामी नयन-पथ-गामी भवतु मे ॥३॥
+                        </div>
+                        <div class="transliteration">
+                            mahāmbhodhes tīre kanaka-rucire nīla-śikhare<br>
+                            vasan prāsādāntaḥ sahaja-balabhadreṇa balinā<br>
+                            subhadrā-madhya-sthaḥ sakala-sura-sevāvasara-do<br>
+                            jagannāthaḥ svāmī nayana-patha-gāmī bhavatu me (3)
+                        </div>
+                        <div class="translation">
+                            Residing on the shore of the great ocean, within a large palace situated upon the crest of the brilliant, golden Nilacala Hill, along with His powerful brother Bala-bhadra, and in the middle of Them His sister Subhadra, Lord Jagannatha bestows the opportunity for devotional service upon all godly souls. May that Jagannatha Swami be the object of my vision.
+                        </div>
+                    </div>
+
+                    <!-- Verse 4 -->
+                    <div class="verse" id="verse4">
+                        <div class="verse-number">4</div>
+                        <div class="sanskrit">
+                            कृपा पारावारः सजल जलद श्रेणिरुचिरो<br>
+                            रमा वाणी रामः स्फुरद् अमल पङ्केरुहमुखः ।<br>
+                            सुरेन्द्रैर् आराध्यः श्रुतिगण शिखा गीत चरितो<br>
+                            जगन्नाथः स्वामी नयन पथ गामी भवतु मे ॥४॥
+                        </div>
+                        <div class="transliteration">
+                            kṛpā-pārāvāraḥ sajala-jalada-śreṇi-ruciro<br>
+                            ramā-vāṇī-rāmaḥ sphurad-amala-paṅkeruha-mukhaḥ<br>
+                            surendrair ārādhyaḥ śruti-gaṇa-śikhā-gīta-carito<br>
+                            jagannāthaḥ svāmī nayana-patha-gāmī bhavatu me (4)
+                        </div>
+                        <div class="translation">
+                            Lord Jagannatha is an ocean of mercy and He is beautiful like a row of blackish rain clouds. He is the storehouse of bliss for Lakshmi and Saraswati, and His face is like a spotless full-blown lotus. He is worshiped by the best of demigods and sages, and His glories are sung by the Upanishads. May that Jagannatha Swami be the object of my vision.
+                        </div>
+                    </div>
+
+                    <!-- Verse 5 -->
+                    <div class="verse" id="verse5">
+                        <div class="verse-number">5</div>
+                        <div class="sanskrit">
+                            रथारूढो गच्छन् पथि मिलित भूदेव पटलैः<br>
+                            स्तुति प्रादुर्भावम् प्रतिपदमुपाकर्ण्य सदयः ।<br>
+                            दया सिन्धुर्बन्धुः सकल जगतां सिन्धु सुतया<br>
+                            जगन्नाथः स्वामी नयन पथ गामी भवतु मे ॥५॥
+                        </div>
+                        <div class="transliteration">
+                            rathārūḍho gacchan pathi milita-bhūdeva-paṭalaiḥ<br>
+                            stuti-prādurbhāvam prati-padam upākarṇya sadayaḥ<br>
+                            dayā-sindhur bandhuḥ sakala jagatāṁ sindhu-sutayā<br>
+                            jagannāthah svāmī nayana-patha-gāmī bhavatu me (5)
+                        </div>
+                        <div class="translation">
+                            When Lord Jagannatha is on His Ratha-yatra cart and is moving along the road, at every step there is a loud presentation of prayers and songs chanted by large assemblies of brahmanas. Hearing their hymns Lord Jagannatha is very favorably disposed towards them. He is the ocean of mercy and the true friend of all the worlds. May that Jagannatha Swami, along with His consort Lakshmi, who was born from the ocean of nectar, be the object of my vision.
+                        </div>
+                    </div>
+
+                    <!-- Verse 6 -->
+                    <div class="verse" id="verse6">
+                        <div class="verse-number">6</div>
+                        <div class="sanskrit">
+                            परंब्रह्मापीड़ः कुवलय-दलोत्‍फुल्ल-नयनो<br>
+                            निवासी नीलाद्रौ निहित-चरणोऽनन्त-शिरसि ।<br>
+                            रसानन्दी राधा-सरस-वपुरालिङ्गन-सुखो<br>
+                            जगन्नाथः स्वामी नयन-पथगामी भवतु मे ॥६॥
+                        </div>
+                        <div class="transliteration">
+                            paraṁ-brahmāpīḍaḥ kuvalaya-dalotphulla-nayano<br>
+                            nivāsī nīlādrau nihita-caraṇo 'nanta-śirasi<br>
+                            rasānandī rādhā-sarasa-vapur-āliṅgana-sukho<br>
+                            jagannāthaḥ svāmī nayana-patha-gāmī bhavatu me (6)
+                        </div>
+                        <div class="translation">
+                            He is the ornament of the head of Lord Brahma and His eyes are like the full-blown petals of the lotus. He resides on the Nilacala Hill, and His lotus feet are placed on the heads of Ananta Deva. Lord Jagannatha is overwhelmed by the mellow of love and He becomes joyful in the embracing of the body of Sri Radharani, which is like a cool pond. May that Jagannatha Swami be the object of my vision.
+                        </div>
+                    </div>
+
+                    <!-- Verse 7 -->
+                    <div class="verse" id="verse7">
+                        <div class="verse-number">7</div>
+                        <div class="sanskrit">
+                            न वै याचे राज्यं न च कनक माणिक्य विभवं<br>
+                            न याचेऽहं रम्यां सकल जन काम्यां वरवधूम् ।<br>
+                            सदा काले काले प्रमथ पतिना गीतचरितो<br>
+                            जगन्नाथः स्वामी नयन पथ गामी भवतु मे ॥७॥
+                        </div>
+                        <div class="transliteration">
+                            na vai yāce rājyaṁ na ca kanaka-māṇikya-vibhavaṁ<br>
+                            na yāce 'haṁ ramyāṁ sakala jana-kāmyāṁ vara-vadhūm<br>
+                            sadā kāle kāle pramatha-patinā gīta-carito<br>
+                            jagannāthaḥ svāmī nayana-patha-gāmī bhavatu me (7)
+                        </div>
+                        <div class="translation">
+                            I do not pray for a kingdom, nor for gold, rubies, and wealth. I do not ask for an excellent and beautiful wife as desired by all men. I simply pray that Jagannatha Swami, whose glories are always sung by Lord Siva, be the constant object of my vision.
+                        </div>
+                    </div>
+
+                    <!-- Verse 8 -->
+                    <div class="verse" id="verse8">
+                        <div class="verse-number">8</div>
+                        <div class="sanskrit">
+                            हर त्वं संसारं द्रुततरम् असारं सुरपते<br>
+                            हर त्वं पापानां विततिम् अपरां यादवपते ।<br>
+                            अहो दीनेऽनाथे निहित चरणो निश्चितमिदं<br>
+                            जगन्नाथः स्वामी नयन पथ गामी भवतु मे ॥८॥
+                        </div>
+                        <div class="transliteration">
+                            hara tvaṁ saṁsāraṁ druta-taram asāraṁ sura-pate<br>
+                            hara tvaṁ pāpānāṁ vitatiṁ aparāṁ yādava-pate<br>
+                            aho dīne 'nāthe nihita-caraṇo niścitam idaṁ<br>
+                            jagannāthaḥ svāmī nayana-patha-gāmī bhavatu me (8)
+                        </div>
+                        <div class="translation">
+                            O Lord of the demigods, please quickly remove this useless material existence I am undergoing. O Lord of the Yadus, please destroy this vast ocean of sins which has no shore. Alas, this is certain that Lord Jagannatha's lotus feet are bestowed upon those who feel themselves fallen and have no shelter in this world but Him. May that Jagannatha Swami be the object of my vision.
+                        </div>
+                    </div>
+
+                    <!-- Phala Sruti -->
+                    <div class="phala-sruti" id="phala-sruti">
+                        <div class="sanskrit">
+                            जगन्नाथाष्टकं पुन्यं यः पठेत् प्रयतः शुचिः ।<br>
+                            सर्वपाप विशुद्धात्मा विष्णुलोकं स गच्छति ॥९॥
+                        </div>
+                        <div class="transliteration">
+                            jagannāthāṣṭakaṁ punyaṁ yaḥ paṭhet prayataḥ śuciḥ<br>
+                            sarva-pāpa-viśuddhātmā viṣṇu-lokaṁ sa gacchati
+                        </div>
+                        <div class="translation">
+                            The self-retrained, virtuous soul who recites these eight verses glorifying Lord Jagannatha becomes cleansed of all sins and duly proceeds to Lord Visnu's abode.
+                        </div>
+                    </div>
+
+                    <div class="conclusion">
+                        <div class="sanskrit">
+                            ॥ इति श्रीमत् शंकराचार्यविरचितं जगन्नाथाष्टकं संपूर्णम् ॥
+                        </div>
+                        <div class="transliteration">
+                            iti śrimat śaṅkaracārya viracitaṁ jagannāthāṣṭakam saṁpūrṇam
+                        </div>
+                        <div class="translation">
+                            Thus ends the eight stanza hymn Jagannāthāṣṭakam composed by Śrimat Śaṅkaracārya.
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <p>© 2025 RiseUpHindu | जय जगन्नाथ</p>
+                <p>Dedicated to the preservation and propagation of Jagannath culture</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Toggle sidebar on mobile
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            
+            if (window.innerWidth <= 992 && 
+                !sidebar.contains(event.target) && 
+                event.target !== sidebarToggle && 
+                !sidebarToggle.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Update active link in sidebar when scrolling
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.verse, .phala-sruti, #intro');
+            const navLinks = document.querySelectorAll('.sidebar a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling for sidebar links
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close sidebar on mobile after clicking
+                    if (window.innerWidth <= 992) {
+                        document.getElementById('sidebar').classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

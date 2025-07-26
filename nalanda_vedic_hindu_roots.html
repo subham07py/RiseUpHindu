@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕉️ Nalanda University and Its Deep Vedic & Hindu Roots</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF;
+            /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600;
+            /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 12px rgba(255, 138, 0, 0.4);
+            --shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+            --shadow-hover: 0 14px 40px rgba(255, 138, 0, 0.4);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            background: #0A0A0A;
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Particle Background */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02) rotate(0.5deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 138, 0, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--text-light);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            padding-bottom: 10px;
+            font-size: 2.2rem;
+            position: relative;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li,
+        ol li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+            position: relative;
+            cursor: help;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface-light);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+            box-shadow: var(--shadow);
+            animation: fadeInTooltip 0.3s ease;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: var(--surface);
+            border-radius: var(--border-radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            transform: translateZ(0);
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid var(--divider);
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .data-table th {
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.2), rgba(41, 98, 255, 0.2));
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .data-table tr:hover {
+            background: rgba(255, 138, 0, 0.1);
+            transform: scale(1.01);
+        }
+
+        .quote-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 30px 0;
+            position: relative;
+            font-style: italic;
+            animation: glowingBorder 3s infinite;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: rgba(255, 138, 0, 0.2);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+        }
+
+        .conclusion-box {
+            background: rgba(76, 175, 80, 0.15);
+            border-left: 4px solid #4CAF50;
+            padding: 20px;
+            margin: 30px 0;
+            font-weight: 500;
+            border-radius: var(--border-radius-sm);
+            position: relative;
+            animation: glowingBorder 3s infinite;
+        }
+
+        .conclusion-box::before {
+            content: "✓";
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: rgba(76, 175, 80, 0.3);
+        }
+
+        .reference-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 30px;
+            columns: 2;
+            column-gap: 2rem;
+        }
+
+        .reference-list li {
+            margin-bottom: 15px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            break-inside: avoid;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .reference-list li::before {
+            content: "📜";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary);
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+            position: relative;
+            border: none;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            display: none;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--accent);
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: var(--text-light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            z-index: 1000;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: var(--glow);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInTooltip {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 138, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0);
+            }
+        }
+
+        @keyframes glowingBorder {
+            0% {
+                border-color: rgba(255, 138, 0, 0.3);
+                box-shadow: 0 0 5px rgba(255, 138, 0, 0.3);
+            }
+
+            50% {
+                border-color: rgba(255, 138, 0, 0.6);
+                box-shadow: 0 0 15px rgba(255, 138, 0, 0.6);
+            }
+
+            100% {
+                border-color: rgba(255, 138, 0, 0.3);
+                box-shadow: 0 0 5px rgba(255, 138, 0, 0.3);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .delay-5 {
+            animation-delay: 1.0s;
+        }
+
+        .delay-6 {
+            animation-delay: 1.2s;
+        }
+
+        .delay-7 {
+            animation-delay: 1.4s;
+        }
+
+        .delay-8 {
+            animation-delay: 1.6s;
+        }
+
+        .delay-9 {
+            animation-delay: 1.8s;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 138, 0, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 138, 0, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.2s ease, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            .sidebar {
+                display: block;
+            }
+
+            .timeline::before {
+                left: 50%;
+            }
+
+            .timeline-item:nth-child(odd) {
+                left: 0;
+                padding-right: 40px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 50%;
+                padding-left: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .data-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item::before {
+                left: 10px;
+            }
+
+            .reference-list {
+                columns: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#reading-path">Reading Path</a>
+                <a href="#mission">Mission</a>
+                <a href="#articles">Articles</a>
+                <a href="#join">Join Us</a>
+                <a href="disclamer.html">Disclaimer</a>
+                <a href="about_riseuphindu.html">About Us</a>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#brahmanical">Brahmanical Studies</a></li>
+            <li><a href="#buddhist">Buddhist Monks</a></li>
+            <li><a href="#hindu-pandits">Hindu Pandits</a></li>
+            <li><a href="#archaeological">Archaeological Proof</a></li>
+            <li><a href="#patrons">Hindu Patrons</a></li>
+            <li><a href="#pluralism">Pluralism</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1 class="animate" id="intro">Nalanda University and Its Deep Vedic & Hindu Roots</h1>
+        <p class="intro-text animate delay-1">Debunking Myths of Exclusivity</p>
+
+        <div class="card animate delay-2" id="intro">
+            <h2>📌 Introduction</h2>
+            <p>
+                When most people think of Nalanda, they imagine it solely as a Buddhist center of learning. While that
+                is partially true, what's often overlooked — or deliberately ignored — is Nalanda's <span
+                    class="highlight" data-tooltip="Core connection">deep connection with Vedic traditions, Hindu
+                    sciences, and Brahmanical learning</span>.
+            </p>
+            <p>
+                Far from being a sectarian institution, <span class="highlight"
+                    data-tooltip="Interdisciplinary nature">Nalanda was a truly interdisciplinary and Dharmic
+                    university</span>, where Vedas, Sanskrit grammar, logic, law, medicine, astrology, and even
+                Śaiva-Vaiṣṇava traditions coexisted alongside Buddhist philosophy.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3 pulse" id="brahmanical">
+            <h2>📚 1. Brahmanical Studies at Nalanda: A Strong Vedic Foundation</h2>
+            <p>
+                Ancient Indian universities such as <span class="highlight" data-tooltip="Key institutions">Nālandā,
+                    Takṣaśilā, and Vikramaśīlā</span> were not purely Buddhist; they were <span class="highlight"
+                    data-tooltip="Dharmic essence">Dharmic learning centers</span> rooted in <span class="highlight"
+                    data-tooltip="Knowledge framework">Vedic epistemology</span> and pedagogy. As per multiple
+                historical sources:
+            </p>
+            <div class="quote-box">
+                "The highly formalized methods of Vedic learning helped to inspire the formation of large teaching
+                centres... such universities taught not only the Vedic texts and rituals, but also the Vedāngas (limbs
+                of the Veda): linguistics, logic (hetu), medicine, law, astronomy, and city-planning."
+            </div>
+            <p>Nalanda's curriculum extended into:</p>
+            <ul>
+                <li><span class="highlight" data-tooltip="Law and ethics">Dharma Śāstra</span></li>
+                <li><span class="highlight" data-tooltip="Economics and governance">Artha Śāstra</span></li>
+                <li><span class="highlight" data-tooltip="Aesthetics and drama">Nāṭya Śāstra</span></li>
+                <li><span class="highlight" data-tooltip="Architecture">Vāstu Śāstra</span></li>
+                <li><span class="highlight" data-tooltip="Sanskrit grammar">Vyākaraṇa</span></li>
+                <li><span class="highlight" data-tooltip="Vedic auxiliaries">Vedāṅgas</span> and <span class="highlight"
+                        data-tooltip="Historical texts">Puranas</span></li>
+            </ul>
+            <h3>🧠 Subjects Included</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Subject Area</th>
+                        <th>Textual Basis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Language & Grammar</td>
+                        <td>Pāṇini's <span class="highlight" data-tooltip="Foundational grammar">Aṣṭādhyāyī</span></td>
+                    </tr>
+                    <tr>
+                        <td>Medicine</td>
+                        <td><span class="highlight" data-tooltip="Traditional healing">Āyurveda</span></td>
+                    </tr>
+                    <tr>
+                        <td>Law & Ethics</td>
+                        <td>Dharmaśāstra, <span class="highlight" data-tooltip="Ethical code">Manusmṛti</span></td>
+                    </tr>
+                    <tr>
+                        <td>Logic & Reasoning</td>
+                        <td><span class="highlight" data-tooltip="Philosophical logic">Hetuvidyā</span></td>
+                    </tr>
+                    <tr>
+                        <td>Metaphysics</td>
+                        <td><span class="highlight" data-tooltip="Spiritual philosophy">Adhyātmavidyā</span></td>
+                    </tr>
+                    <tr>
+                        <td>Astronomy</td>
+                        <td><span class="highlight" data-tooltip="Celestial science">Jyotiṣa Śāstra</span></td>
+                    </tr>
+                    <tr>
+                        <td>Ritual Sciences</td>
+                        <td><span class="highlight" data-tooltip="Vedic rituals">Yajurveda, Atharvaveda</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4" id="buddhist">
+            <h2>🧘‍♂️ 2. Buddhist Monks Acknowledge Vedic Studies</h2>
+            <h3>📌 Xuanzang (Hiuen Tsang) – 7th Century Chinese Scholar</h3>
+            <p>
+                Xuanzang documented that alongside Mahāyāna and Hīnayāna texts, <span class="highlight"
+                    data-tooltip="Vedic inclusion">Nalanda also taught Vedic scriptures, especially the Atharvaveda, as
+                    part of its "miscellaneous canon."</span>
+            </p>
+            <div class="quote-box">
+                🗣️ "The priests... study the Great Vehicle (Mahāyāna), eighteen Buddhist sects, and also the Vedas,
+                including the Atharvaveda and other magical sciences."
+            </div>
+            <p>
+                He emphasized that many scholars could <span class="highlight" data-tooltip="Scholarly depth">explain
+                    30–50 canonical works</span>, and the <span class="highlight"
+                    data-tooltip="Vedic respect">residential monks studied the Vedas with utmost piety</span>.
+            </p>
+            <h3>📌 Yuan Chwang (Xuanzang) on the Rig Veda</h3>
+            <div class="quote-box">
+                "Though the Rig Veda was preserved orally by Brāhmaṇas, commentaries and treatises were in writing. The
+                term 'Veda' referred not to just scripture but to a full spectrum of intellectual disciplines."<br>
+                → (Source: <span class="highlight" data-tooltip="Historical reference">"On Yuan Chwang's Travels in
+                    India, 629–645 A.D., p. 160"</span>)
+            </div>
+            <h3>📌 Yijing (I-tsing) – 7th Century Buddhist Monk</h3>
+            <p>Yijing highlighted:</p>
+            <ul>
+                <li><span class="highlight" data-tooltip="Grammar foundation">Pāṇini's Aṣṭādhyāyī</span> was a
+                    foundational text.</li>
+                <li>Vedic disciplines like:
+                    <ul>
+                        <li><span class="highlight" data-tooltip="Linguistics">Śabdavidyā</span>,</li>
+                        <li><span class="highlight" data-tooltip="Logical reasoning">Hetuvidyā</span>,</li>
+                        <li><span class="highlight" data-tooltip="Medical science">Cikitsāvidyā</span>, and</li>
+                        <li><span class="highlight" data-tooltip="Arts and crafts">Śilpaśāstra</span></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="quote-box">
+                🧠 "Without mastering Sanskrit grammar and Vedic logic, students couldn't qualify for debates."
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-5 pulse" id="hindu-pandits">
+            <h2>🕉️ 3. Hindu Pandits and Monks at Nalanda</h2>
+            <p>
+                Even as late as the <span class="highlight" data-tooltip="Historical period">13th century</span>,
+                Tibetan monk <span class="highlight" data-tooltip="Key figure">Dharmasvāmin</span> found:
+            </p>
+            <ul>
+                <li>Hindu <span class="highlight" data-tooltip="Scholars present">Pandits and Brāhmaṇas</span> residing
+                    in Nalanda.</li>
+                <li>They continued <span class="highlight" data-tooltip="Vedic continuity">Vedic teaching</span> under
+                    Mahāpāṇḍita Rāhulaśrībhadra.</li>
+                <li>This indicates a <span class="highlight" data-tooltip="Inclusive culture">pluralistic
+                        tradition</span> well beyond Buddhism.</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-6" id="archaeological">
+            <h2>🛕 4. Archaeological Proof: Brahmanical Idols Unearthed</h2>
+            <p>Nalanda yielded numerous <span class="highlight" data-tooltip="Hindu artifacts">Hindu mūrtis
+                    (idols)</span> through excavations:</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Deity/Image Found</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Śiva & Śiva-Liṅga</td>
+                        <td>Iconography includes crescent moon and phallic symbols</td>
+                    </tr>
+                    <tr>
+                        <td>Viṣṇu</td>
+                        <td>Images with four arms and conch/disc motifs</td>
+                    </tr>
+                    <tr>
+                        <td>Sūrya & Revanta</td>
+                        <td>Solar deity with attendants</td>
+                    </tr>
+                    <tr>
+                        <td>Ganeśa, Sarasvatī, Gaṅgā</td>
+                        <td>Hindu deities worshipped even by Buddhists in Dharmic symbiosis</td>
+                    </tr>
+                    <tr>
+                        <td>Cāṇḍikā (Durgā)</td>
+                        <td>Śākta representation at a predominantly Buddhist site</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>🔎 Many of these idols were accompanied by <span class="highlight" data-tooltip="Patron evidence">donor
+                    seals</span>, often showing <span class="highlight" data-tooltip="Hindu symbols">Vaiṣṇava tilak,
+                    Garuḍa, or Śiva's bull Nandi</span>, proving the patrons' Hindu faith.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-7 pulse" id="patrons">
+            <h2>🔖 5. Hindu Patrons and Royal Seals</h2>
+            <h3>🔸 Seal of Vainyagupta (Paramabhāgavata)</h3>
+            <ul>
+                <li>Titles: <span class="highlight" data-tooltip="Royal titles">Mahārājādhirāja,
+                        Bhagavān-Mahādeva-pādānudhyāta</span></li>
+                <li>Symbol: <span class="highlight" data-tooltip="Śiva's emblem">Nandi</span> (Śiva's bull)</li>
+                <li>Religion: Śaiva with Vaiṣṇava syncretism</li>
+            </ul>
+            <h3>🔸 Seal of Buddhagupta:</h3>
+            <ul>
+                <li>Genealogy traces to <span class="highlight" data-tooltip="Epic lineage">Ghaṭotkacha, son of
+                        Bhīma</span>.</li>
+            </ul>
+            <h3>🔸 KumāraGupta's Seal:</h3>
+            <ul>
+                <li>Founder of Nalanda (~5th century CE)</li>
+                <li><span class="highlight" data-tooltip="Vaiṣṇava symbol">Vaiṣṇava tilak</span> & <span
+                        class="highlight" data-tooltip="Vishnu's emblem">Garuḍa icon</span> suggest:
+                    <br>➤ Nalanda was a <span class="highlight" data-tooltip="Multi-faith origin">Hindu-initiated
+                        multi-faith university</span>.
+                </li>
+            </ul>
+            <div class="quote-box">
+                "From the inscriptions and imagery, it's clear Nalanda was not exclusive to Buddhism but was equally a
+                center for Vedic, Brahmanical, and Sanskritic learning."
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-8" id="pluralism">
+            <h2>🪔 6. Pluralism and Interdisciplinary Learning</h2>
+            <p>
+                Nalanda was a <span class="highlight" data-tooltip="Unified knowledge">Dharmic university in the truest
+                    sense</span> — integrating:
+            </p>
+            <ul>
+                <li>Buddhism (Mahāyāna & Hīnayāna)</li>
+                <li>Hinduism (Veda, Śāstra, Tantra)</li>
+                <li>Śaiva & Vaiṣṇava traditions</li>
+                <li>Logic (Nyāya), Medicine (Āyurveda), Grammar, Ethics</li>
+            </ul>
+            <p>🧘‍♀️ It wasn't "religious" in a narrow sense — it was <span class="highlight"
+                    data-tooltip="Cultural essence">civilizational</span>.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-9 pulse" id="conclusion">
+            <h2>✅ Conclusion: Nalanda's Dharmic Legacy Must Be Reclaimed</h2>
+            <div class="conclusion-box">
+                <ul>
+                    <li>Nalanda <span class="highlight" data-tooltip="Not exclusive">was not solely Buddhist</span> — it
+                        was <span class="highlight" data-tooltip="Shared wisdom">a crucible of Vedic, Hindu, and
+                            Buddhist wisdom</span>.</li>
+                    <li>Vedic <span class="highlight" data-tooltip="Core disciplines">sciences, Pāṇinian grammar,
+                            Atharvaveda, Rigveda, and Brahmanical disciplines</span> were not just present — they <span
+                            class="highlight" data-tooltip="Flourished">thrived</span>.</li>
+                    <li>Hindu <span class="highlight" data-tooltip="Physical evidence">idols, royal seals, and donor
+                            records</span> testify that Nalanda was <span class="highlight"
+                            data-tooltip="Inclusive space">a shared sacred space of Dharma</span>.</li>
+                </ul>
+            </div>
+            <p style="text-align: center;">
+                🕉️ Hinduism and Buddhism coexisted, collaborated, and built one of the greatest universities in world
+                history — <span class="highlight" data-tooltip="Great institution">Nalanda Mahāvihāra</span>.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-9" id="references">
+            <h2>📚 References</h2>
+            <ul class="reference-list">
+                <li>Xuanzang (Hiuen Tsang), <span class="highlight" data-tooltip="Travelogue">"Si-Yu-Ki"</span></li>
+                <li><span class="highlight" data-tooltip="Historical account">On Yuan Chwang's Travels in India, 629–645
+                        A.D.</span></li>
+                <li><span class="highlight" data-tooltip="Archaeological source">Memoirs of the Archaeological Survey of
+                        India on Nalanda</span></li>
+                <li><span class="highlight" data-tooltip="Excavation records">ASI Excavation Reports, Nalanda
+                        Site</span></li>
+                <li><span class="highlight" data-tooltip="Monk's account">Yijing's Travel Accounts</span></li>
+                <li><span class="highlight" data-tooltip="Inscription records">Epigraphia Indica, Vol. XXI</span></li>
+            </ul>
+        </div>
+
+        <div class="cta-section animate delay-9">
+            <h2>📢 Spread the Truth</h2>
+            <p>💬 Share the Dharmic Legacy of Nalanda:</p>
+            <button
+                onclick="window.location.href='https://x.com/intent/tweet?text=Nalanda was a Dharmic university, blending Vedic, Hindu, and Buddhist wisdom. Let’s reclaim its true legacy! #NalandaTruth';">✔
+                Share this article</button>
+            <button onclick="alert('Please tag relevant posts with #NalandaTruth');">✔ Tag it with
+                #NalandaTruth</button>
+            <button
+                onclick="window.location.href='https://x.com/intent/tweet?text=Spread facts about Nalanda’s Vedic and Hindu roots! #DharmicLegacy';">✔
+                Spread facts, not fiction</button>
+            <p class="hashtag">#NalandaTruth #DharmicLegacy #IndianHistory #KnowTheFacts</p>
+        </div>
+    </div>
+
+    <div class="fab"></div>
+
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: ['#FF8A00', '#FFD600', '#2962FF'] },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Custom Cursor and Trail
+            const cursor = document.querySelector('.cursor');
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+                cursorTrail.style.opacity = 1;
+            });
+
+            document.addEventListener('mouseout', () => {
+                cursorTrail.style.opacity = 0;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Floating Action Button (Scroll to Top)
+            const fab = document.querySelector('.fab');
+            fab.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Debounce Scroll for Performance
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > 300) {
+                    fab.style.opacity = 1;
+                    fab.style.transform = 'scale(1)';
+                } else {
+                    fab.style.opacity = 0;
+                    fab.style.transform = 'scale(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            fab.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            fab.style.opacity = 0;
+            fab.style.transform = 'scale(0)';
+        });
+    </script>
+</body>
+
+</html>

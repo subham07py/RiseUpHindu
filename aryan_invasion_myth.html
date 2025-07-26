@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 आर्य आक्रमण सिद्धांत का खंडन</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF;
+            /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600;
+            /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 10px rgba(255, 138, 0, 0.3);
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 12px 36px rgba(255, 138, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-logo::before {
+            content: var(--om-symbol);
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .content-box {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .content-box:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-top: 3rem;
+            position: relative;
+            padding-left: 20px;
+            border-left: 4px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            margin-top: 2rem;
+            color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        ul li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        .conclusion {
+            background: rgba(255, 138, 0, 0.2);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 0.5s ease;
+        }
+
+        .conclusion::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.1), transparent);
+            z-index: -1;
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+            cursor: help;
+            position: relative;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background: var(--surface);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 10;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .quote-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            font-style: italic;
+            position: relative;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote-box::before {
+            content: '\201C';
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 4rem;
+            color: rgba(255, 138, 0, 0.2);
+            position: absolute;
+            left: 10px;
+            top: -10px;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-to-action a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .hashtags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .hashtag {
+            background: rgba(255, 138, 0, 0.2);
+            color: var(--accent);
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .hashtag:hover {
+            background: var(--accent);
+            color: var(--surface);
+            transform: translateY(-3px);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+        }
+
+        .header-icon {
+            display: block;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            animation: bounce 2s infinite;
+        }
+
+        .evidence-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius-sm);
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent);
+            transition: all 0.4s ease;
+        }
+
+        .evidence-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .evidence-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .evidence-icon {
+            font-size: 1.5rem;
+        }
+
+        .final-statement {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 50px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(255, 138, 0, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--text);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .content-box {
+                padding: 25px;
+            }
+
+            .call-to-action {
+                padding: 25px;
+            }
+
+            .final-statement {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .content-box {
+                padding: 20px;
+            }
+
+            .call-to-action {
+                padding: 20px;
+            }
+
+            .final-statement {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links" id="navLinks">
+                <a href="home.html#home">होम</a>
+                <a href="home.html#reading-path">पठन पथ</a>
+                <a href="home.html#mission">मिशन</a>
+                <a href="home.html#articles">लेख</a>
+                <a href="home.html#join">हमसे जुड़ें</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content-box animate" style="animation-delay: 0.1s;">
+            <div class="header-icon">
+                <i class="fas fa-history"></i>
+            </div>
+            <a href="https://www.instagram.com/p/C8_OuIRyofN">
+                <h1><i class="fas fa-book-open"></i> आर्य आक्रमण सिद्धांत का खंडन</h1>
+            </a>
+            <p>सदियों से, <span class="highlight" data-tooltip="आर्य आक्रमण सिद्धांत">आर्य आक्रमण सिद्धांत (AIT)</span>
+                ने भारत के अतीत के बारे में मुख्यधारा की कथा को आकार दिया है। लेकिन क्या होगा यदि हम आपको बताएं कि यह
+                सिद्धांत न केवल अवैज्ञानिक है बल्कि औपनिवेशिक हितों से उत्पन्न हुआ है?</p>
+            <p>इस व्यापक अन्वेषण में, हम <span class="highlight"
+                    data-tooltip="आनुवंशिक, पुरातात्विक, खगोलीय और पाठ्य साक्ष्य">आनुवंशिक, पुरातात्विक, खगोलीय और पाठ्य
+                    साक्ष्य</span> का उपयोग करके AIT मिथक को तोड़ेंगे, जो साबित करता है कि भारत की प्राचीन सभ्यता
+                स्वदेशी और निरंतर थी।</p>
+        </div>
+
+        <div class="content-box animate" style="animation-delay: 0.2s;">
+            <h2><i class="fas fa-question-circle evidence-icon"></i> <span class="highlight"
+                    data-tooltip="आर्य आक्रमण/प्रवास सिद्धांत">आर्य आक्रमण/प्रवास सिद्धांत</span> क्या है?</h2>
+            <p>यह विवादास्पद सिद्धांत, मुख्य रूप से ब्रिटिश मिशनरी और भाषाविद् <span class="highlight"
+                    data-tooltip="मैक्स मूलर">मैक्स मूलर</span> द्वारा प्रस्तावित, कई समस्याग्रस्त दावे करता है:</p>
+            <ul>
+                <li>आर्यों ने लगभग <span class="highlight" data-tooltip="1500 ईसा पूर्व">1500 ईसा पूर्व</span> में मध्य
+                    एशिया से भारत पर आक्रमण किया।</li>
+                <li>उन्होंने कथित तौर पर उन्नत <span class="highlight" data-tooltip="सिंधु घाटी सभ्यता">सिंधु घाटी
+                        सभ्यता (IVC)</span> को नष्ट कर दिया।</li>
+                <li>आर्यों ने कथित रूप से भारत में <span class="highlight" data-tooltip="घोड़ा">घोड़ा</span> लाया।</li>
+                <li>उन्होंने भारत में प्रवेश करने के बाद <span class="highlight" data-tooltip="वेद">वेदों</span> की रचना
+                    की।</li>
+            </ul>
+            <div class="quote-box">
+                मैक्स मूलर ने स्वयं स्वीकार किया कि उनका एजेंडा <span class="highlight"
+                    data-tooltip="वेदों को कमजोर करना">वेदों को कमजोर करना</span> था ताकि ईसाई धर्म का प्रसार हो सके।
+                उनके अपने शब्दों में, वेद "उनके धर्म की जड़" थे और भारतीय मन को जीतने के लिए इसे नष्ट करना होगा।
+            </div>
+        </div>
+
+        <div class="content-box animate" style="animation-delay: 0.3s;">
+            <h2><i class="fas fa-dna evidence-icon"></i> आनुवंशिक साक्ष्य: डीएनए AIT को नष्ट करता है</h2>
+            <p>आधुनिक आनुवंशिक अध्ययन पूरी तरह से <span class="highlight" data-tooltip="आर्य आक्रमण या प्रवास">आर्य
+                    आक्रमण या प्रवास की अवधारणा को खारिज करते हैं</span>:</p>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-microscope"></i>
+                    <h3>राष्ट्रीय चिकित्सा पुस्तकालय अनुसंधान</h3>
+                </div>
+                <p>अध्ययनों से पुष्टि होती है कि भारतीय आबादी में <span class="highlight"
+                        data-tooltip="अद्वितीय आनुवंशिक पहचान">अद्वितीय आनुवंशिक पहचान</span> है जो गहरी स्थानीय जड़ों
+                    को दर्शाती है। दक्षिणी और उत्तरी भारतीय जीन पूल दोनों <span class="highlight"
+                        data-tooltip="पश्चिमी यूरेशिया से अधिक विविधता">पश्चिमी यूरेशिया से अधिक विविधता</span> दिखाते
+                    हैं, जो किसी बड़े पैमाने पर आक्रमण को नकारता है।</p>
+            </div>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-digging"></i>
+                    <h3>राखीगढ़ी डीएनए अध्ययन (2019)</h3>
+                </div>
+                <p>पुरातत्वविद् <span class="highlight" data-tooltip="वसंत शिंदे">वसंत शिंदे</span> के नेतृत्व में, इस
+                    अभूतपूर्व अध्ययन में प्राचीन हड़प्पा व्यक्तियों में <span class="highlight"
+                        data-tooltip="स्टेप या ईरानी वंश">स्टेप या ईरानी वंश के कोई संकेत नहीं</span> मिले। यह निश्चित
+                    रूप से इस दावे को खारिज करता है कि इंडो-आर्य विदेशी आक्रमणकारी थे।</p>
+            </div>
+            <div class="conclusion">
+                <i class="fas fa-check-circle"></i> निष्कर्ष: भारतीय <span class="highlight"
+                    data-tooltip="स्वदेशी">स्वदेशी</span> हैं और हड़प्पावासी <span class="highlight"
+                    data-tooltip="हमारे पूर्वज">हमारे पूर्वज</span> हैं — किसी विदेशी नस्ल के शिकार नहीं।
+            </div>
+        </div>
+
+        <div class="content-box animate" style="animation-delay: 0.4s;">
+            <h2><i class="fas fa-horse evidence-icon"></i> मिथक: आर्यों ने घोड़ा लाया</h2>
+            <p>AIT दावा करता है कि IVC को घोड़ा अज्ञात था। साक्ष्य इसके विपरीत कहते हैं:</p>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-bone"></i>
+                    <h3>सुरकोटदा उत्खनन (2100–1700 ईसा पूर्व)</h3>
+                </div>
+                <p>पुरातत्वविदों ने <span class="highlight" data-tooltip="वास्तविक घोड़े की हड्डियाँ">वास्तविक घोड़े की
+                        हड्डियाँ</span> खोजीं, जिन्हें <span class="highlight"
+                        data-tooltip="भारतीय पुरातत्व सर्वेक्षण">भारतीय पुरातत्व सर्वेक्षण</span> द्वारा 1990 में
+                    आधिकारिक रूप से दर्ज किया गया।</p>
+            </div>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-archway"></i>
+                    <h3>कई IVC स्थल</h3>
+                </div>
+                <p><span class="highlight" data-tooltip="मोहनजोदड़ो, हड़प्पा, कालीबंगा, और लोथल">मोहनजोदड़ो, हड़प्पा,
+                        कालीबंगा, और लोथल</span> में <span class="highlight"
+                        data-tooltip="इक्वस कैबलस (सच्चा घोड़ा)">इक्वस कैबलस (सच्चा घोड़ा)</span> के अवशेष मिले हैं, जो
+                    कथित आर्य प्रवास से पहले के हैं।</p>
+            </div>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>भीमबेटका गुफा चित्र</h3>
+                </div>
+                <p><span class="highlight" data-tooltip="10,000 ईसा पूर्व">10,000 ईसा पूर्व</span> से संबंधित, ये
+                    प्राचीन कलाकृतियाँ जंगली घोड़ों को वश में करने के दृश्यों को दर्शाती हैं — जो किसी भी प्रस्तावित
+                    आर्य प्रवास समयरेखा से कहीं अधिक पुरानी हैं।</p>
+            </div>
+            <div class="conclusion">
+                <i class="fas fa-check-circle"></i> निष्कर्ष: भारत में घोड़े <span class="highlight"
+                    data-tooltip="1500 ईसा पूर्व से पहले">1500 ईसा पूर्व से सहस्राब्दियों पहले</span> मौजूद थे।
+            </div>
+        </div>
+
+        <div class="content-box animate" style="animation-delay: 0.5s;">
+            <h2><i class="fas fa-book evidence-icon"></i> मिथक: आर्यों ने 1500 ईसा पूर्व में वेद लिखे</h2>
+            <p>वैदिक ग्रंथों में विस्तृत <span class="highlight" data-tooltip="खगोलीय संदर्भ">खगोलीय संदर्भ</span> हैं
+                जो सटीक डेटिंग की अनुमति देते हैं:</p>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-star"></i>
+                    <h3>शतपथ ब्राह्मण रिकॉर्ड</h3>
+                </div>
+                <p>वर्णित खगोलीय घटनाएँ <span class="highlight" data-tooltip="3000 ईसा पूर्व">3000 ईसा पूर्व</span> के
+                    आकाश के साथ मेल खाती हैं, जो यह साबित करता है कि ये ग्रंथ कथित आर्य आगमन से पहले के हैं।</p>
+            </div>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-sun"></i>
+                    <h3>कृष्ण यजुर्वेद संदर्भ</h3>
+                </div>
+                <p>सूर्य संक्रांति के विवरण <span class="highlight" data-tooltip="8500 ईसा पूर्व">8500 ईसा पूर्व</span>
+                    तक के हैं, जो वैदिक ज्ञान को दावे से कहीं अधिक प्राचीन रखता है।</p>
+            </div>
+            <div class="conclusion">
+                <i class="fas fa-check-circle"></i> निष्कर्ष: वेद <span class="highlight"
+                    data-tooltip="स्वदेशी">स्वदेशी</span> हैं और <span class="highlight"
+                    data-tooltip="कहीं अधिक पुराने">कहीं अधिक पुराने</span> हैं — संभवतः <span class="highlight"
+                    data-tooltip="8500 ईसा पूर्व">8500 ईसा पूर्व</span> तक।
+            </div>
+        </div>
+
+        <div class="content-box animate" style="animation-delay: 0.6s;">
+            <h2><i class="fas fa-chess-pawn evidence-icon"></i> AIT के पीछे का असली एजेंडा</h2>
+            <p>AIT इतिहास के बारे में नहीं था — यह <span class="highlight" data-tooltip="विभाजन और शासन">विभाजन और
+                    शासन</span> के बारे में था:</p>
+            <ul>
+                <li>वैदिक संस्कृति को "विदेशी" करार देकर, ब्रिटिश ने <span class="highlight"
+                        data-tooltip="जातिगत विभाजन">जातिगत विभाजन</span> बनाने और <span class="highlight"
+                        data-tooltip="हिंदू गौरव">हिंदू गौरव</span> को कमजोर करने की कोशिश की।</li>
+                <li>इसने ईसाई मिशनरियों को एक उपकरण दिया, जो <span class="highlight"
+                        data-tooltip="'मूर्तिपूजक' परंपराओं पर श्रेष्ठता">'मूर्तिपूजक' परंपराओं पर श्रेष्ठता</span> का
+                    दावा करता था।</li>
+                <li>भारतीय मार्क्सवादी इतिहासकारों और औपनिवेशिक युग के विद्वानों ने वैचारिक उद्देश्यों के लिए इस मिथक को
+                    बनाए रखा।</li>
+            </ul>
+            <div class="quote-box">
+                "आर्य सिद्धांत औपनिवेशिक शासन को उचित ठहराने का एक सुविधाजनक तरीका था, जिसमें भारतीयों को स्व-शासन के
+                अयोग्य के रूप में चित्रित किया गया, जिन्हें पश्चिम के 'सभ्य' प्रभाव की आवश्यकता थी।" — <span
+                    class="highlight" data-tooltip="डॉ. कोएनराड एल्स्ट">डॉ. कोएनराड एल्स्ट</span>
+            </div>
+        </div>
+
+        <div class="content-box animate" style="animation-delay: 0.7s;">
+            <h2><i class="fas fa-fire evidence-icon"></i> अंतिम प्रहार: वह आक्रमण जो कभी नहीं हुआ</h2>
+            <p><span class="highlight" data-tooltip="आनुवंशिकी">आनुवंशिकी</span> से लेकर <span class="highlight"
+                    data-tooltip="पुरातत्व">पुरातत्व</span>, <span class="highlight"
+                    data-tooltip="भाषाविज्ञान">भाषाविज्ञान</span> से लेकर <span class="highlight"
+                    data-tooltip="खगोल विज्ञान">खगोल विज्ञान</span> तक, साक्ष्य जबरदस्त हैं:</p>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-helmet-battle"></i>
+                    <h3>कोई आक्रमण साक्ष्य नहीं</h3>
+                </div>
+                <p>प्रस्तावित आक्रमण अवधि के दौरान IVC स्थलों पर बड़े पैमाने पर हिंसा, विनाश की परतों, या विदेशी
+                    कलाकृतियों के कोई संकेत नहीं हैं।</p>
+            </div>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-language"></i>
+                    <h3>भाषाई निरंतरता</h3>
+                </div>
+                <p>संस्कृत उपमहाद्वीप में गहरी जड़ें दिखाता है, बिना किसी आयातित भाषा होने के साक्ष्य के।</p>
+            </div>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-monument"></i>
+                    <h3>सांस्कृतिक निरंतरता</h3>
+                </div>
+                <p>वैदिक प्रथाएँ और IVC कलाकृतियाँ उल्लेखनीय समानताएँ दिखाती हैं, जो एक निरंतर सभ्यता का सुझाव देती हैं।
+                </p>
+            </div>
+        </div>
+
+        <div class="content-box animate" style="animation-delay: 0.8s;">
+            <h2><i class="fas fa-user-tie evidence-icon"></i> <span class="highlight" data-tooltip="डॉ. आंबेडकर">डॉ.
+                    आंबेडकर</span> के विचार शूद्रों और आर्यों पर</h2>
+            <a href="https://www.mea.gov.in/Images/CPV/VolumeH7.pdf">
+                <p>("डॉ. बाबासाहेब आंबेडकर: लेखन और भाषण", खंड 7, पृष्ठ 309–310 से)</p>
+            </a>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-times-circle"></i>
+                    <h3>आर्य आक्रमण सिद्धांत को अस्वीकार करना</h3>
+                </div>
+                <div class="quote-box">
+                    "यह सोचना गलत है कि आर्य आक्रमणकारियों ने शूद्रों को हराया।"
+                </div>
+                <p>डॉ. आंबेडकर इस सिद्धांत को दृढ़ता से खारिज करते हैं कि:</p>
+                <ul>
+                    <li>आर्य भारत के बाहर से आए।</li>
+                    <li>आर्यों ने स्वदेशी लोगों (जैसे शूद्र या दास) पर हमला किया और उन्हें जीता।</li>
+                    <li>आर्यों और शूद्रों के बीच कोई युद्ध हुआ।</li>
+                    <li>आर्य अधिक शक्तिशाली और सैन्य रूप से प्रभुत्वशाली थे।</li>
+                </ul>
+                <p>📌 वेदों या प्राचीन भारतीय साहित्य में ऐसी धारणाओं का समर्थन करने वाला <span class="highlight"
+                        data-tooltip="कोई पाठ्य या पुरातात्विक साक्ष्य">कोई पाठ्य या पुरातात्विक साक्ष्य</span> नहीं है।
+                </p>
+            </div>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-users"></i>
+                    <h3>शूद्र आर्य थे</h3>
+                </div>
+                <div class="quote-box">
+                    "शूद्र आर्य समुदाय का हिस्सा थे।"
+                </div>
+                <ul>
+                    <li>शूद्र मूल रूप से आर्य समाज का अभिन्न अंग थे।</li>
+                    <li>वे कुछ प्रथाओं का विरोध करने के कारण वैदिक अनुष्ठानों से बाहर किए गए, न कि जन्म के कारण।</li>
+                    <li>उनका अलग वर्ण स्थिति सामाजिक-राजनीतिक विकास से उभरी, न कि नस्ल से।</li>
+                </ul>
+            </div>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-palette"></i>
+                    <h3>जाति नस्ल पर आधारित नहीं</h3>
+                </div>
+                <div class="quote-box">
+                    "यह सच नहीं है कि शूद्र काले रंग के थे या नस्लीय रूप से हीन थे।"
+                </div>
+                <p>वैदिक साक्ष्य इस धारणा का समर्थन नहीं करते कि शूद्र काले रंग के थे या आर्यों से शारीरिक रूप से भिन्न
+                    थे। आर्यों द्वारा काले रंग के लोगों को गुलाम बनाने का विचार पूरी तरह से निराधार है।</p>
+            </div>
+            <div class="evidence-card">
+                <div class="evidence-title">
+                    <i class="fas fa-crown"></i>
+                    <h3>शूद्रों का राजसी समारोहों में शामिल होना</h3>
+                </div>
+                <div class="quote-box">
+                    "शूद्रों को ब्राह्मणों, क्षत्रियों और वैश्यों के साथ राज्याभिषेक अनुष्ठानों में आमंत्रित किया जाता
+                    था।"
+                </div>
+                <p><span class="highlight" data-tooltip="महाभारत">महाभारत</span> जैसे ग्रंथ शूद्रों को राजसी राज्याभिषेक
+                    में भाग लेते हुए दिखाते हैं, जो उनकी राजनीतिक समावेशिता को साबित करता है।</p>
+            </div>
+            <div class="conclusion">
+                <i class="fas fa-check-circle"></i> अंतिम विचार: डॉ. आंबेडकर का तर्क प्रामाणिक भारतीय स्रोतों का उपयोग
+                करके <span class="highlight" data-tooltip="औपनिवेशिक कथन">औपनिवेशिक कथनों</span> को चुनौती देता है, यह
+                दिखाते हुए कि <span class="highlight"
+                    data-tooltip="शूद्र न तो आक्रमणकारी थे, न ही पराजित, न ही नस्लीय रूप से भिन्न">शूद्र न तो आक्रमणकारी
+                    थे, न ही पराजित, न ही नस्लीय रूप से भिन्न—वे केवल बाद में हाशिए पर डाले गए आर्य थे</span>।
+            </div>
+        </div>
+
+        <div class="call-to-action animate" style="animation-delay: 0.9s;">
+            <h2>हमारा इतिहास पुनः प्राप्त करें!</h2>
+            <p>इस ज्ञान को साझा करें और ऐतिहासिक रिकॉर्ड को सुधारने में मदद करें</p>
+            <a href="#">अब साझा करें <i class="fas fa-share-alt"></i></a>
+        </div>
+
+        <div class="final-statement animate" style="animation-delay: 1s;">
+            आर्य आक्रमण सिद्धांत मृत है।
+        </div>
+
+        <div class="hashtags animate" style="animation-delay: 1.1s;">
+            <span class="hashtag">#आर्यआक्रमणमिथक</span>
+            <span class="hashtag">#वैदिकभारत</span>
+            <span class="hashtag">#भारतप्रथम</span>
+            <span class="hashtag">#सनातनशक्ति</span>
+            <span class="hashtag">#स्वदेशीसभ्यता</span>
+        </div>
+    </div>
+
+    <div class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
+
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#FF8A00' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('#navLinks');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

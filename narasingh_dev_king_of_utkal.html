@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️ Narasingha Deva I — The Forgotten Pioneer of Guerrilla Warfare in India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Merriweather:wght@700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0056b3;
+            /* Dark Blue */
+            --primary-dark: #003087;
+            --secondary: #2c3e50;
+            /* Darker Blue-Gray */
+            --accent: #ffd600;
+            /* Gold */
+            --background: #121212;
+            --surface: #1e1e1e;
+            --surface-light: #2a2a2a;
+            --text: #e0e0e0;
+            --text-light: #ffffff;
+            --text-muted: #9e9e9e;
+            --divider: #424242;
+            --success: #66bb6a;
+            /* Medium Green */
+            --error: #ef5350;
+            /* Medium Red */
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+            --border-radius: 12px;
+            --border-radius-sm: 6px;
+            --glow: 0 0 12px rgba(0, 86, 179, 0.4);
+        }
+
+        /* CSS Reset */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background: var(--background) !important;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--background) !important;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #121212 100%) !important;
+            background-attachment: fixed;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Particle Overlay */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: transparent !important;
+            opacity: 0.3;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 86, 179, 0.2);
+            position: relative;
+            animation: fadeIn 1s ease;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.5rem;
+            border-bottom: 2px solid rgba(0, 86, 179, 0.3);
+            animation: slideIn 0.8s ease-out;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: var(--text);
+        }
+
+        .event-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .event-item {
+            background: var(--surface-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            perspective: 1000px;
+        }
+
+        .event-item:hover {
+            transform: translateY(-5px) rotateX(2deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .event-item.active .details-section {
+            transform: rotateX(0deg);
+            opacity: 1;
+            height: auto;
+        }
+
+        .event-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .event-title i {
+            margin-right: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .details-section {
+            background: var(--surface);
+            border-radius: var(--border-radius-sm);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-left: 4px solid var(--success);
+            transform: rotateX(-90deg);
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: transform 0.5s ease, opacity 0.5s ease, height 0.5s ease;
+        }
+
+        .details-section.active {
+            transform: rotateX(0deg);
+            opacity: 1;
+            height: auto;
+        }
+
+        .quote-box {
+            background: rgba(0, 86, 179, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: var(--border-radius-sm);
+            position: relative;
+            transition: transform 0.3s ease;
+            font-style: italic;
+        }
+
+        .quote-box:hover {
+            transform: translateX(5px);
+        }
+
+        .quote-box::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 4rem;
+            color: rgba(0, 86, 179, 0.1);
+            font-family: serif;
+        }
+
+        .quote-ref {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: normal;
+        }
+
+        .key-points {
+            background: var(--surface-light);
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .key-points:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .key-points ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .key-points ul li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .key-points ul li::before {
+            content: '👉';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .highlight {
+            background: rgba(255, 214, 0, 0.3);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            color: var(--accent);
+            position: relative;
+            cursor: help;
+            transition: all 0.3s ease;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface-light);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+            box-shadow: var(--shadow);
+            animation: fadeInTooltip 0.3s ease;
+        }
+
+        .call-to-action {
+            background: linear-gradient(135deg, rgba(0, 86, 179, 0.15), rgba(44, 62, 80, 0.15));
+            border: 1px dashed var(--secondary);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: glowingBorder 3s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 86, 179, 0.05) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: #121212;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+            z-index: -1;
+        }
+
+        .cta-btn:hover::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        .conclusion {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .conclusion::before {
+            content: '🛡️';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem;
+            color: rgba(255, 255, 255, 0.02);
+            z-index: 0;
+        }
+
+        .conclusion p {
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--divider), transparent);
+            margin: 3rem 0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background: var(--surface);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            transition: left 0.3s ease;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--accent);
+        }
+
+        .sidebar-toggle {
+            position: fixed;
+            top: 100px;
+            left: 10px;
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 10px;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: var(--text-light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            z-index: 1000;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: var(--glow);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInTooltip {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 86, 179, 0.2);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 86, 179, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 86, 179, 0);
+            }
+        }
+
+        @keyframes glowingBorder {
+            0% {
+                border-color: rgba(0, 86, 179, 0.3);
+                box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+            }
+
+            50% {
+                border-color: rgba(0, 86, 179, 0.6);
+                box-shadow: 0 0 15px rgba(0, 86, 179, 0.6);
+            }
+
+            100% {
+                border-color: rgba(0, 86, 179, 0.3);
+                box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 86, 179, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: rgba(0, 86, 179, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.2s ease, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            .sidebar {
+                left: 0;
+            }
+
+            .sidebar-toggle {
+                display: none;
+            }
+
+            .timeline::before {
+                left: 50%;
+            }
+
+            .timeline-item:nth-child(odd) {
+                left: 0;
+                padding-right: 40px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 50%;
+                padding-left: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 1.5rem;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item::before {
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .event-item {
+                padding: 1.2rem;
+            }
+
+            .sidebar {
+                left: -250px;
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Historical Truth</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#reading-path">Reading Path</a>
+                <a href="#mission">Mission</a>
+                <a href="#articles">Articles</a>
+                <a href="#join">Join Us</a>
+                <a href="disclamer.html">Disclaimer</a>
+                <a href="about_riseuphindu.html">About Us</a>>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#event1">Lakhnauti Campaign</a></li>
+            <li><a href="#event2">Katasin Trap</a></li>
+            <li><a href="#event3">Retaliation</a></li>
+            <li><a href="#legacy">Legacy</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </div>
+    <div class="sidebar-toggle">☰</div>
+
+    <div class="container">
+        <header class="scroll-animation" id="intro">
+            <h1>🛡️ Narasingha Deva I — The Forgotten Pioneer of Guerrilla Warfare</h1>
+            <p class="subtitle">Discover the visionary ruler who pioneered guerrilla tactics in medieval India</p>
+        </header>
+
+        <p class="scroll-animation">When we think of guerrilla warfare in Indian history, names like the Marathas or
+            Rajputs often come to mind. But centuries before them, <strong><span class="highlight"
+                    data-tooltip="King of Utkala">King Narasingha Deva I</span></strong> of Utkala (Odisha) pioneered
+            these tactics with unmatched precision.</p>
+
+        <div class="event-list">
+            <li class="event-item scroll-animation" id="event1">
+                <div class="event-title">
+                    <i class="fas fa-flag"></i> Lakhnauti Campaign (1243–1244)
+                </div>
+                <div class="details-section">
+                    <h3><i class="fas fa-check-circle" style="color: var(--success);"></i> Details:</h3>
+                    <div class="quote-box">
+                        According to <strong><span class="highlight"
+                                data-tooltip="Persian historian">Minhaj-i-Siraj</span></strong>, author of
+                        <em>Tabaqat-i-Nasiri</em>, the Kalinga army invaded Bengal and captured the <strong><span
+                                class="highlight" data-tooltip="Key fortress">Lakhnauti fort</span></strong>.
+                        <span class="quote-ref">— Minhaj-i-Siraj, Tabaqat-i-Nasiri</span>
+                    </div>
+                    <p>Unlike other Hindu rulers who maintained a defensive stance, Narasingha Deva adopted an
+                        aggressive strategy. His campaign from June 21, 1243, to June 9, 1244, showcased the endurance
+                        and discipline of his forces.</p>
+                </div>
+            </li>
+
+            <li class="event-item scroll-animation" id="event2">
+                <div class="event-title">
+                    <i class="fas fa-bow-arrow"></i> The Trap at Katasin (April 1244)
+                </div>
+                <div class="details-section">
+                    <h3><i class="fas fa-check-circle" style="color: var(--success);"></i> Details:</h3>
+                    <p>Bengal’s governor Tughril Tughan Khan marched toward Odisha, reaching Katasin. Minhaj records
+                        that the Hindu forces seemingly abandoned the fort, leaving only elephants and dung to deceive
+                        the invaders.</p>
+                    <div class="quote-box">
+                        As the Muslim troops relaxed for their mid-day meal, the Utkala army — elephants, cavalry, and
+                        paikas — emerged from the forests, catching them off guard.
+                        <span class="quote-ref">— Minhaj-i-Siraj, Tabaqat-i-Nasiri</span>
+                    </div>
+                    <p>The surprise attack left the Muslim forces in disarray, with many slain and Tughan Khan barely
+                        escaping.</p>
+                </div>
+            </li>
+
+            <li class="event-item scroll-animation" id="event3">
+                <div class="event-title">
+                    <i class="fas fa-swords"></i> Retaliation and Victory (1245)
+                </div>
+                <div class="details-section">
+                    <h3><i class="fas fa-check-circle" style="color: var(--success);"></i> Details:</h3>
+                    <p>In 1245, Narasingha Deva launched another assault on Lakhnauti, forcing Tughan Khan to retreat.
+                        Reinforcements from Delhi and Awadh arrived, but the Delhi general seized Tughan Khan’s fort.
+                        Seizing the chaos, the Kalinga army struck again, defeating both contingents and recapturing the
+                        fort.</p>
+                    <p>This series of rapid strikes, retreats, and ambushes is a textbook example of early guerrilla
+                        warfare.</p>
+                </div>
+            </li>
+        </div>
+
+        <hr>
+
+        <div class="timeline scroll-animation" id="legacy">
+            <h2>🕒 Key Campaigns Timeline</h2>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>1243–1244: Lakhnauti Campaign</h3>
+                    <p>Kalinga army captures Lakhnauti fort in Bengal, showcasing aggressive tactics.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>April 1244: Katasin Trap</h3>
+                    <p>Utkala forces use deception to ambush Tughril Tughan Khan’s army.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>1245: Retaliation</h3>
+                    <p>Second assault on Lakhnauti, defeating Muslim forces amid their internal conflicts.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Post-1245: Lasting Impact</h3>
+                    <p>No Muslim ruler dared invade Kalinga again, cementing Narasingha Deva’s legacy.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="key-points scroll-animation">
+            <h2>🧠 Why Narasingha Deva’s Legacy Matters</h2>
+            <ul>
+                <li><strong><span class="highlight" data-tooltip="Tactical brilliance">Tactical
+                            Aggression:</span></strong> Narasingha Deva showed that planning and deception could
+                    overpower larger armies.</li>
+                <li><strong><span class="highlight" data-tooltip="Eastern India’s role">Eastern
+                            Resistance:</span></strong> Utkala was a major force in resisting Islamic invasions.</li>
+                <li><strong><span class="highlight" data-tooltip="Military heritage">Odisha’s
+                            Contribution:</span></strong> His rule highlights Odisha’s central role in India’s military
+                    history.</li>
+            </ul>
+        </div>
+
+        <div class="call-to-action scroll-animation">
+            <div class="call-to-action-content">
+                <div class="cta-title">❓ Explore More Historical Heroes</div>
+                <p>Uncover the stories of India’s forgotten warriors and their contributions.</p>
+                <a href="historical_heroes.html" target="_blank" class="cta-btn">Discover More</a>
+            </div>
+        </div>
+
+        <div class="conclusion scroll-animation" id="conclusion">
+            <p>Narasingha Deva I wasn’t just a king — he was a <strong><span class="highlight"
+                        data-tooltip="Military genius">visionary strategist</span></strong> who mastered terrain,
+                psychology, and warfare tempo. Before Chhatrapati Shivaji Maharaj or the Rajputs, he provided India’s
+                first blueprint for guerrilla resistance.</p>
+            <p>Let’s bring his legacy back into the light where it belongs.</p>
+        </div>
+
+        <footer class="scroll-animation">
+            © Historical Truth | For a PDF or downloadable version of this article, please contact us.
+        </footer>
+    </div>
+
+    <div class="fab"></div>
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 40, density: { enable: true, value_area: 800 } },
+                color: { value: ['#0056b3', '#ffd600', '#2c3e50'] },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 0.8, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            scrollElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Accordion for Events
+            const eventItems = document.querySelectorAll('.event-item');
+            eventItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const details = item.querySelector('.details-section');
+                    const isActive = item.classList.contains('active');
+                    eventItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.details-section').classList.remove('active');
+                    });
+                    if (!isActive) {
+                        item.classList.add('active');
+                        details.classList.add('active');
+                    }
+                });
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Sidebar Toggle
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                sidebarToggle.textContent = sidebar.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Custom Cursor and Trail
+            const cursor = document.querySelector('.cursor');
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+                cursorTrail.style.opacity = 1;
+            });
+
+            document.addEventListener('mouseout', () => {
+                cursorTrail.style.opacity = 0;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Floating Action Button (Scroll to Top)
+            const fab = document.querySelector('.fab');
+            fab.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Debounce Scroll for Performance
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > 300) {
+                    fab.style.opacity = 1;
+                    fab.style.transform = 'scale(1)';
+                } else {
+                    fab.style.opacity = 0;
+                    fab.style.transform = 'scale(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            fab.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            fab.style.opacity = 0;
+            fab.style.transform = 'scale(0)';
+        });
+    </script>
+</body>
+
+</html>

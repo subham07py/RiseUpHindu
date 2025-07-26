@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕉️ Dr. B.R. Ambedkar Never Burned Manusmriti</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF;
+            /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600;
+            /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 12px rgba(255, 138, 0, 0.4);
+            --shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+            --shadow-hover: 0 14px 40px rgba(255, 138, 0, 0.4);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            background: #0A0A0A;
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Particle Background */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02) rotate(0.5deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 138, 0, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--text-light);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            padding-bottom: 10px;
+            font-size: 2.2rem;
+            position: relative;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li,
+        ol li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li::before {
+            content: counter(item) ".";
+            counter-increment: item;
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+            position: relative;
+            cursor: help;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface-light);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+            box-shadow: var(--shadow);
+            animation: fadeInTooltip 0.3s ease;
+        }
+
+        .quote-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 30px 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: rgba(255, 138, 0, 0.2);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+        }
+
+        .reference {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .reference:hover {
+            color: var(--accent);
+        }
+
+        .myth-reality-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: var(--surface);
+            border-radius: var(--border-radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            transform: translateZ(0);
+        }
+
+        .myth-reality-table th,
+        .myth-reality-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid var(--divider);
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .myth-reality-table th {
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.2), rgba(41, 98, 255, 0.2));
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .myth-reality-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .myth-reality-table tr:hover {
+            background: rgba(255, 138, 0, 0.1);
+            transform: scale(1.01);
+        }
+
+        .final-word-box {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.15), rgba(41, 98, 255, 0.15));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: glowingBorder 3s infinite;
+        }
+
+        .final-word-box::before {
+            content: "⚠️";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5rem;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .final-word-box h2,
+        .final-word-box p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-word-box p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-to-action a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .call-to-action a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+            z-index: -1;
+        }
+
+        .call-to-action a:hover::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+            position: relative;
+            border: none;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            display: none;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--accent);
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: var(--text-light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            z-index: 1000;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: var(--glow);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInTooltip {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 138, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0);
+            }
+        }
+
+        @keyframes glowingBorder {
+            0% {
+                border-color: rgba(255, 138, 0, 0.3);
+                box-shadow: 0 0 5px rgba(255, 138, 0, 0.3);
+            }
+
+            50% {
+                border-color: rgba(255, 138, 0, 0.6);
+                box-shadow: 0 0 15px rgba(255, 138, 0, 0.6);
+            }
+
+            100% {
+                border-color: rgba(255, 138, 0, 0.3);
+                box-shadow: 0 0 5px rgba(255, 138, 0, 0.3);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .delay-5 {
+            animation-delay: 1.0s;
+        }
+
+        .delay-6 {
+            animation-delay: 1.2s;
+        }
+
+        .delay-7 {
+            animation-delay: 1.4s;
+        }
+
+        .delay-8 {
+            animation-delay: 1.6s;
+        }
+
+        .delay-9 {
+            animation-delay: 1.8s;
+        }
+
+        .delay-10 {
+            animation-delay: 2.0s;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 138, 0, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 138, 0, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.2s ease, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            .sidebar {
+                display: block;
+            }
+
+            .timeline::before {
+                left: 50%;
+            }
+
+            .timeline-item:nth-child(odd) {
+                left: 0;
+                padding-right: 40px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 50%;
+                padding-left: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .myth-reality-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item::before {
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links">
+                <a href="home.html#home">Home</a>
+                <a href="home.html#reading-path">Reading Path</a>
+                <a href="home.html#mission">Mission</a>
+                <a href="home.html#articles">Articles</a>
+                <a href="home.html#join">Join Us</a>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#mahad">Mahad Satyagraha</a></li>
+            <li><a href="#proposal">Burning Proposal</a></li>
+            <li><a href="#speech">Ambedkar's Speech</a></li>
+            <li><a href="#attendees">Attendees</a></li>
+            <li><a href="#burning">Who Burned It?</a></li>
+            <li><a href="#later">Ambedkar's Later Views</a></li>
+            <li><a href="#mentions">Ambedkar's Mentions</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1 class="animate" id="intro">Did Dr. B.R. Ambedkar Burn Manusmriti?</h1>
+
+        <div class="card animate delay-1">
+            <p>
+                It is widely believed — and even celebrated in some circles — that Dr. Bhimrao Ramji Ambedkar publicly
+                burned the Manusmriti (an ancient Hindu legal text) on <span class="highlight"
+                    data-tooltip="Date of Mahad Satyagraha">December 25, 1927</span>, as
+                a symbolic act against caste oppression. This event is often cited online, and many groups even observe
+                <span class="highlight" data-tooltip="Annual commemoration">Manusmriti Dahan Diwas</span> (Manusmriti
+                Burning Day) annually. But what is the <span class="highlight"
+                    data-tooltip="Historical truth">truth</span>?
+            </p>
+            <p>
+                Let's explore the documented history, speeches, and publications — especially from the <span
+                    class="highlight" data-tooltip="Primary source">Collected Works of Dr. Ambedkar (Vol. 38, Hindi
+                    Edition)</span> — and find out if this
+                event really happened the way it's told.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2" id="mahad">
+            <h2>📜 The Mahad Satyagraha – The Real Context</h2>
+            <p>
+                Before jumping to conclusions, it's important to understand the broader context of what happened at
+                Mahad in
+                1927.
+            </p>
+            <ul>
+                <li>The <span class="highlight" data-tooltip="Social reform movement">Mahad Satyagraha</span> was
+                    organized by the <span class="highlight" data-tooltip="Organizing committee">Mahad
+                        Satyagraha Parishad</span> on <span class="highlight" data-tooltip="Event dates">December 25–27,
+                        1927</span>.</li>
+                <li>Dr. Ambedkar was invited by the Parishad Secretary <span class="highlight"
+                        data-tooltip="Key organizer">Sitaram Namdev
+                        Shivtarkar</span> to address the gathering.</li>
+                <li>The goal of the Satyagraha was to demand <span class="highlight" data-tooltip="Social justice">equal
+                        access to public water
+                        sources</span> and <span class="highlight" data-tooltip="Core objective">social equality</span>.
+                </li>
+            </ul>
+            <p>Yes, Manusmriti burning happened <span class="highlight" data-tooltip="Context of event">at</span> this
+                event — but <span class="highlight" data-tooltip="Key clarification">not by Dr. Ambedkar himself</span>.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3 pulse" id="proposal">
+            <h2>📖 Did Ambedkar Propose Manusmriti Burning?</h2>
+            <p><strong>No. He did not.</strong></p>
+            <p>
+                In the pamphlet Dr. Ambedkar published <span class="highlight"
+                    data-tooltip="Pre-event documentation">before the Mahad Satyagraha</span>, <span class="highlight"
+                    data-tooltip="No mention of burning">there is no mention</span> of Manusmriti Dahan.
+            </p>
+            <span class="reference">🗂️ Reference: <span class="highlight" data-tooltip="Source document">Dr. Ambedkar
+                    Samagra Vangmay, Volume 38, Page 98</span></span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4" id="speech">
+            <h2>🎤 Dr. Ambedkar's Speech on December 25, 1927</h2>
+            <ul>
+                <li>Dr. Ambedkar gave a speech around <span class="highlight" data-tooltip="Time of speech">4 PM</span>
+                    on December 25.</li>
+                <li>The session began with Vedic prayers by children, followed by letters of support and speeches by
+                    other
+                    members.</li>
+                <li>Dr. Ambedkar's entire speech made no mention of Manusmriti, nor did he ever utter the word <span
+                        class="highlight" data-tooltip="Key omission">"Manusmriti"</span>
+                    during the talk.</li>
+            </ul>
+            <span class="reference">🗂️ Reference: <span class="highlight" data-tooltip="Source document">Samagra
+                    Vangmay Vol. 38, Pages 101–113</span></span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-5" id="attendees">
+            <h2>👥 Who Attended the Event?</h2>
+            <p>The event included:</p>
+            <ul>
+                <li><span class="highlight" data-tooltip="Parishad Secretary">Sitaram Shivtarkar</span></li>
+                <li>Dhondi Narayan Gaikwad</li>
+                <li>Gangavane</li>
+                <li><span class="highlight" data-tooltip="Supporter from Pune">Rajbhoj</span> from Pune</li>
+                <li>Bhau Rao Gaikwad from Nashik</li>
+                <li>And others from both Dalit and upper-caste backgrounds</li>
+            </ul>
+            <span class="reference">🗂️ Reference: <span class="highlight" data-tooltip="Source document">Vol. 38, Page
+                    97</span></span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-6 pulse" id="burning">
+            <h2>🔥 Who Actually Burned the Manusmriti?</h2>
+            <p>The actual act of Manusmriti burning took place:</p>
+            <ul>
+                <li>Around <span class="highlight" data-tooltip="Time of burning">9 PM on December 25, 1927</span></li>
+                <li>Carried out by <span class="highlight" data-tooltip="Main proposer">Gangadhar Neelkanth
+                        Sahasrabuddhe</span> along with <span class="highlight" data-tooltip="Participants">5–6 Dalit
+                        monks</span></li>
+                <li>In a ceremonial fire altar made of sandalwood</li>
+            </ul>
+            <p>
+                📌 No source or eyewitness account confirms that <span class="highlight"
+                    data-tooltip="Key clarification">Dr. Ambedkar was present at the
+                    burning, or that he lit the fire</span>.
+            </p>
+            <span class="reference">🗂️ Reference: <span class="highlight" data-tooltip="Source document">Vol. 38, Page
+                    117</span></span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="timeline animate delay-7">
+            <h2>🕒 Timeline of Mahad Satyagraha Events</h2>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>4:00 PM, Dec 25, 1927</h3>
+                    <p>Dr. Ambedkar delivers his speech, focusing on social equality and water access rights.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Post-Speech, Dec 25, 1927</h3>
+                    <p>Mahad Satyagraha Parishad passes four resolutions, including the Manusmriti burning proposal by
+                        Gangadhar Neelkanth Sahasrabuddhe.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>9:00 PM, Dec 25, 1927</h3>
+                    <p>Manusmriti burning ceremony conducted by Sahasrabuddhe and Dalit monks.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-8 pulse" id="later">
+            <h2>🧠 What Did Dr. Ambedkar Say About Manusmriti Later?</h2>
+            <p>
+                Interestingly, in <span class="highlight" data-tooltip="Year of Hindu Code Bill debates">1949</span>,
+                during the <span class="highlight" data-tooltip="Legislative discussions">Hindu Code Bill
+                    debates</span>, <span class="highlight" data-tooltip="Positive remark">Dr. Ambedkar praised</span>
+                certain parts of the Manusmriti:
+            </p>
+            <div class="quote-box">
+                "The Manusmriti gives women the right to inherit property."
+            </div>
+            <span class="reference">🗂️ Reference: <span class="highlight" data-tooltip="Source document">Dr. Ambedkar:
+                    Writings and Speeches, Vol. 14, Part 1, Pages 280–281</span></span>
+            <p>
+                Would Dr. Ambedkar say something <span class="highlight"
+                    data-tooltip="Logical deduction">positive</span> about Manusmriti if he <span class="highlight"
+                    data-tooltip="Unlikely scenario">personally burned</span> it or was fundamentally against it? Highly
+                unlikely.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-9" id="mentions">
+            <h2>🗞️ Mentions of Manusmriti Burning by Dr. Ambedkar Himself</h2>
+            <p>Dr. Ambedkar mentioned Manusmriti Dahan only <span class="highlight"
+                    data-tooltip="Limited references">twice</span>:</p>
+            <ol>
+                <li>In the newspaper <span class="highlight" data-tooltip="Publication">Bahishkrit Bharat</span> on
+                    <span class="highlight" data-tooltip="Date">February 3,
+                        1928</span></li>
+                <li>In a <span class="highlight" data-tooltip="Interview">1938 interview</span> with journalist <span
+                        class="highlight" data-tooltip="Interviewer">T.V.
+                        Parvate</span></li>
+            </ol>
+            <p>
+                📌 In <span class="highlight" data-tooltip="Key clarification">both instances</span>, Dr. Ambedkar never
+                claimed he burned the text himself.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-10 pulse" id="conclusion">
+            <h2>✅ Conclusion: What Do the Facts Show?</h2>
+            <ul>
+                <li>📌 Dr. B.R. Ambedkar <span class="highlight" data-tooltip="No direct involvement">did not
+                        burn</span> the Manusmriti on December 25, 1927</li>
+                <li>📌 He <span class="highlight" data-tooltip="No proposal">did not propose</span> or <span
+                        class="highlight" data-tooltip="No support">support</span> any
+                    resolution to burn it</li>
+                <li>📌 The act was carried out by <span class="highlight" data-tooltip="Main actor">Gangadhar Neelkanth
+                        Sahasrabuddhe, a
+                        Brahmin</span>, and <span class="highlight" data-tooltip="Participants">some Dalit monks</span>
+                </li>
+                <li>📌 Dr. Ambedkar <span class="highlight" data-tooltip="Positive remarks">praised positive
+                        aspects</span> of Manusmriti in 1949</li>
+                <li>📌 He <span class="highlight" data-tooltip="No endorsement">never endorsed</span> Manusmriti Dahan
+                    as an annual event</li>
+                <li>📌 Therefore, celebrating <span class="highlight" data-tooltip="Misleading celebration">Manusmriti
+                        Dahan Diwas in Ambedkar's name is
+                        misleading</span></li>
+            </ul>
+
+            <h3>❌ Myth vs. Reality</h3>
+            <table class="myth-reality-table">
+                <thead>
+                    <tr>
+                        <th>Claim</th>
+                        <th>Reality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dr. Ambedkar burned Manusmriti</td>
+                        <td>❌ No documented evidence</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Ambedkar proposed Manusmriti Dahan</td>
+                        <td>❌ Resolution was proposed by someone else</td>
+                    </tr>
+                    <tr>
+                        <td>Manusmriti Dahan was the main goal of Mahad Satyagraha</td>
+                        <td>❌ The goal was water equality</td>
+                    </tr>
+                    <tr>
+                        <td>Ambedkar hated all of Manusmriti</td>
+                        <td>❌ He appreciated its provision for women's rights</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="call-to-action animate delay-1">
+            <h2>📢 Spread the Truth</h2>
+            <p>The narrative around Dr. Ambedkar and Manusmriti burning has been distorted. Share this blog to honor his
+                true legacy of justice and equality!</p>
+            <a href="#">Share This Blog</a>
+        </div>
+
+        <div class="final-word-box animate delay-2">
+            <h2>🔔 Final Word: Beware of Propaganda</h2>
+            <p>
+                Those promoting Manusmriti Dahan in Dr. Ambedkar's name may have <span class="highlight"
+                    data-tooltip="Underlying motives">political or
+                    ideological motives</span>, not historical accuracy. As responsible citizens, we must verify claims
+                with <span class="highlight" data-tooltip="Importance of evidence">primary sources</span> and avoid
+                spreading <span class="highlight" data-tooltip="False narratives">myths</span> in Ambedkar's name.
+            </p>
+            <p>
+                Let us honor Baba Saheb by focusing on his <span class="highlight"
+                    data-tooltip="True contributions">real legacy</span> — <span class="highlight"
+                    data-tooltip="Core values">justice, equality, education, and constitutional reform</span> — not by
+                distorting
+                history.
+            </p>
+        </div>
+    </div>
+
+    <div class="fab"></div>
+
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: ['#FF8A00', '#FFD600', '#2962FF'] },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Custom Cursor and Trail
+            const cursor = document.querySelector('.cursor');
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+                cursorTrail.style.opacity = 1;
+            });
+
+            document.addEventListener('mouseout', () => {
+                cursorTrail.style.opacity = 0;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Floating Action Button (Scroll to Top)
+            const fab = document.querySelector('.fab');
+            fab.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Debounce Scroll for Performance
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > 300) {
+                    fab.style.opacity = 1;
+                    fab.style.transform = 'scale(1)';
+                } else {
+                    fab.style.opacity = 0;
+                    fab.style.transform = 'scale(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            fab.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            fab.style.opacity = 0;
+            fab.style.transform = 'scale(0)';
+        });
+    </script>
+</body>
+
+</html> 

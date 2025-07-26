@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕉️ Debunking the Non-Vedic Varna System: A Closer Look at Ancient Indian Texts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF8A00; /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF; /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600; /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 12px rgba(255, 138, 0, 0.4);
+            --shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+            --shadow-hover: 0 14px 40px rgba(255, 138, 0, 0.4);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background-image: url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: -1;
+        }
+
+        /* Particle Overlay */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 138, 0, 0.3);
+            box-shadow: var(--shadow);
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+            color: var(--text-light);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+            position: relative;
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        h3, h4 {
+            color: var(--accent);
+            margin: 2rem 0 1rem;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 138, 0, 0.2);
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02) rotate(0.5deg);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(255, 138, 0, 0.4);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 138, 0, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 138, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+            position: relative;
+            cursor: help;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface-light);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+            box-shadow: var(--shadow);
+            animation: fadeInTooltip 0.3s ease;
+        }
+
+        .quote-box {
+            background: rgba(41, 98, 255, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            position: relative;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote-box::before {
+            content: '\201C';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: rgba(41, 98, 255, 0.2);
+            position: absolute;
+            left: 10px;
+            top: 0;
+            line-height: 1;
+        }
+
+        .quote-source {
+            display: block;
+            text-align: right;
+            font-style: normal;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .evidence-card {
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: var(--border-radius-sm);
+            padding: 1.5rem;
+            border: 1px solid rgba(76, 175, 80, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .evidence-card:hover {
+            background: rgba(76, 175, 80, 0.15);
+            border-color: rgba(76, 175, 80, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .evidence-card h4 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #4CAF50;
+        }
+
+        .evidence-card h4 i {
+            margin-right: 0.5rem;
+        }
+
+        .conclusion-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+            position: relative;
+            animation: glowingBorder 3s infinite;
+        }
+
+        .conclusion-box::before {
+            content: '✓';
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: rgba(76, 175, 80, 0.3);
+        }
+
+        .bottom-line-box {
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.2), rgba(41, 98, 255, 0.2));
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            border: 1px solid rgba(255, 138, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 6s infinite;
+        }
+
+        .bottom-line-box::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 138, 0, 0.1) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .action-points {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .action-point {
+            background: rgba(255, 138, 0, 0.1);
+            border: 1px solid rgba(255, 138, 0, 0.3);
+            border-radius: 50px;
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .action-point:hover {
+            background: rgba(255, 138, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .action-point i {
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            display: none;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--accent);
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: var(--text-light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            z-index: 1000;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: var(--glow);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInTooltip {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 138, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0); }
+        }
+
+        @keyframes glowingBorder {
+            0% { border-color: rgba(255, 138, 0, 0.3); box-shadow: 0 0 5px rgba(255, 138, 0, 0.3); }
+            50% { border-color: rgba(255, 138, 0, 0.6); box-shadow: 0 0 15px rgba(255, 138, 0, 0.6); }
+            100% { border-color: rgba(255, 138, 0, 0.3); box-shadow: 0 0 5px rgba(255, 138, 0, 0.3); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1.0s; }
+        .delay-6 { animation-delay: 1.2s; }
+        .delay-7 { animation-delay: 1.4s; }
+        .delay-8 { animation-delay: 1.6s; }
+        .delay-9 { animation-delay: 1.8s; }
+        .delay-10 { animation-delay: 2.0s; }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 138, 0, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 138, 0, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.2s ease, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 138, 0, 0.2);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            .sidebar {
+                display: block;
+            }
+            .timeline::before {
+                left: 50%;
+            }
+            .timeline-item:nth-child(odd) {
+                left: 0;
+                padding-right: 40px;
+            }
+            .timeline-item:nth-child(even) {
+                left: 50%;
+                padding-left: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+            .evidence-grid {
+                grid-template-columns: 1fr;
+            }
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            .timeline-item::before {
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links">
+                <a href="home.html#home">Home</a>
+                <a href="home.html#reading-path">Reading Path</a>
+                <a href="home.html#mission">Mission</a>
+                <a href="home.html#articles">Articles</a>
+                <a href="home.html#join">Join Us</a>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#misinterpretation">Persistent Misinterpretation</a></li>
+            <li><a href="#karma-myth">Varna Change Myth</a></li>
+            <li><a href="#abrahmana">Abrahmana Usage</a></li>
+            <li><a href="#ailush">Mahirshi Ailush</a></li>
+            <li><a href="#historical">Historical Examples</a></li>
+            <li><a href="#scriptures">Scriptural Evidence</a></li>
+            <li><a href="#gita">Gita 4.13</a></li>
+            <li><a href="#foreign">Foreign Accounts</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <header class="animate">
+            <h1><i class="fas fa-om"></i> The Varna System</h1>
+            <p class="intro animate delay-1">A Closer Look at Ancient Indian Texts and Their Authentic Interpretation</p>
+        </header>
+
+        <div class="card animate delay-2" id="misinterpretation">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h2>The Persistent Misinterpretation</h2>
+            </div>
+            <p>For years, a misinterpretation of the <span class="highlight" data-tooltip="Core concept">Varna system</span> has persisted, creating confusion and promoting what is now referred to as an <span class="highlight" data-tooltip="Non-scriptural view">"avaidic" (non-Vedic)</span> understanding.</p>
+            <p>This misreading fuels a flawed system—one where actions carried out within such a misunderstanding cannot lead to just or beneficial outcomes. It's unfortunate that even today, we must clarify these misconceptions.</p>
+            <p>Let's break down some common claims and explore how a deeper reading of ancient Indian texts offers a clearer, more consistent understanding.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3 pulse" id="karma-myth">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h2>The Myth of Varna Change Based Solely on Karma</h2>
+            </div>
+            <p>One often-cited verse is from <span class="highlight" data-tooltip="Scriptural reference">Manusmriti 10.65</span>:</p>
+            <div class="quote-box">
+                "A Shudra attains Brahmanhood, and a Brahmana goes to the state of a Shudra. The same should be understood for a Kshatriya and a Vaishya."
+                <span class="quote-source">— Manusmriti 10.65</span>
+            </div>
+            <p>However, this is frequently misquoted out of context. The preceding verse (10.64) explains the conditions: if a Brahmin repeatedly marries a Shudra woman over seven generations, their lineage may eventually regain Brahmin status.</p>
+            <p>When taken together, the two verses make it clear: <span class="highlight" data-tooltip="Key clarification">varna change occurs over generations through lineage, not purely through deeds in one lifetime</span>.</p>
+            <p>Thus, the argument that Manusmriti promotes a <span class="highlight" data-tooltip="Misinterpretation">karma-only</span> system is incorrect. Instead, Manu's framework is based on a triad: <span class="highlight" data-tooltip="Core components">birth (janma), rituals (sanskara), and action (karma)</span>. Even inter-varna marriages are acknowledged, though same-varna (savarna) unions were preferred.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4" id="abrahmana">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h2>"Abrahmana" and Its Misunderstood Usage</h2>
+            </div>
+            <p>Verses in texts like <span class="highlight" data-tooltip="Scriptural reference">Aitareya Brahmana (7.23)</span> and <span class="highlight" data-tooltip="Scriptural reference">Shatapatha Brahmana (3.2.1.40)</span> mention that Kshatriyas may become "Brahmanas" upon initiation (diksha). This is often used to argue that varna is flexible.</p>
+            <p>However, here, "Brahmana" doesn't mean a complete varna shift. It's used contextually—for someone who, after <span class="highlight" data-tooltip="Ritual process">initiation</span>, is allowed access to <span class="highlight" data-tooltip="Sacred practices">Vedic rituals</span> like Gayatri Mantra and Yajnas. This doesn't override the varna determined by birth and sanskara.</p>
+            <p>Similarly, <span class="highlight" data-tooltip="Scriptural reference">Manusmriti 4.245</span> states that a Brahmana who engages in immoral behavior becomes "like a Shudra." This is <span class="highlight" data-tooltip="Metaphorical usage">a metaphor for loss of moral/spiritual status</span>, not an actual varna change.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-5" id="ailush">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h2>The Story of Mahirshi Ailush Kavash and Others</h2>
+            </div>
+            <p>Kavash, referred to as "Dasya Putra" and "Abrahmana," was initially excluded by Rishis. Yet, upon displaying profound knowledge, he was accepted. Here, <span class="highlight" data-tooltip="Contextual term">Abrahmana</span> doesn't imply a permanent birth status—it points to lack of initiation or recognition.</p>
+            <p>This affirms that <span class="highlight" data-tooltip="Key insight">spiritual recognition was tied to knowledge and conduct, but varna remained birth-linked</span>.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-6" id="historical">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h2>Historical Examples in Context</h2>
+            </div>
+            <div class="evidence-grid">
+                <div class="evidence-card">
+                    <h4><i class="fas fa-user-tie"></i> Vidura</h4>
+                    <p>Born to a maidservant, Vidura was indeed a Shudra and served as a royal minister. In <span class="highlight" data-tooltip="Scriptural reference">Mahabharata (Udyoga Parva 41.5)</span>, he acknowledges being born in a Shudra womb and refrains from advising on Brahmavidya.</p>
+                    <p>This clearly shows that <span class="highlight" data-tooltip="Key clarification">while he was respected, his varna did not change</span>.</p>
+                </div>
+                <div class="evidence-card">
+                    <h4><i class="fas fa-crown"></i> King Janaka</h4>
+                    <p>A Brahmagyani, yet remained a Kshatriya. When sage Vyasa sent Shukadeva to him, Janaka initially declined, noting that as a Kshatriya, instructing a Brahmana wasn't appropriate. Again, <span class="highlight" data-tooltip="Key insight">spiritual greatness ≠ varna change</span>.</p>
+                </div>
+                <div class="evidence-card">
+                    <h4><i class="fas fa-exclamation-circle"></i> Satyakama Jabala & Matanga</h4>
+                    <p>These are often cited as proof of varna fluidity, but the text argues that these are <span class="highlight" data-tooltip="Contextual usage">symbolic, not normative</span>. Relying on such rare exceptions highlights that varna change was not the general rule.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="timeline animate delay-7" id="scriptures">
+            <h2>🕒 Timeline of Key Scriptural Evidence</h2>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Rig Veda</h3>
+                    <p>Describes Shudras as industrious in Purushamedha Yajna, with distinct dharmic paths.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Manusmriti</h3>
+                    <p>Defines varnas by birth (2.148, 10.4) and lineage-based change (10.64-65).</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Aitareya Brahmana</h3>
+                    <p>Uses "Brahmana" contextually for ritual access (7.23).</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Bhagavad Gita</h3>
+                    <p>Mentions guna and karma but implies fixed varna (4.13).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-8" id="gita">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h2>Reassessing Gita 4.13 – Guna & Karma?</h2>
+            </div>
+            <p>While Gita 4.13 mentions <span class="highlight" data-tooltip="Key terms">guna</span> (quality) and <span class="highlight" data-tooltip="Key terms">karma</span> (action), it does not explicitly state that varna can be changed. The word <span class="highlight" data-tooltip="Linguistic nuance">srishtam</span> (created) is in <span class="highlight" data-tooltip="Grammatical context">past tense</span>, implying creation based on prior karma—not license for change within one life.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-9" id="foreign">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h2>What About Foreign Accounts?</h2>
+            </div>
+            <ul>
+                <li><span class="highlight" data-tooltip="Historical source">Megasthenes</span> spoke of Indian philosophers being the first caste and said they could arise from any varna. However, <span class="highlight" data-tooltip="Scriptural source">Kautilya's Arthashastra</span>, predating Megasthenes, clearly describes Brahmanas as <span class="highlight" data-tooltip="Key clarification">by birth</span>.</li>
+                <li><span class="highlight" data-tooltip="Historical source">Turk-e-Jahangiri</span> mentions that children become Brahmanas only after age 8. This isn't proof of change—it reflects the <span class="highlight" data-tooltip="Ritual process">sanskara process</span>, not a replacement for birth-based varna.</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="conclusion-box animate delay-10 pulse" id="conclusion">
+            <h2>Conclusion: Karma Shapes Status, Not Varna</h2>
+            <p>The text argues strongly that <span class="highlight" data-tooltip="Core finding">varna is primarily determined by birth and sanskara</span>. While karma influences spiritual growth and social status, it does not override varna. Isolated exceptions cannot redefine a millennia-old dharmic system.</p>
+            <p>The non-Vedic reinterpretation of varna as flexible or solely karma-based is a <span class="highlight" data-tooltip="Modern distortion">modern projection</span>, not consistent with the majority of traditional scriptures.</p>
+            <p>Understanding this distinction is essential—not for division, but for <span class="highlight" data-tooltip="Goal of analysis">truthful dialogue</span>, informed by the <span class="highlight" data-tooltip="Importance of context">original context</span> and <span class="highlight" data-tooltip="Scriptural integrity">integrity of ancient texts</span>.</p>
+        </div>
+
+        <div class="bottom-line-box animate delay-1">
+            <h3 class="bounce">🛑 Bottom Line:</h3>
+            <p>The idea that <span class="highlight" data-tooltip="Misconception">Varna = Karma</span> is a modern myth.</p>
+            <p>Ancient texts speak of <span class="highlight" data-tooltip="Correct framework">Varna = Janma + Sanskara + Karma</span>.</p>
+        </div>
+
+        <div class="action-points animate delay-2">
+            <div class="action-point">
+                <i class="fas fa-fire"></i> Restore Dharmic Truth
+            </div>
+            <div class="action-point">
+                <i class="fas fa-brain"></i> Stop Misusing Scripture
+            </div>
+            <div class="action-point">
+                <i class="fas fa-book-reader"></i> Read In Context
+            </div>
+            <div class="action-point">
+                <i class="fas fa-share-alt"></i> Share This Truth
+            </div>
+        </div>
+
+        <div class="cta-section animate delay-3">
+            <h2>📢 Spread the Truth</h2>
+            <p>Help clarify the Varna system by sharing this article!</p>
+            <a href="https://x.com/intent/tweet?text=The Varna system is about birth, sanskara, and karma—not just karma! Learn the truth. #VarnaTruth">Share This Article</a>
+            <p class="hashtag">#VarnaTruth #DharmaFacts #ScripturalClarity #KnowTheTruth</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 RiseUpHindu | All Rights Reserved</p>
+    </footer>
+
+    <div class="fab"></div>
+
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 30, density: { enable: true, value_area: 800 } },
+                color: { value: ['#FF8A00', '#FFD600', '#2962FF'] },
+                shape: { type: 'circle' },
+                opacity: { value: 0.2, random: true },
+                size: { value: 2, random: true },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 0.5, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Custom Cursor and Trail
+            const cursor = document.querySelector('.cursor');
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+                cursorTrail.style.opacity = 1;
+            });
+
+            document.addEventListener('mouseout', () => {
+                cursorTrail.style.opacity = 0;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Floating Action Button (Scroll to Top)
+            const fab = document.querySelector('.fab');
+            fab.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Debounce Scroll for Performance
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > 300) {
+                    fab.style.opacity = 1;
+                    fab.style.transform = 'scale(1)';
+                } else {
+                    fab.style.opacity = 0;
+                    fab.style.transform = 'scale(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            fab.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            fab.style.opacity = 0;
+            fab.style.transform = 'scale(0)';
+        });
+    </script>
+</body>
+</html>

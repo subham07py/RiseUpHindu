@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 The Legend of Bisar Mohanty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF8A00; /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF; /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600; /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 12px rgba(255, 138, 0, 0.4);
+            --shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+            --shadow-hover: 0 14px 40px rgba(255, 138, 0, 0.4);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Particle Overlay */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 138, 0, 0.3);
+            box-shadow: var(--shadow);
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            color: var(--text-light);
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+            position: relative;
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        h3 {
+            color: var(--accent);
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: var(--accent);
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            position: relative;
+            cursor: help;
+            transition: all 0.3s ease;
+        }
+
+        .highlight:hover {
+            background: rgba(255, 138, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface-light);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+            box-shadow: var(--shadow);
+            animation: fadeInTooltip 0.3s ease;
+        }
+
+        .quote-box {
+            background: rgba(41, 98, 255, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+            color: var(--text);
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .quote-box:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .quote-box::before {
+            content: "\201C";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 3rem;
+            color: rgba(41, 98, 255, 0.2);
+            font-family: serif;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 0.7rem;
+            font-size: 1.05rem;
+        }
+
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 15px;
+            color: var(--accent);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .conclusion-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+            text-align: center;
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: var(--text-light);
+            position: relative;
+            animation: glowingBorder 3s infinite;
+        }
+
+        .conclusion-box::before {
+            content: '✓';
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: rgba(76, 175, 80, 0.3);
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 138, 0, 0.2);
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02) rotate(0.5deg);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(255, 138, 0, 0.4);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 138, 0, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 138, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .cta-section a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-section a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+            z-index: -1;
+        }
+
+        .cta-section a:hover::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            display: none;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--accent);
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: var(--text-light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            z-index: 1000;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: var(--glow);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInTooltip {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 138, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0); }
+        }
+
+        @keyframes glowingBorder {
+            0% { border-color: rgba(255, 138, 0, 0.3); box-shadow: 0 0 5px rgba(255, 138, 0, 0.3); }
+            50% { border-color: rgba(255, 138, 0, 0.6); box-shadow: 0 0 15px rgba(255, 138, 0, 0.6); }
+            100% { border-color: rgba(255, 138, 0, 0.3); box-shadow: 0 0 5px rgba(255, 138, 0, 0.3); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 138, 0, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 138, 0, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.2s ease, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 138, 0, 0.2);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            .sidebar {
+                display: block;
+            }
+            .timeline::before {
+                left: 50%;
+            }
+            .timeline-item:nth-child(odd) {
+                left: 0;
+                padding-right: 40px;
+            }
+            .timeline-item:nth-child(even) {
+                left: 50%;
+                padding-left: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            .timeline-item::before {
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links">
+                <a href="home.html#home">Home</a>
+                <a href="home.html#reading-path">Reading Path</a>
+                <a href="home.html#mission">Mission</a>
+                <a href="home.html#articles">Articles</a>
+                <a href="home.html#join">Join Us</a>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#context">Historical Context</a></li>
+            <li><a href="#kalapahad">Rise of Kalapahad</a></li>
+            <li><a href="#invasion">Invasion of Odisha</a></li>
+            <li><a href="#rampage">Kalapahad’s Rampage</a></li>
+            <li><a href="#rescue">Bisar Mohanty’s Rescue</a></li>
+            <li><a href="#redemption">Kalapahad’s Redemption</a></li>
+            <li><a href="#significance">Cultural Significance</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <header class="scroll-animation" id="intro">
+            <h1><i class="fas fa-om"></i> The Legend of Bisar Mohanty: A Heroic Saga of Devotion and Defiance in Odisha</h1>
+        </header>
+
+        <div class="card scroll-animation">
+            <p>The history of Odisha is replete with tales of valor, faith, and resilience, but few are as compelling as the legend of <span class="highlight" data-tooltip="Key figure">Bisar Mohanty</span>, a humble devotee of Lord Jagannath whose extraordinary courage preserved a sacred relic during a tumultuous period in the 16th century. Set against the backdrop of political upheaval and religious persecution, this historical legend, rooted in the years <span class="highlight" data-tooltip="Historical period">1568–1572 AD</span>, weaves together themes of devotion, sacrifice, and the triumph of faith over destruction. This expanded account delves deeper into the historical context, the events surrounding Kalapahad’s invasion, and Bisar Mohanty’s daring act to save the <span class="highlight" data-tooltip="Sacred relic">Navi Brahma</span> of Lord Jagannath.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card scroll-animation" id="context">
+            <div class="card-header">
+                <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                <h2>Historical Context: Odisha Under Siege</h2>
+            </div>
+            <p>In the mid-16th century, Odisha, then known as the kingdom of Kalinga, was a prosperous and culturally rich region under the rule of <span class="highlight" data-tooltip="Historical figure">Mukunda Dev II (r. 1560–1568 AD)</span>. Renowned as an "El Dorado" for its wealth and resources, Odisha attracted the ambitions of neighboring powers, particularly the Sultanate of Bengal under Sulaiman Karrani. The period was marked by intense political rivalries and territorial ambitions, with the Mughal emperor Akbar expanding his empire from Delhi and the Afghan sultans of Bengal vying for regional dominance.</p>
+            <p>Mukunda Dev faced numerous challenges, both internal and external. Internally, treachery and rebellion plagued his court, exemplified by the betrayal of feudatory chief Ramachandra Bhanja, who declared himself king during a critical moment. Externally, Sulaiman Karrani’s desire to annex Odisha led to a series of military campaigns. Mukunda Dev’s alliance with Akbar, formed to counter potential threats from Bengal, further enraged Sulaiman, setting the stage for a devastating invasion in <span class="highlight" data-tooltip="Key event">1568 AD</span>.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card scroll-animation" id="kalapahad">
+            <div class="card-header">
+                <div class="card-icon"><i class="fas fa-user-slash"></i></div>
+                <h2>The Rise of Kalapahad: From Brahmin to Destroyer</h2>
+            </div>
+            <p>Central to this narrative is the figure of <span class="highlight" data-tooltip="Key antagonist">Kalapahad</span>, whose transformation from a Hindu Brahmin to a feared iconoclast is a pivotal element of the legend. According to historical accounts and Odia folklore, Kalapahad was originally Rajiv Lochan Roy (or Kalachand Roy Bhadury), a Bengali Brahmin and general in Mukunda Dev’s army. Sulaiman Karrani, after suffering defeat in an earlier battle, devised a diplomatic strategy to undermine Odisha’s defenses. He invited Rajiv Lochan for peace talks and orchestrated a meeting with his daughter, Dulari, whose beauty captivated the general.</p>
+            <p>Rajiv’s love for Dulari led him to propose marriage, but religious barriers stood in the way. Hindu priests refused to convert Dulari to Hinduism, citing strict religious codes that prohibited such conversions. Enraged by this rejection and driven by his passion, Rajiv converted to Islam, adopting the name Mohammed Farmuli and earning the moniker <span class="highlight" data-tooltip="Symbolic name">"Kalapahad" (Black Mountain)</span>. This conversion marked a turning point, as Kalapahad became a zealous destroyer of Hindu temples and a symbol of terror across Bengal, Bihar, and Odisha.</p>
+            <p>Scholars like Prof. P. Mukherjee have questioned the romantic narrative, suggesting Kalapahad was a "full-blooded Afghan" rather than a converted Brahmin. However, the Odia tradition, as recorded in texts like the <span class="highlight" data-tooltip="Historical source">Madalapanji</span> (the Jagannath Temple chronicle), firmly holds to the story of his conversion and subsequent iconoclastic campaign, making it a cornerstone of the legend.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card scroll-animation" id="invasion">
+            <div class="card-header">
+                <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h2>The Invasion of Odisha and the Fall of Mukunda Dev</h2>
+            </div>
+            <p>In 1568 AD, while Akbar was preoccupied with the siege of Chitor, Sulaiman Karrani launched a two-pronged invasion of Odisha. One army was led by Sulaiman himself, while the other was commanded by his son Bayazid and Kalapahad. Mukunda Dev, unable to secure aid from Akbar or his Mughal governor in Bihar, Munim Khan, faced the invaders alone. He met Sulaiman’s forces on the banks of the Ganges, where he fought valiantly but was ultimately defeated. Retreating to the fort of Kotsima, Mukunda Dev faced further betrayal when Ramachandra Bhanja rebelled and proclaimed himself king.</p>
+            <p>In a desperate bid to reclaim control, Mukunda Dev negotiated a treaty with Sulaiman and marched against Ramachandra Bhanja. The two met in battle at Gohiritikira near Jajpur, where both Mukunda Dev and Ramachandra Bhanja were killed—Ramachandra by Bayazid and Mukunda Dev, according to some accounts, by treachery from his own agents, Sikhi and Manai, who guided Kalapahad’s forces to attack from the rear. With Mukunda Dev’s death, Odisha fell to the Afghan invaders, marking the end of its independence in <span class="highlight" data-tooltip="Key event">1568 AD</span>.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card scroll-animation" id="rampage">
+            <div class="card-header">
+                <div class="card-icon"><i class="fas fa-fire"></i></div>
+                <h2>Kalapahad’s Iconoclastic Rampage</h2>
+            </div>
+            <p>Following the conquest, Kalapahad unleashed a wave of destruction across Odisha. His campaign targeted major religious and cultural centers, including Balasore, Cuttack, Jajpur, Sambalpur, Ekamrakshetra (Bhubaneswar), Konark, and Puri. The <span class="highlight" data-tooltip="Historical source">Madalapanji</span> and other sources describe his systematic demolition of temples, including the iconic Konark Sun Temple, where he displaced the Dadhinauti (a key structural element) and razed associated shrines. His ultimate target was the Jagannath Temple in Puri, a spiritual epicenter revered by Hindus worldwide.</p>
+            <p>Kalapahad’s motivations, as per the legend, stemmed from both his new religious zeal and a desire to avenge the rejection by Hindu society. He planned to burn the wooden idols of Lord Jagannath, Balabhadra, and Subhadra, believing their destruction would crush the spirit of Hindu resistance. The Madalapanji recounts that the temple’s servitors, forewarned of Kalapahad’s intentions, hid the idols at Hatipada near Chilika Lake. However, Kalapahad discovered their location, retrieved the idols, and transported them to the banks of the Ganges, where he set them ablaze.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card scroll-animation" id="rescue">
+            <div class="card-header">
+                <div class="card-icon"><i class="fas fa-drum"></i></div>
+                <h2>Bisar Mohanty’s Daring Rescue</h2>
+            </div>
+            <p>Amid this chaos, <span class="highlight" data-tooltip="Key figure">Bisar Mohanty</span>, a young and ardent devotee of Lord Jagannath, emerged as the hero of this tale. Aware of Kalapahad’s plan to destroy the idols, Bisar recognized that open resistance was futile given the terror Kalapahad inspired. Instead, he devised a cunning strategy to save the sacred essence of Lord Jagannath, known as the <span class="highlight" data-tooltip="Sacred relic">Navi Brahma</span> (the navel portion or Brahma Pinda), believed to be the divine core of the deity.</p>
+            <p>Disguising himself as a madman, Bisar roamed the streets of Puri, carrying a dhola and playing it erratically to deflect suspicion. On the day of the idol’s burning, he followed Kalapahad’s entourage as they dragged the idol to the riverside. The onlookers, though devastated, remained silent out of fear. After Kalapahad and his soldiers set the idol ablaze and left, believing it reduced to ashes, Bisar sprang into action. He extinguished the flames with water from a nearby source and searched the remains. Miraculously, he found the Navi Brahma intact, a testament to the deity’s indestructibility.</p>
+            <p>With great care, Bisar concealed the Navi Brahma inside his dhola and escaped to his native village, Kujanga Garh. There, he entrusted the relic to the local zamindar, who constructed a temple to house it within a replica of the original idol. The operation was kept secret to avoid detection by Kalapahad or his allies. According to tradition, the Navi Brahma was later returned to Puri during the reign of Ramachandra Dev of the Bhoi dynasty (c. 1575 AD), who reinstalled it in a new idol during the <span class="highlight" data-tooltip="Ceremony">Nabakalebara ceremony</span>, ensuring the continuity of Lord Jagannath’s divine presence.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="timeline scroll-animation" id="timeline">
+            <h2>🕒 Timeline of Key Events</h2>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>1560–1568 AD</h3>
+                    <p>Mukunda Dev II rules Odisha, facing internal and external threats.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>1568 AD</h3>
+                    <p>Sulaiman Karrani and Kalapahad invade Odisha, leading to Mukunda Dev’s defeat.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>1568–1572 AD</h3>
+                    <p>Kalapahad’s iconoclastic campaign destroys temples, targeting Jagannath Temple.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>c. 1572 AD</h3>
+                    <p>Bisar Mohanty saves the Navi Brahma, hiding it in Kujanga Garh.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>c. 1575 AD</h3>
+                    <p>Navi Brahma reinstated in Puri during Ramachandra Dev’s reign.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card scroll-animation" id="redemption">
+            <div class="card-header">
+                <div class="card-icon"><i class="fas fa-pray"></i></div>
+                <h2>Kalapahad’s Redemption and Legacy</h2>
+            </div>
+            <p>The legend also recounts Kalapahad’s eventual remorse. After years of destruction, the cries of persecuted Hindus and his own introspection led him to seek redemption. Guided by his childhood preceptor, Premananda, Kalapahad renounced his violent ways and, with his wife Dulari, embarked on a pilgrimage to holy sites like Haridwar, Vrindavan, Dwaraka, and Rameswaram, ultimately returning to Puri as an ascetic. At the Jagannath Temple, he sought forgiveness, and according to folklore, he and Dulari lived out their days as pious devotees near Swargadwar, eventually disappearing mysteriously.</p>
+            <p>While some aspects of Kalapahad’s story are debated, Bisar Mohanty’s act of bravery remains a celebrated chapter in Odia folklore. His courage in the face of overwhelming odds and his ingenuity in preserving the Navi Brahma have cemented his place as a revered figure among devotees of Lord Jagannath.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card scroll-animation" id="significance">
+            <div class="card-header">
+                <div class="card-icon"><i class="fas fa-heart"></i></div>
+                <h2>Cultural and Historical Significance</h2>
+            </div>
+            <p>The legend of Bisar Mohanty, though less documented in formal scriptures like the Dardhyata Bhakti, is a vibrant part of Odisha’s oral tradition, passed down through generations. Its authenticity is bolstered by its alignment with historical events, such as the Afghan conquest of Odisha and the desecration of the Jagannath Temple, as recorded in the <span class="highlight" data-tooltip="Historical source">Madalapanji</span> and other sources. The story resonates with themes of resilience, faith, and the preservation of cultural heritage in the face of adversity.</p>
+            <p>Bisar Mohanty’s actions symbolize the enduring spirit of Odisha’s people and their devotion to Lord Jagannath, a deity who transcends mere iconography to embody the spiritual heart of the region. His legacy continues to inspire, reminding us that even in the darkest times, a single individual’s faith can shine as a beacon of hope.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="conclusion-box scroll-animation" id="conclusion">
+            <p><strong>Conclusion</strong></p>
+            <p>The legend of Bisar Mohanty is a powerful narrative of devotion and defiance, set against the backdrop of a pivotal moment in Odisha’s history. His daring rescue of the <span class="highlight" data-tooltip="Sacred relic">Navi Brahma</span> ensured the survival of Lord Jagannath’s divine essence, preserving a cornerstone of Hindu spirituality. As a historical legend, it bridges the gap between fact and folklore, offering a glimpse into the resilience of a people and the enduring power of faith. Bisar Mohanty’s story deserves to be celebrated by every devotee of Lord Jagannath and by all who value the triumph of courage over despair.</p>
+        </div>
+
+        <div class="cta-section scroll-animation">
+            <h2>📢 Spread the Legend</h2>
+            <p>Share the heroic tale of Bisar Mohanty and his devotion to Lord Jagannath!</p>
+            <a href="https://instagram.com">Share This Article</a>
+            <p class="hashtag">#OdiaLegend #Jagannath #BisarMohanty #DharmaFacts</p>
+        </div>
+
+        <footer>
+            <p>© 2025 RiseUpHindu | All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <div class="fab"></div>
+
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 30, density: { enable: true, value_area: 800 } },
+                color: { value: ['#FF8A00', '#FFD600', '#2962FF'] },
+                shape: { type: 'circle' },
+                opacity: { value: 0.2, random: true },
+                size: { value: 2, random: true },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 0.5, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            scrollElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Custom Cursor and Trail
+            const cursor = document.querySelector('.cursor');
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+                cursorTrail.style.opacity = 1;
+            });
+
+            document.addEventListener('mouseout', () => {
+                cursorTrail.style.opacity = 0;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Floating Action Button (Scroll to Top)
+            const fab = document.querySelector('.fab');
+            fab.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Debounce Scroll for Performance
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > 300) {
+                    fab.style.opacity = 1;
+                    fab.style.transform = 'scale(1)';
+                } else {
+                    fab.style.opacity = 0;
+                    fab.style.transform = 'scale(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            fab.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            fab.style.opacity = 0;
+            fab.style.transform = 'scale(0)';
+        });
+    </script>
+</body>
+</html>

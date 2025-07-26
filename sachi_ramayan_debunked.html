@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 सच्ची रामायण के पीछे का सच</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00; /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF; /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600; /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 10px rgba(255, 138, 0, 0.3);
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 12px 36px rgba(255, 138, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-logo::before {
+            content: var(--om-symbol);
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            color: var(--text-light);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            padding-bottom: 10px;
+            font-size: 2.2rem;
+            position: relative;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .conclusion-box {
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.15), rgba(41, 98, 255, 0.15));
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 40px 0;
+            animation: pulse 2s infinite;
+        }
+
+        .quote-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 30px 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 4rem;
+            color: rgba(255, 138, 0, 0.2);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+            cursor: help;
+            position: relative;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background: var(--surface);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 10;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-to-action a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+            position: relative;
+            border: none;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .intro-quote {
+            text-align: center;
+            font-size: 1.2rem;
+            font-style: italic;
+            margin: 40px 0;
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            background: rgba(255, 255, 255, 0.05);
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .intro-quote::before,
+        .intro-quote::after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--accent);
+            opacity: 0.3;
+            position: absolute;
+        }
+
+        .intro-quote::before {
+            top: -10px;
+            left: 10px;
+        }
+
+        .intro-quote::after {
+            bottom: -30px;
+            right: 10px;
+        }
+
+        .final-conclusion-list li {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: var(--border-radius-sm);
+            border-left: 3px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .final-conclusion-list li:hover {
+            transform: translateY(-3px);
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--text);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .fab:hover { transform: scale(1.1); }
+        .fab::before { content: "↑"; font-size: 1.5rem; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 138, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1.0s; }
+        .delay-6 { animation-delay: 1.2s; }
+        .delay-7 { animation-delay: 1.4s; }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 20px;
+            }
+            .call-to-action {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 15px;
+            }
+            .call-to-action {
+                padding: 20px;
+            }
+            h2::before {
+                left: -25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links" id="navLinks">
+                <a href="home.html#home">होम</a>
+                <a href="home.html#reading-path">पठन पथ</a>
+                <a href="home.html#mission">मिशन</a>
+                <a href="home.html#articles">लेख</a>
+                <a href="home.html#join">हमसे जुड़ें</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="animate"><i class="fas fa-book-open"></i> सच्ची रामायण के पीछे का सच</h1>
+        <h2 class="animate delay-1">सत्यापित तथ्यों के साथ मिथकों का पर्दाफाश</h2>
+
+        <div class="intro-quote animate delay-2">
+            क्या सर्वोच्च न्यायालय ने वास्तव में ललई सिंह यादव की <span class="highlight" data-tooltip="सच्ची रामायण">Sachi Ramayan</span> को "सच्ची" रामायण घोषित किया और वाल्मीकि रामायण को काल्पनिक बताया? संक्षिप्त उत्तर है — नहीं। यह एक प्रचार-प्रसारित मिथक है, जिसे किसी भी न्यायिक दस्तावेज द्वारा समर्थन नहीं किया गया है।
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3">
+            <h2><i class="fas fa-search"></i> <span class="highlight" data-tooltip="सच्ची रामायण">Sachi Ramayan</span> क्या है और ललई यादव कौन हैं?</h2>
+            <p>
+                <span class="highlight" data-tooltip="सच्ची रामायण">Sachi Ramayan</span> (सच्ची रामायण) नामक पुस्तक का मूल लेखक <span class="highlight" data-tooltip="ललई सिंह यादव">ललई सिंह यादव</span> नहीं थे, बल्कि यह <span class="highlight" data-tooltip="ई.वी. रामासामी (पेरियार)">ई.वी. रामासामी (पेरियार)</span> द्वारा तमिल में लिखी गई थी। पेरियार की पुस्तक का मूल शीर्षक <span class="highlight" data-tooltip="रामायण के पात्र">"Ramayana Pathirangal"</span> था, जिसका अर्थ है "रामायण के पात्र"। यह कोई आध्यात्मिक या ऐतिहासिक ग्रंथ नहीं था, बल्कि पेरियार के <span class="highlight" data-tooltip="हिंदू विरोधी विचार">हिंदू विरोधी विचारों</span> से प्रेरित रामायण के पात्रों की <span class="highlight" data-tooltip="व्यक्तिगत और आलोचनात्मक व्याख्या">व्यक्तिगत और आलोचनात्मक व्याख्या</span> थी।
+            </p>
+            <p>
+                बाद में, इस पुस्तक का अनुवाद और <span class="highlight" data-tooltip="भ्रामक शीर्षक">भ्रामक शीर्षक "सच्ची रामायण"</span> के तहत हिंदी में प्रकाशित किया गया। इसका उद्देश्य <span class="highlight" data-tooltip="हिंदू पाठकों को भ्रमित करना">हिंदू पाठकों को भ्रमित और हेरफेर करना</span> था, ताकि वे इसे पवित्र रामायण का बेहतर संस्करण मान लें। हालांकि, <span class="highlight" data-tooltip="राम आधार">ललई ने स्वयं इसका अनुवाद नहीं किया। यह अनुवाद राम आधार नामक व्यक्ति ने किया था।</span>
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4">
+            <h2><i class="fas fa-gavel"></i> कानूनी विवाद: वास्तव में क्या हुआ?</h2>
+            <p>
+                उत्तर प्रदेश सरकार ने <span class="highlight" data-tooltip="आपत्तिजनक और उत्तेजक सामग्री">आपत्तिजनक और उत्तेजक सामग्री</span> का हवाला देते हुए <span class="highlight" data-tooltip="सच्ची रामायण">Sachi Ramayan</span> की प्रतियों पर <span class="highlight" data-tooltip="प्रतिबंध और जब्ती">प्रतिबंध लगाया और जब्त किया</span>, जो आपराधिक प्रक्रिया संहिता (CrPC), 1860 की <span class="highlight" data-tooltip="धारा 99-ए">धारा 99-ए</span> के तहत था।
+            </p>
+            <p>
+                ललई सिंह यादव ने <span class="highlight" data-tooltip="इलाहाबाद उच्च न्यायालय">इलाहाबाद उच्च न्यायालय</span> में प्रतिबंध को चुनौती दी और <span class="highlight" data-tooltip="मामला जीता">मामला जीत लिया</span> — लेकिन <span class="highlight" data-tooltip="सामग्री का समर्थन नहीं">नहीं क्योंकि अदालत ने सामग्री का समर्थन किया था।</span>
+            </p>
+            <h3>✅ असल कारण जिसके चलते वह जीते:</h3>
+            <p>
+                उत्तर प्रदेश सरकार <span class="highlight" data-tooltip="प्रक्रियात्मक आवश्यकताएँ">धारा 99-ए की प्रक्रियात्मक आवश्यकताओं को पूरा करने में विफल रही</span>। उन्होंने निम्नलिखित निर्दिष्ट नहीं किया:
+            </p>
+            <ol>
+                <li>कौन सी सामग्री आपत्तिजनक थी।</li>
+                <li>यह कैसे समूहों के बीच शत्रुता को बढ़ावा देती थी।</li>
+                <li>सरकार की राय का तथ्यात्मक आधार।</li>
+            </ol>
+            <p>
+                इस <span class="highlight" data-tooltip="तकनीकी त्रुटि">तकनीकी त्रुटि</span> के कारण, अदालत ने <span class="highlight" data-tooltip="प्रतिबंध रद्द">प्रतिबंध को रद्द कर दिया</span>, लेकिन <span class="highlight" data-tooltip="पुस्तक की सामग्री के पक्ष में कोई टिप्पणी नहीं">पुस्तक की सामग्री के पक्ष में कोई टिप्पणी नहीं की।</span>
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-5">
+            <h2><i class="fas fa-balance-scale"></i> सर्वोच्च न्यायालय का फैसला: अंतिम निर्णय</h2>
+            <p>
+                उच्च न्यायालय में हार के बाद, उत्तर प्रदेश सरकार ने <span class="highlight" data-tooltip="भारत का सर्वोच्च न्यायालय">भारत के सर्वोच्च न्यायालय</span> का रुख किया।
+            </p>
+            <p>सर्वोच्च न्यायालय ने <span class="highlight" data-tooltip="16 सितंबर 1976">16 सितंबर 1976</span> को फैसला सुनाया:</p>
+            <div class="quote-box">
+                "किसी भी प्रकाशन पर प्रतिबंध लगाने से पहले सरकार को धारा 99-ए के तहत सभी 3 शर्तों को पूरा करना होगा।"
+            </div>
+            <p>
+                इसने <span class="highlight" data-tooltip="सामग्री को मान्य या अनुमोदित नहीं">सच्ची रामायण की सामग्री को मान्य या अनुमोदित नहीं किया</span>। वास्तव में, उसी फैसले में <span class="highlight" data-tooltip="पुस्तक आपत्तिजनक थी">यह स्वीकार किया गया कि पुस्तक आपत्तिजनक थी</span>, लेकिन <span class="highlight" data-tooltip="कानूनी प्रक्रिया का पालन नहीं">कानूनी प्रक्रिया का सही ढंग से पालन नहीं किया गया था</span>, इसलिए प्रतिबंध लागू नहीं किया जा सका।
+            </p>
+            <div class="conclusion-box">
+                📌 महत्वपूर्ण: सर्वोच्च न्यायालय ने <span class="highlight" data-tooltip="वाल्मीकि रामायण को काल्पनिक नहीं">कभी भी वाल्मीकि रामायण को काल्पनिक नहीं कहा</span> या इसे हीन नहीं ठहराया। यह दावा <span class="highlight" data-tooltip="100% झूठा प्रचार">100% झूठा प्रचार</span> है।
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-6">
+            <h2><i class="fas fa-exclamation-triangle"></i> <span class="highlight" data-tooltip="सच्ची रामायण">Sachi Ramayan</span> के पीछे का असली एजेंडा</h2>
+            <ul>
+                <li><span class="highlight" data-tooltip="मूल पुस्तक">मूल पुस्तक</span> पेरियार द्वारा लिखी गई थी, जो <span class="highlight" data-tooltip="हिंदू विरोधी और विभाजनकारी">हिंदू विरोधी और विभाजनकारी</span> थी।</li>
+                <li>ललई यादव हिंदू धर्म के <span class="highlight" data-tooltip="ज्ञात आलोचक">ज्ञात आलोचक</span> थे, जिन्होंने बाद में बौद्ध धर्म अपनाया और हिंदू विरोधी कार्यों का प्रकाशन शुरू किया।</li>
+                <li>उनका <span class="highlight" data-tooltip="सच्ची रामायण">Sachi Ramayan</span> का प्रकाशन <span class="highlight" data-tooltip="हिंदू समाज को तोड़ने का प्रयास">हिंदू समाज को जातिगत आधार पर तोड़ने के व्यापक प्रयास</span> का हिस्सा था।</li>
+                <li><span class="highlight" data-tooltip="राजकमल प्रकाशन">राजकमल प्रकाशन द्वारा प्रकाशित वर्तमान संस्करण</span> एक <span class="highlight" data-tooltip="संपादित, राजनीतिक रूप से प्रेरित पुस्तक">संपादित, राजनीतिक रूप से प्रेरित पुस्तक</span> है, जिसका उपयोग अक्सर <span class="highlight" data-tooltip="वामपंथी कार्यकर्ता">वामपंथी कार्यकर्ताओं</span> द्वारा गलत सूचना फैलाने के लिए किया जाता है।</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-7">
+            <h2><i class="fas fa-book"></i> सर्वोच्च न्यायालय ने असली रामायण के बारे में क्या कहा?</h2>
+            <p>
+                2019 के <span class="highlight" data-tooltip="राम मंदिर अंतिम फैसला">राम मंदिर अंतिम फैसले</span> में, <span class="highlight" data-tooltip="भारत का सर्वोच्च न्यायालय">भारत के सर्वोच्च न्यायालय</span> ने:
+            </p>
+            <ul>
+                <li><span class="highlight" data-tooltip="वाल्मीकि रामायण">वाल्मीकि रामायण को ऐतिहासिक साक्ष्य</span> के रूप में मान्यता दी।</li>
+                <li>इसे <span class="highlight" data-tooltip="विश्वसनीय स्रोत">विश्वसनीय स्रोत</span> के रूप में उद्धृत किया।</li>
+                <li>इसे <span class="highlight" data-tooltip="हिंदू आस्था और राष्ट्रीय विरासत">हिंदू आस्था और राष्ट्रीय विरासत का हिस्सा</span> माना।</li>
+            </ul>
+            <p>यह <span class="highlight" data-tooltip="काल्पनिक दावा खारिज">पूरी तरह से उस दावे को खारिज करता है</span> कि अदालत ने कभी रामायण को काल्पनिक कहा था।</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-1">
+            <h2><i class="fas fa-times-circle"></i> ललई यादव अन्य मामले भी हारे</h2>
+            <p>ललई ने निम्नलिखित भी प्रकाशित किया:</p>
+            <ul>
+                <li><span class="highlight" data-tooltip="सच्ची रामायण की चाबी">Sachi Ramayan Ki Chabi</span></li>
+                <li><span class="highlight" data-tooltip="आर्यों का नैतिक पोल खोल">Aryon Ka Naitik Pol Khol</span></li>
+            </ul>
+            <p>
+                इन पुस्तकों पर भी प्रतिबंध लगाया गया था, और इस बार <span class="highlight" data-tooltip="कानूनी प्रक्रिया का पालन">उत्तर प्रदेश सरकार ने धारा 99-ए के तहत कानूनी प्रक्रियाओं का सही ढंग से पालन किया</span>। जब ललई ने इस प्रतिबंध को अदालत में चुनौती दी, तो <span class="highlight" data-tooltip="मामला हारा और जुर्माना">वह मामला हार गए और उन पर ₹200 का जुर्माना लगाया गया</span>।
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2">
+            <h2><i class="fas fa-check-circle"></i> अंतिम निष्कर्ष: साक्ष्य क्या दिखाते हैं</h2>
+            <ul class="final-conclusion-list">
+                <li><strong>पेरियार ने कभी <span class="highlight" data-tooltip="सच्ची रामायण">Sachi Ramayan</span> नाम की पुस्तक नहीं लिखी।</strong></li>
+                <li><strong>ललई यादव ने पुस्तक का अनुवाद नहीं किया; <span class="highlight" data-tooltip="राम आधार">राम आधार</span> ने किया।</strong></li>
+                <li><strong><span class="highlight" data-tooltip="सच्ची रामायण">Sachi Ramayan</span> पर <span class="highlight" data-tooltip="आपत्तिजनक सामग्री">आपत्तिजनक सामग्री</span> के कारण प्रतिबंध लगाया गया था।</strong></li>
+                <li><strong>अदालती फैसलों ने कभी पुस्तक के दावों का समर्थन नहीं किया।</strong></li>
+                <li><strong>सर्वोच्च न्यायालय ने <span class="highlight" data-tooltip="वाल्मीकि रामायण">वाल्मीकि रामायण</span> को सम्मानित, ऐतिहासिक ग्रंथ के रूप में बरकरार रखा।</strong></li>
+                <li><strong>"सच्ची रामायण" शीर्षक हिंदू समुदाय को गुमराह करने के लिए एक गलत प्रस्तुति है।</strong></li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3">
+            <h2><i class="fas fa-om"></i> सनातन का रुख</h2>
+            <p>
+                हिंदुओं के रूप में, हमारी आस्था <span class="highlight" data-tooltip="वाल्मीकि रामायण">वाल्मीकि रामायण</span> में है, जो सनातन धर्म का <span class="highlight" data-tooltip="शाश्वत और पवित्र ग्रंथ">शाश्वत और पवित्र ग्रंथ</span> है। विकृत ग्रंथों के माध्यम से इसे गलत तरीके से प्रस्तुत करने और बदनाम करने के प्रयासों का <span class="highlight" data-tooltip="कानूनी और बौद्धिक रूप से मुकाबला">कानूनी और बौद्धिक रूप से मुकाबला</span> किया जाना चाहिए।
+            </p>
+        </div>
+
+        <div class="call-to-action animate delay-4">
+            <h3>सच को फैलाने में मदद करें</h3>
+            <p>गलत सूचना से निपटने के लिए इस जानकारी को दूसरों के साथ साझा करें</p>
+            <a href="#">अब साझा करें</a>
+        </div>
+    </div>
+
+    <div class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
+
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#FF8A00' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('#navLinks');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

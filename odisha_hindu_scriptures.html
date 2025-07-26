@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 ओडिशा हिंदू शास्त्रों में: मिथकों का खंडन</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF;
+            /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600;
+            /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 10px rgba(255, 138, 0, 0.3);
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 12px 36px rgba(255, 138, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-logo::before {
+            content: var(--om-symbol);
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            color: var(--text-light);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            padding-bottom: 10px;
+            font-size: 2.2rem;
+            position: relative;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        ul li::before {
+            content: '•';
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .source-list li::before {
+            content: '📖';
+            opacity: 0.7;
+        }
+
+        .conclusion {
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.15), rgba(41, 98, 255, 0.15));
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 40px 0;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        .quote-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 30px 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 4rem;
+            color: rgba(255, 138, 0, 0.2);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+            cursor: help;
+            position: relative;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background: var(--surface);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 10;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-to-action a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+            position: relative;
+            border: none;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .hashtags {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--text-muted);
+            font-style: italic;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .hashtags span {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .hashtags span:hover {
+            background: rgba(255, 138, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--text);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 138, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .delay-5 {
+            animation-delay: 1.0s;
+        }
+
+        .delay-6 {
+            animation-delay: 1.2s;
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .call-to-action {
+                padding: 25px;
+            }
+
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .call-to-action {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links" id="navLinks">
+                <a href="home.html#home">होम</a>
+                <a href="home.html#reading-path">पठन पथ</a>
+                <a href="home.html#mission">मिशन</a>
+                <a href="home.html#articles">लेख</a>
+                <a href="home.html#join">हमसे जुड़ें</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="animate"><i class="fas fa-book-open"></i> हिंदू शास्त्रों में ओडिशा</h1>
+
+        <div class="card animate delay-1">
+            <p>
+                ऑनलाइन अक्सर एक गलत सूचना अभियान चलाया जाता है जिसमें दावा किया जाता है कि प्राचीन हिंदू शास्त्र <span
+                    class="highlight" data-tooltip="ओडिशा (कलिंग/उत्कल)">ओडिशा (कलिंग/उत्कल)</span> को "अशुद्ध" या
+                "गैर-वैदिक" घोषित करते हैं। एक लोकप्रिय इंस्टाग्राम पोस्ट इस दावे का समर्थन करने के लिए <span
+                    class="highlight" data-tooltip="भागवत पुराण 11.21.8">भागवत पुराण 11.21.8</span> का गलत उल्लेख करता
+                है। हालांकि, शास्त्रों की गहन जांच से <span class="highlight" data-tooltip="बिल्कुल विपरीत">बिल्कुल
+                    विपरीत</span> पता चलता है — ओडिशा हिंदू परंपरा में सबसे सम्मानित भूमियों में से एक है।
+            </p>
+            <p>आइए <span class="highlight" data-tooltip="ग्रंथों से सत्य">ग्रंथों से सत्य</span> को समझें — न कि संपादित
+                सोशल मीडिया पोस्ट से।</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2">
+            <h2><i class="fas fa-om"></i> 1. स्कंद पुराण में उत्कल (ओडिशा) की महिमा</h2>
+            <p>18 महापुराणों में से एक, <span class="highlight" data-tooltip="स्कंद पुराण">स्कंद पुराण</span>, <span
+                    class="highlight" data-tooltip="उत्कल की स्पष्ट रूप से प्रशंसा करता है">उत्कल (ओडिशा) की स्पष्ट रूप
+                    से प्रशंसा करता है</span> एक पवित्र भूमि के रूप में:</p>
+
+            <h3>🔶 स्कंद पुराण से मुख्य बिंदु:</h3>
+            <div class="quote-box">
+                "एक भूमि है जिसका नाम <strong>उत्कल</strong> है। यह प्रसिद्ध और अत्यंत पवित्र है। वहाँ कई
+                <strong>तीर्थ</strong> और पवित्र मंदिर हैं... लोग विष्णु के अनुयायी हैं, अच्छे व्यवहार वाले हैं, और धर्म
+                के प्रति समर्पित हैं।"
+            </div>
+            <ul>
+                <li>📍 स्थान: <span class="highlight" data-tooltip="दक्षिणी समुद्र के तट पर">दक्षिणी समुद्र के तट
+                        पर</span> (स्पष्ट रूप से ओडिशा की पहचान करता है)।</li>
+                <li>🧘‍♂️ ब्राह्मण वेदों का अध्ययन करते हैं और यज्ञ करते हैं।</li>
+                <li>👪 लोग <span class="highlight" data-tooltip="विनम्र, दीर्घायु और सामंजस्य में रहते हैं">विनम्र,
+                        दीर्घायु और सामंजस्य में रहते हैं</span>।</li>
+                <li>🙏 <span class="highlight" data-tooltip="कोई नास्तिक नहीं">कोई नास्तिक नहीं</span> — सभी विष्णु के
+                    भक्त हैं।</li>
+            </ul>
+            <p>🛕 यह क्षेत्र <span class="highlight" data-tooltip="पुरुषोत्तम क्षेत्र">पुरुषोत्तम क्षेत्र</span> (पुरी
+                जगन्नाथ धाम) से सीधे जुड़ा हुआ है — भारत के चार प्रमुख <span class="highlight"
+                    data-tooltip="चार धाम">चार धाम</span> में से एक।</p>
+            <div class="conclusion">
+                ✅ निष्कर्ष: स्कंद पुराण उत्कल (ओडिशा) को <span class="highlight" data-tooltip="तीर्थ भूमि">तीर्थ
+                    भूमि</span> कहता है — पवित्रता और भक्ति की भूमि, न कि अशुद्धता की।
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3">
+            <h2><i class="fas fa-times-circle"></i> 2. भागवत पुराण 11.21.8 का ओडिशा को बदनाम करने के लिए गलत उपयोग</h2>
+            <p>कई ऑनलाइन उपयोगकर्ता (इंस्टाग्राम) गलत दावा करते हैं कि <span class="highlight"
+                    data-tooltip="भागवत पुराण 11.21.8">भागवत पुराण 11.21.8</span> "अंग, वंग, कलिंग" वाक्यांश का हवाला
+                देकर ओडिशा और बंगाल को अशुद्ध बताता है। हालांकि:</p>
+
+            <h3>📖 आइए श्लोक की जांच करें (SB 11.21.8):</h3>
+            <div class="quote-box">
+                "उन स्थानों में... जहाँ शुद्धिकरण अनुष्ठानों की उपेक्षा की जाती है, जहाँ मांसाहारी प्रमुख हैं, या जहाँ
+                भूमि बंजर है — उन्हें अशुद्ध माना जाता है।"
+            </div>
+            <ul>
+                <li>✔️ कहीं भी ओडिशा, कलिंग, या बंगाल का स्पष्ट उल्लेख नहीं है।</li>
+                <li>✔️ शब्द "किकट" (किकट) <span class="highlight" data-tooltip="कलिंग नहीं है">कलिंग (कलिङ्ग) नहीं
+                        है</span>। वे <span class="highlight" data-tooltip="अलग-अलग क्षेत्र">अलग-अलग क्षेत्र</span> हैं।
+                </li>
+                <li>✔️ यह श्लोक <span class="highlight" data-tooltip="व्यवहारिक मानदंड">व्यवहारिक मानदंड</span> का वर्णन
+                    करता है, न कि केवल भूगोल का।</li>
+            </ul>
+            <p>यहां तक कि अगर कोई क्षेत्र अशुद्ध कहा जाता है, तो यह <span class="highlight"
+                    data-tooltip="आध्यात्मिक संस्कृति की कमी">आध्यात्मिक संस्कृति की कमी</span> के कारण है, न कि उसके
+                नाम या जाति के कारण। और स्पष्ट रूप से, <span class="highlight"
+                    data-tooltip="यहाँ ओडिशा का उल्लेख नहीं है">यहाँ ओडिशा का उल्लेख नहीं है</span>।</p>
+            <p>🔍 <span class="highlight" data-tooltip="गलत अनुवादित हिंदी पोस्ट">गलत अनुवादित हिंदी पोस्ट</span>
+                जानबूझकर टिप्पणी में "अंग-वंग-कलिंग" जोड़ता है, जो <span class="highlight"
+                    data-tooltip="मूल संस्कृत में नहीं है">मूल संस्कृत में नहीं है</span>।</p>
+            <div class="conclusion">
+                ✅ निष्कर्ष: भागवत पुराण 11.21.8 अशुद्ध आचरण के बारे में है — ओडिशा को बदनाम करने के बारे में नहीं।
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4">
+            <h2><i class="fas fa-pray"></i> 3. उत्कल का वेदों और जगन्नाथ से संबंध</h2>
+            <ul>
+                <li>भगवान <span class="highlight" data-tooltip="जगन्नाथ">जगन्नाथ</span>, पुरी (पुरुषोत्तम क्षेत्र) के
+                    मुख्य देवता, को <span class="highlight" data-tooltip="विष्णु/नारायण का रूप">विष्णु/नारायण का
+                        रूप</span> माना जाता है।</li>
+                <li><span class="highlight" data-tooltip="स्कंद पुराण">स्कंद पुराण</span> के अनुसार, <span
+                        class="highlight" data-tooltip="लक्ष्मी, नारायण और वेद उत्कल में निवास करते हैं">लक्ष्मी, नारायण
+                        और वेद उत्कल में निवास करते हैं</span>।</li>
+                <li>पुरी को <span class="highlight"
+                        data-tooltip="वह भूमि जहाँ नारायण लकड़ी की मूर्ति के रूप में प्रकट होते हैं">वह भूमि जहाँ नारायण
+                        लकड़ी की मूर्ति के रूप में प्रकट होते हैं</span> — एक अद्वितीय और दैवीय घटना के रूप में वर्णित
+                    किया गया है।</li>
+            </ul>
+            <p>🏆 उत्कल एक ऐसी भूमि है जो <span class="highlight" data-tooltip="यज्ञ, भक्ति और शास्त्रीय ज्ञान">यज्ञ,
+                    भक्ति और शास्त्रीय ज्ञान</span> की शताब्दियों से पवित्र है।</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-5">
+            <h2><i class="fas fa-scroll"></i> 4. वास्तविक अशुद्ध भूमियाँ — आचरण पर आधारित, न कि जाति या क्षेत्र</h2>
+            <p>यहां तक कि भागवत पुराण (11.21.8) कहता है:</p>
+            <div class="quote-box">
+                "वे स्थान जहाँ वैदिक अनुष्ठानों की उपेक्षा की जाती है, जहाँ लोग अधार्मिक हैं, और जहाँ सत्य अनुपस्थित है
+                — वे अशुद्ध हैं।"
+            </div>
+            <p>इसका तात्पर्य है:</p>
+            <ul>
+                <li>कोई भी भूमि स्वाभाविक रूप से अशुद्ध नहीं है।</li>
+                <li>अशुद्धता <span class="highlight" data-tooltip="अधार्मिक व्यवहार">अधार्मिक व्यवहार</span> से उत्पन्न
+                    होती है, न कि भूगोल या जाति से।</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-6">
+            <h2><i class="fas fa-lotus"></i> निष्कर्ष: सनातन धर्म में ओडिशा शुद्ध और पवित्र है</h2>
+            <p>🔥 <span class="highlight" data-tooltip="झूठा कथन कि ओडिशा को शास्त्रों में निंदा की गई है">झूठा कथन कि
+                    ओडिशा (कलिंग/उत्कल) को हिंदू ग्रंथों में निंदा की गई है</span> न केवल भ्रामक है — यह पवित्र
+                शास्त्रों का विकृतिकरण है।</p>
+            <ul>
+                <li>✅ <span class="highlight" data-tooltip="स्कंद पुराण">स्कंद पुराण</span> ओडिशा को <span
+                        class="highlight" data-tooltip="वैदिक ज्ञान और विष्णु भक्ति की भूमि">वैदिक ज्ञान और विष्णु भक्ति
+                        की भूमि</span> के रूप में प्रशंसा करता है।</li>
+                <li>✅ <span class="highlight" data-tooltip="भागवत पुराण 11.21.8">भागवत पुराण 11.21.8</span> कभी भी कलिंग
+                    का नाम नहीं लेता, न ही इसे अशुद्ध घोषित करता है।</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-1">
+            <h2><i class="fas fa-shield-alt"></i> नफरत को अस्वीकार करें, सत्य को अपनाएँ</h2>
+            <p>यदि आप ऑनलाइन ऐसी पोस्ट देखते हैं, तो जान लें कि:</p>
+            <ul>
+                <li>🛑 हिंदुओं को विभाजित करने के लिए शास्त्रों का गलत उल्लेख करना <span class="highlight"
+                        data-tooltip="अधर्म का कार्य">अधर्म का कार्य</span> है।</li>
+                <li>📖 <span class="highlight" data-tooltip="मूल स्रोतों">मूल स्रोतों</span> का अध्ययन करें — संपादित
+                    स्क्रीनशॉट्स का नहीं।</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2">
+            <h3><i class="fas fa-book"></i> स्रोत और संदर्भ:</h3>
+            <ul class="source-list">
+                <li>.स्कंद पुराण – उत्कल माहात्म्य</li>
+                <li>.भागवत पुराण (SB 11.21.8) – मूल संस्कृत और अनुवाद</li>
+            </ul>
+        </div>
+
+
+        <div class="hashtags animate delay-4">
+            <span>#ओडिशा</span>
+            <span>#कलिंग</span>
+            <span>#उत्कल</span>
+            <span>#हिंदू_शास्त्र</span>
+            <span>#मिथक_खंडन</span>
+            <span>#सनातन_धर्म</span>
+            <span>#जगन्नाथ_धाम</span>
+            <span>#पुरी</span>
+            <span>#स्कंद_पुराण</span>
+            <span>#भागवत_पुराण</span>
+        </div>
+    </div>
+
+    <div class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
+
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#FF8A00' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('#navLinks');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

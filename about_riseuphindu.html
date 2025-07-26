@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About RiseUpHindu: Reclaiming Sanatan Dharma in the Digital Age</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00; /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF; /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600; /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 10px rgba(255, 138, 0, 0.3);
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 12px 36px rgba(255, 138, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0A0A0A 100%);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .content-box {
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .content-box:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            margin-top: 50px;
+            margin-bottom: 18px;
+            color: var(--text-light);
+            position: relative;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: var(--surface-light);
+            border-radius: var(--border-radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        th, td {
+            border: 1px solid var(--divider);
+            padding: 15px;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--text-light);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        td {
+            color: var(--text);
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        tr:hover {
+            background: rgba(255, 138, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+            position: relative;
+            border: none;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .content-box {
+                padding: 25px;
+            }
+            table, th, td {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            .content-box {
+                padding: 20px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            h2::before {
+                left: -25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links">
+                <a href="home.html#home">Home</a>
+                <a href="home.html#reading-path">Reading Path</a>
+                <a href="home.html#mission">Mission</a>
+                <a href="home.html#articles">Articles</a>
+                <a href="home.html#join">Join Us</a>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content-box animate">
+            <h1>About RiseUpHindu</h1>
+            <p>RiseUpHindu is more than just a website; it's a <strong>mission</strong>, a <strong>movement</strong>, and a <strong>shield</strong> for Sanatan Dharma in the digital age.</p>
+            <p>In today's world, Hindu culture is often misrepresented, and our scriptures are judged without understanding. This leads to many young people being misled by propaganda, half-truths, and hate. RiseUpHindu was created to <strong>counter this attack with Shastra (scriptural wisdom), Logic, and Technology.</strong></p>
+            <p>We leverage modern tools like <strong>Artificial Intelligence, social media, memes, and open-source projects</strong> to make Bharatiya wisdom cool, powerful, and global again. Our Dharma is not weak—it's <strong>eternal (Sanatan)</strong>. But in Kali Yuga, it needs <strong>voices, creators, and warriors</strong> to rise.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="content-box animate delay-1">
+            <h2>Restoring Order in a Disordered World</h2>
+            <p>In modern chaos, where everyone often tries to do everything, the ancient <strong>Varna system</strong> offered a powerful solution: <strong>clarity of duty (स्वधर्म - Svadharma)</strong>. This division of responsibility helps <strong>prevent confusion</strong> and enhances <strong>efficiency</strong> in nation-building, allowing individuals to contribute their best according to their inherent nature and skills.</p>
+            <p>Here's how the traditional Varna roles can be understood in a modern context:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Varna</th>
+                        <th>Role</th>
+                        <th>Modern Equivalent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🧠 <strong>Brahmin</strong></td>
+                        <td>Knowledge, teaching, ethics</td>
+                        <td>Teachers, researchers, dharmic thinkers</td>
+                    </tr>
+                    <tr>
+                        <td>🗡️ <strong>Kshatriya</strong></td>
+                        <td>Leadership, protection</td>
+                        <td>Policymakers, defense, social warriors</td>
+                    </tr>
+                    <tr>
+                        <td>💰 <strong>Vaishya</strong></td>
+                        <td>Wealth creation, trade</td>
+                        <td>Entrepreneurs, financiers, economic developers</td>
+                    </tr>
+                    <tr>
+                        <td>🛠️ <strong>Shudra</strong></td>
+                        <td>Service, support</td>
+                        <td>Engineers, builders, creators, skilled tech hands</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>This framework emphasizes that society thrives when each individual understands and fulfills their unique contribution, leading to a harmonious and efficient civilization.</p>
+        </div>
+    </div>
+
+    <div class="cursor-trail"></div>
+
+    <script>
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Cursor Trail
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

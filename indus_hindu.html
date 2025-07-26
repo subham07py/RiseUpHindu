@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 सिंधु सभ्यता में हिंदु तथ्य</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            --secondary: #2962FF;
+            --accent: #FFD600;
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --text: #E6E6E6;
+            --shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+            --border-radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            color: var(--text);
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-logo::before {
+            content: "ॐ";
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .categories {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .categories a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .categories a:hover {
+            color: var(--accent);
+        }
+
+        .post-date {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-image {
+            width: 100%;
+            max-width: 838px;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: 1.5rem auto;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .featured-image:hover {
+            transform: translateY(-5px);
+        }
+
+        .content-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            border: 1px solid rgba(255, 138, 0, 0.2);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .content-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .content-card img:hover {
+            transform: translateY(-5px);
+        }
+
+        .content-card figcaption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 0.5rem;
+        }
+
+        .highlight {
+            color: var(--accent);
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            cursor: help;
+            position: relative;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background: var(--surface);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 10;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .ra-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: var(--text);
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .ra-button:hover {
+            background: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .ra-button i {
+            margin-right: 0.5rem;
+        }
+
+        .home-link {
+            display: block;
+            margin: 2rem auto;
+            text-align: center;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            width: fit-content;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .home-link:hover {
+            transform: scale(1.05);
+            background: var(--accent);
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--text);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .content-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links" id="navLinks">
+                <a href="home.html#home">होम</a>
+                <a href="home.html#reading-path">पठन पथ</a>
+                <a href="home.html#mission">मिशन</a>
+                <a href="home.html#articles">लेख</a>
+                <a href="home.html#join">हमसे जुड़ें</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="categories">
+            <a href="https://sanatansamiksha.com/category/archaeology/" target="_blank" data-tooltip="पुरातत्व">पुरातत्व</a> |
+            <a href="https://sanatansamiksha.com/category/natraj-nachiketa/" data-tooltip="नटराज नचिकेता" target="_blank">नटराज नचिकेता</a>
+        </div>
+        <h1><i class="fas fa-university"></i> सिंधु सभ्यता में हिंदु तथ्य</h1>
+        <div class="post-date"><time datetime="2025-07-19T20:51:00+05:30">19 जुलाई, 2025</time></div>
+
+        <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/IMG_20250719_212414.jpg?resize=838%2C527&ssl=1"
+            alt="सिंधु सभ्यता" class="featured-image">
+
+        <div class="content-card">
+            <!-- <div class="ra-button" onclick="document.getElementById('ra-audio').play()">
+                <i class="fas fa-play"></i> इस लेख को सुनें
+            </div>
+            <audio id="ra-audio" data-lang="hi-IN" data-voice="Google hi-IN-Standard-A">
+                <source src="https://assets.readaloudwidget.com/embed/sound/silence.mp3" type="audio/mpeg">
+            </audio> -->
+            <p>भारत की प्राचीन <span class="highlight" data-tooltip="सिंधु घाटी सभ्यता">सिंधु संस्कृति</span> आज भी एक
+                रहस्य बनी हुई है, हालांकि लिपि न पढ़ पाने के कारण इस संस्कृति का निश्चित पहलू हमारे सामने आना बाकी है।
+                फिर भी वहां से प्राप्त अनेकों चीजें इस संस्कृति के बहुत से तथ्यों को उजागर करती है। प्राप्त वस्तुओं का
+                तुलनात्मक अध्ययन बहुत सारी जानकारियां साझा करता है। आइये हम कुछ और चीजें देखते हैं जो इसकी समानता को
+                <span class="highlight" data-tooltip="हिंदु धर्म">हिंदुओं</span> से जोड़ती है।
+            </p>
+            <h2><i class="fas fa-deer"></i> मृगचर्म और कमंडल</h2>
+            <p><span class="highlight" data-tooltip="हिरण की खाल">मृगचर्म</span> वैदिक परिव्राजकों का एक पहनावा रहा है।
+                जिसपर <span class="highlight" data-tooltip="बौद्ध ग्रंथ">धम्मपद</span> में गौत्तम बुद्ध ने कटाक्ष करते
+                हुए भी कहा था कि मृगचर्म या अजिन धारण से कोई ब्राह्मण नहीं होता है। इससे पता चलता है कि वैदिक ब्राह्मण
+                बुद्ध के समय मृगचर्म भी धारण करते थे। <span class="highlight"
+                    data-tooltip="ऋषि विश्वामित्र">विश्वामित्र</span> की १०० ईसापूर्व की एक छवि में भी उन्हें मृगचर्म
+                सहित दिखाया है।</p>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2112432554237470266081393.jpg?resize=736%2C850&ssl=1"
+                    alt="धम्मपद" loading="lazy">
+                <figcaption>धम्मपद, ब्राह्मण वग्गो से</figcaption>
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2113409219518812949664026.jpg?resize=760%2C710&ssl=1"
+                    alt="विश्वामित्र" loading="lazy">
+                <figcaption>खरोष्ठी में <span class="highlight" data-tooltip="ऋषि विश्वामित्र">विश्पा मित्र</span> भी
+                    लिखा है। साथ में <span class="highlight" data-tooltip="मृगचर्म">अजीन</span> अर्थात मृग चर्म भी है।
+                </figcaption>
+            </figure>
+            <h2><i class="fas fa-water"></i> कमंडल का महत्व</h2>
+            <p><span class="highlight" data-tooltip="पानी का पात्र">कमंडल</span> – हिंदु साधुओं, तपस्वियों और भगवान
+                <span class="highlight" data-tooltip="सृष्टिकर्ता">ब्रह्मा</span> तथा <span class="highlight"
+                    data-tooltip="संहारक">शिव जी</span> द्वारा कमंडल धारण किया जाता था। सिंधु सभ्यता से भी कमंडल मिले
+                हैं किंतु उससे पहले हम कमंडल के कुछ प्रमाण देखते हैं –
+            </p>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2115062625423804649323067.jpg?resize=858%2C638&ssl=1"
+                    alt="शिव सिक्का" loading="lazy">
+                <figcaption>उज्जैन से प्राप्त २०० ईसापूर्व के सिक्के पर त्रिमुख भगवान <span class="highlight"
+                        data-tooltip="संहारक">शिव</span> कमंडल के साथ हैं।</figcaption>
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2115553699000900018657484.jpg?resize=931%2C769&ssl=1"
+                    alt="वैस्संतर जातक" loading="lazy">
+                <figcaption>सांचि स्तुप से प्राप्त <span class="highlight" data-tooltip="बौद्ध कथा">वैस्संतर जातक</span>
+                    में ब्राह्मण को कमंडल के साथ दिखाया है।</figcaption>
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2116382041672736111608835.jpg?resize=1024%2C728&ssl=1"
+                    alt="सिंधु मुद्रा" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2116478085908281851676589.jpg?resize=1024%2C703&ssl=1"
+                    alt="सिंधु मुद्रा" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2116578374420498881959505.jpg?resize=1024%2C725&ssl=1"
+                    alt="सिंधु मुद्रा" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2117567976224256090679054.jpg?resize=1024%2C747&ssl=1"
+                    alt="सिंधु मुद्रा" loading="lazy">
+            </figure>
+            <p>हालांकि सिंधु सभ्यता की किसी मुद्रा पर मृगचर्म और कमंडल का प्रयोग नहीं उकेरा है। किंतु कमंडल की
+                पुरातात्विक प्राप्ति इसके उपयोग को सिद्ध करती है। मृगचर्म पुरातात्विक रूप से मिलना मुश्किल है किंतु
+                <span class="highlight" data-tooltip="प्राचीन सभ्यता">अकेडियन</span> की एक मुद्रांक पर दो सिंधु सभ्यता
+                के निवासियों को दर्शाया है। जिनको अकेडियन राजा या अध्यक्ष से वार्ता करते हुए दर्शाया है। वहां सिंधु
+                वासियों को <span class="highlight" data-tooltip="सिंधु वासी">मेलुहा</span> कहा जाता था। शील पर दोनों
+                भारतीयों (सिंधु वासियों) में से एक को दांडी केश सहित और कंधे पर मृगचर्म धारण किए और हाथ में कमंडल लिए
+                दर्शाया गया है।
+            </p>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2119386502815428606958591.jpg?resize=1024%2C709&ssl=1"
+                    alt="अकेडियन मुद्रा" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2119492125326297275980560.jpg?resize=1024%2C695&ssl=1"
+                    alt="अकेडियन मुद्रा" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2119586136248981527999333.jpg?resize=1024%2C664&ssl=1"
+                    alt="अकेडियन मुद्रा" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2025/07/img_20250719_2120073836571152282268161.jpg?resize=1024%2C671&ssl=1"
+                    alt="अकेडियन मुद्रा" loading="lazy">
+            </figure>
+            <h2><i class="fas fa-check-circle"></i> निष्कर्ष</h2>
+            <p>इस प्रमाण से स्पष्ट है कि <span class="highlight" data-tooltip="सिंधु घाटी सभ्यता">सिंधु सभ्यता</span>
+                में मृगचर्म और कमंडल का प्रयोग होता था। <span class="highlight" data-tooltip="गौत्तम बुद्ध">बुद्ध</span>
+                ने बाद में मृगचर्म का विरोध किया था। और यही दोनों चीजें हमें हिंदु प्रतिमाओं या हिंदु दार्शनिकों के साथ
+                बाद के अंकनों में भी देखने को मिलता है। अतः इससे स्पष्ट है कि सिंधु सभ्यता बौद्ध सभ्यता तो बिल्कुल नहीं
+                थी, हां <span class="highlight" data-tooltip="हिंदु धर्म">हिंदु संस्कृति</span> के अवश्य निकट दिखती है।
+            </p>
+            <a href="https://sanatansamiksha.com/" class="home-link" target="_blank"
+                style="background: var(--secondary);">Sanatan Samiksha</a>
+            <a href="home.html" class="home-link">होम पेज पर वापस</a>
+        </div>
+    </div>
+
+    <div class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
+
+    <script src="https Hospitality
+
+    <script src=" https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#FF8A00' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } }
+        });
+
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.content-card, .featured-image').forEach((element, index) => {
+                if (element.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    element.style.animationDelay = `${index * 0.1}s`;
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

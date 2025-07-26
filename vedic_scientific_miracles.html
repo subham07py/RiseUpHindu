@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕉️ Scientific Miracles in the Vedas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00; /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF; /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600; /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 10px rgba(255, 138, 0, 0.3);
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 12px 36px rgba(255, 138, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0A0A0A 100%);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--text-light);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            padding-bottom: 10px;
+            font-size: 2.2rem;
+            position: relative;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .conclusion-box {
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.15), rgba(41, 98, 255, 0.15));
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 40px 0;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        .quote-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 30px 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: rgba(255, 138, 0, 0.2);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-to-action a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+            position: relative;
+            border: none;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .section-insight {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(41, 98, 255, 0.1);
+            border-left: 3px solid var(--secondary);
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .section-insight:hover {
+            transform: translateX(5px);
+        }
+
+        .hashtags {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--text-light);
+            font-style: italic;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .hashtags span {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .hashtags span:hover {
+            background: rgba(255, 138, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 138, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1.0s; }
+        .delay-6 { animation-delay: 1.2s; }
+        .delay-7 { animation-delay: 1.4s; }
+        .delay-8 { animation-delay: 1.6s; }
+        .delay-9 { animation-delay: 1.8s; }
+        .delay-10 { animation-delay: 2.0s; }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 20px;
+            }
+            .call-to-action {
+                padding: 25px;
+            }
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 15px;
+            }
+            .call-to-action {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links">
+                <a href="home.html#home">Home</a>
+                <a href="home.html#reading-path">Reading Path</a>
+                <a href="home.html#mission">Mission</a>
+                <a href="home.html#articles">Articles</a>
+                <a href="home.html#join">Join Us</a>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="animate">🕉️ Scientific Miracles in the Vedas</h1>
+        <h2 class="animate delay-1">How Sanatan Dharma Foretold the Universe's Secrets Thousands of Years Ago</h2>
+
+        <div class="quote-box animate delay-2">
+            "Where science ends, the Vedas begin — not in contradiction, but in completion."
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3">
+            <h2>🌙 I. Nature of the Moon's Light</h2>
+            <p>
+                Long before modern science proved it, the Vedas proclaimed that the <span class="highlight">moon reflects
+                    sunlight</span> — not emits its own light.
+            </p>
+            <h3>🔸 Vedic References:</h3>
+            <ul>
+                <li>📜 <span class="highlight">Rig Veda 1.84.15</span>: "Know that the brightness hidden in the lunar sphere
+                    is from the Sun's rays."</li>
+                <li>📜 <span class="highlight">Sama Veda 2.4.3</span>: "When the Sun sets, divine radiance reflects upon the
+                    Moon."</li>
+                <li>📜 <span class="highlight">Yajur Veda 18.40</span>: "Surya is the giver of prosperity; the Moon gets
+                    light from his rays."</li>
+                <li>📜 <span class="highlight">Satapatha Brahmana 10.6.2.11</span>: "The moon is illuminated by the Sun."
+                </li>
+                <li>📜 <span class="highlight">Kaushitaki Upanishad 2.8</span>: "After sunset, the Sun's rays called <span
+                        class="highlight">Sushumna</span> illuminate the Moon."</li>
+            </ul>
+            <div class="section-insight">
+                ✅ Scientific Insight: This aligns with modern astronomy — the Moon reflects sunlight.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4">
+            <h2>🌍 II. The Spherical Shape of the Earth</h2>
+            <p>
+                Ancient Vedic Rishis described Earth as a <span class="highlight">"Parimandal"</span> — a sphere/globe —
+                long before Copernicus or Galileo.
+            </p>
+            <h3>🔸 What is <span class="highlight">Parimandal</span>?</h3>
+            <ul>
+                <li>📘 <span class="highlight">Apte Dictionary</span>: "Parimandal" = Sphere, Globe, Ball.</li>
+            </ul>
+            <h3>🔸 Vedic References:</h3>
+            <ul>
+                <li>📜 <span class="highlight">Satapatha Brahmana 6.7.1.26, 7.1.1.37</span>: Refer to Earth and heavenly
+                    bodies as <span class="highlight">Parimandal</span>.</li>
+                <li>📜 <span class="highlight">Jaiminiya Brahmana 1.257</span>: Explicitly describes Earth as round.</li>
+                <li>📜 <span class="highlight">Kathak Brahmana (Krishna Yajur Veda)</span>: "मण्डलो ह्ययं लोकोऽनेन" — This
+                    world is spherical.</li>
+                <li>📜 <span class="highlight">Rig Veda 1.164.34–35</span>: "What is the center and end of the Earth? The
+                    altar is both" — possible only in a <span class="highlight">sphere</span>.</li>
+            </ul>
+            <div class="section-insight">
+                ✅ Scientific Insight: These point to the Earth's roundness and possibly axial rotation.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-5">
+            <h2>🌊 III. Water Cycle Described in the Vedas</h2>
+            <p>
+                The <span class="highlight">entire water cycle</span> is mapped in the Vedas — evaporation, cloud formation,
+                and rainfall.
+            </p>
+            <h3>🔸 Vedic References:</h3>
+            <ul>
+                <li>📜 <span class="highlight">Atharva Veda 4.15.5</span>: "O Maruts! Raise water from the sea via Sun's
+                    heat and pour it down as rain."</li>
+                <li>📜 <span class="highlight">Rig Veda 1.164.47</span>: "Sun absorbs water, forms clouds, which then drench
+                    the Earth."</li>
+                <li>📜 <span class="highlight">Atharva Veda 6.22.1</span>: "Sunrays absorb water into clouds and pour it
+                    down as rain."</li>
+                <li>📜 <span class="highlight">Rig Veda 1.164.51</span>: "Water evaporates, becomes cloud, returns as rain."
+                </li>
+            </ul>
+            <div class="section-insight">
+                ✅ Scientific Insight: Evaporation–Condensation–Precipitation cycle described accurately.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-6">
+            <h2>🌏 IV. Motion of the Earth</h2>
+            <p>
+                Vedic literature doesn't support a flat Earth. It speaks of Earth's <span class="highlight">motion, speed,
+                    and rotation</span>.
+            </p>
+            <h3>🔸 Vedic References:</h3>
+            <ul>
+                <li>📜 <span class="highlight">Rig Veda 5.84.2</span>: "O Earth! You move swiftly like a racing horse."</li>
+                <li>📜 <span class="highlight">Sam Veda 1.2.1.7</span>: "Yajña keeps the Earth floating and moving."</li>
+                <li>📜 <span class="highlight">Atharva Veda 12.1.17, 12.1.37</span>: Speaks of Earth's <span
+                        class="highlight">speed, vibration, and trembling</span>.</li>
+                <li>📜 <span class="highlight">Rig Veda 3.30.9</span>: "Indra sustains the moving Earth."</li>
+                <li>📜 <span class="highlight">Rig Veda 10.189.1</span>: Indicates <span class="highlight">rotation on axis
+                        and heliocentric motion</span>.</li>
+            </ul>
+            <div class="section-insight">
+                ✅ Scientific Insight: Confirms Earth's motion, way before Galileo.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-7">
+            <h2>☀️ V. Seven Rays of the Sun</h2>
+            <p>
+                The Vedas mention that <span class="highlight">Surya has 7 rays</span>, symbolically matching the <span
+                    class="highlight">7 colors of sunlight (VIBGYOR)</span>.
+            </p>
+            <h3>🔸 Vedic References:</h3>
+            <ul>
+                <li>📜 <span class="highlight">Atharva Veda 7.112.1</span>: "Arogya Surya, with 7 broad rays, heals
+                    diseases."</li>
+                <li>📜 <span class="highlight">Rig Veda 8.72.16</span>: "The 7 rays of the Sun nourish Earth."</li>
+                <li>📜 <span class="highlight">Jaiminiya Upanishad Brahmana 1.9.2.8, Nirukta 4.27, Rig Veda 1.50.8</span>.
+                </li>
+            </ul>
+            <div class="section-insight">
+                ✅ Scientific Insight: Ancient awareness of <span class="highlight">light dispersion</span> and solar energy.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-8">
+            <h2>🔢 VI. Mathematical Wisdom in Vedas</h2>
+            <h3>📜 <span class="highlight">Shukla Yajurveda 18.24–25</span>:</h3>
+            <p>
+                Enumerates <span class="highlight">odd numbers</span> (1 to 33) and <span class="highlight">even
+                    numbers</span> (4 to 48) in a structured ritual pattern.
+            </p>
+            <div class="quote-box">
+                "Yajñena Kalpantām — May all be fulfilled through sacrifice."
+            </div>
+            <h3>🔸 What This Signifies:</h3>
+            <ul>
+                <li><span class="highlight">Odd/Even Series</span>: Arithmetic progression known.</li>
+                <li><span class="highlight">Stoma Theory</span>: Numbers tied to chant groups in Soma sacrifice.</li>
+                <li><span class="highlight">Numerical Precision</span>: Numbers like 33 refer to <span
+                        class="highlight">Vedic gods</span>, 48 relates to <span class="highlight">ritual days</span>.</li>
+                <li><span class="highlight">Mathematical Spirituality</span>: Numbers linked with cosmology.</li>
+            </ul>
+            <div class="section-insight">
+                ✅ Scientific Insight: Shows early <span class="highlight">numeric logic, ritual coding, and abstract
+                    reasoning</span>.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-9">
+            <h2>🔺 VII. Pi Approximation in Vedas</h2>
+            <h3>📜 <span class="highlight">Satapatha Brahmana 7.1.1.18</span>:</h3>
+            <p>
+                Describes a <span class="highlight">circular altar</span> with circumference ~ 3×diameter.
+            </p>
+            <div class="section-insight">
+                ✅ Scientific Insight: Early <span class="highlight">approximation of π (Pi)</span> — shows Vedic geometry.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-10">
+            <h2>🌑 VIII. Solar & Lunar Eclipse Explanation</h2>
+            <h3>📜 <span class="highlight">Mahabharata 12.203.21–22</span>:</h3>
+            <p>
+                Explains <span class="highlight">Rahu as the shadow</span> causing an eclipse — not a mythological monster.
+            </p>
+            <div class="section-insight">
+                ✅ Scientific Insight: Vedic awareness of <span class="highlight">eclipses and celestial alignments</span>.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-1">
+            <h2>🌇 IX. Sun Never Sets — Earth Rotates</h2>
+            <h3>📜 <span class="highlight">Aitareya Brahmana 3.44, Gopatha Brahmana 2.4.10</span>:</h3>
+            <div class="quote-box">
+                "The Sun never sets — it merely appears to."
+            </div>
+            <p>Shows a <span class="highlight">rotating Earth model</span>.</p>
+            <div class="section-insight">
+                ✅ Scientific Insight: Clear reference to <span class="highlight">time zones and axial rotation</span>.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2">
+            <h2>🌕 X. Moon Regulates Seasons</h2>
+            <h3>📜 <span class="highlight">Rig Veda 10.85.18</span>:</h3>
+            <div class="quote-box">
+                "The Moon regulates seasonal flow."
+            </div>
+            <div class="section-insight">
+                ✅ Scientific Insight: Reflects real <span class="highlight">lunar-tide-seasonal correlation</span> known
+                today.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3">
+            <h2>🧮 BONUS: Vedic Numeracy & Cosmic Order</h2>
+            <h3>📜 <span class="highlight">Yajur Veda 17.2</span>:</h3>
+            <p>Lists powers of 10:</p>
+            <div class="quote-box">
+                "Ayuta (10⁴), Niyuta (10⁵), Samudra (10⁹), Parardha (10¹²)"
+            </div>
+            <div class="section-insight">
+                ✅ Scientific Insight: <span class="highlight">Decimal system</span> and <span class="highlight">large number
+                    usage</span> long before Greeks.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4">
+            <h2>🔚 Conclusion: Vedas — The Eternal Scientific Scriptures</h2>
+            <div class="conclusion-box">
+                ✅ The <span class="highlight">Vedas are not mythology</span>. They are <span class="highlight">science
+                    wrapped in spirituality</span>, encoded in poetic Sanskrit and ritual metaphors.
+            </div>
+            <p>📌 They contain:</p>
+            <ul>
+                <li>Astrophysics (Sun-Moon dynamics)</li>
+                <li>Geology (Spherical Earth, Earthquakes)</li>
+                <li>Hydrology (Water cycle)</li>
+                <li>Mathematics (Pi, sequences, numerals)</li>
+                <li>Medicine (Sun therapy)</li>
+                <li>Cosmology (Solar system, eclipses)</li>
+            </ul>
+        </div>
+
+        <div class="call-to-action animate delay-5">
+            <h2>📢 Discover the Wisdom</h2>
+            <p>The Vedas hold timeless truths that transcend eras. Share this blog to spread awareness of the scientific
+                depth of Sanatan Dharma!</p>
+            <a href="#">Share This Blog</a>
+        </div>
+
+        <div class="hashtags animate delay-6">
+            <span>#Vedas</span>
+            <span>#SanatanDharma</span>
+            <span>#AncientScience</span>
+            <span>#Hinduism</span>
+            <span>#VedicWisdom</span>
+            <span>#IndianHistory</span>
+            <span>#Cosmology</span>
+            <span>#Astrophysics</span>
+            <span>#Mathematics</span>
+            <span>#Dharma</span>
+            <span>#Truth</span>
+        </div>
+    </div>
+
+    <div class="cursor-trail"></div>
+
+    <script>
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Cursor Trail
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

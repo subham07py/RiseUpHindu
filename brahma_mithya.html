@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚩 Brahma Satya, Jagat Mithya - RationalOdia के दावे का खंडन</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Merriweather:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #FF8A00; /* Saffron */
+      --primary-dark: #E65100;
+      --secondary: #2962FF; /* Deep Blue */
+      --accent: #FFD600; /* Gold */
+      --background: #121212;
+      --surface: #1E1E1E;
+      --surface-light: #2A2A2A;
+      --text: #E0E0E0;
+      --text-light: #FFFFFF;
+      --text-muted: #9E9E9E;
+      --divider: #424242;
+      --success: #00C853;
+      --error: #D50000;
+      --om-symbol: "ॐ";
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+      --border-radius: 12px;
+      --border-radius-sm: 6px;
+      --glow: 0 0 12px rgba(255, 138, 0, 0.4);
+    }
+
+    /* CSS Reset */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background: var(--background) !important;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background-color: var(--background) !important;
+      background: radial-gradient(circle at center, #1a1a1a 0%, #121212 100%) !important;
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Particle Overlay */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: transparent !important;
+      opacity: 0.4;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(18, 18, 18, 0.95);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      padding: 1rem 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      color: var(--text-light);
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 2rem;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      padding-bottom: 1.5rem;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+
+    h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 2px 10px rgba(255, 138, 0, 0.2);
+      position: relative;
+      animation: fadeIn 1s ease;
+    }
+
+    h1::before {
+      content: var(--om-symbol);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 10rem;
+      color: rgba(255, 255, 255, 0.02);
+      z-index: -1;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 3rem 0 1.5rem;
+      color: var(--text-light);
+      position: relative;
+      padding-left: 1.5rem;
+      border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+      animation: slideIn 0.8s ease-out;
+    }
+
+    h2::before {
+      content: var(--om-symbol);
+      position: absolute;
+      left: -35px;
+      top: 0;
+      opacity: 0.5;
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin: 2rem 0 1rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    .claim-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .claim-item {
+      background: var(--surface);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--primary);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      cursor: pointer;
+      perspective: 1000px;
+    }
+
+    .claim-item:hover {
+      transform: translateY(-5px) rotateX(2deg);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .claim-item.active .rebuttal-section {
+      transform: rotateX(0deg);
+      opacity: 1;
+      height: auto;
+    }
+
+    .claim-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .claim-title i {
+      margin-right: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    .claim-ref {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-left: 0.8rem;
+      font-weight: 400;
+    }
+
+    .rebuttal-section {
+      background: var(--surface-light);
+      border-radius: var(--border-radius-sm);
+      padding: 1.5rem;
+      margin-top: 1rem;
+      border-left: 4px solid var(--success);
+      transform: rotateX(-90deg);
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: transform 0.5s ease, opacity 0.5s ease, height 0.5s ease;
+    }
+
+    .rebuttal-section.active {
+      transform: rotateX(0deg);
+      opacity: 1;
+      height: auto;
+    }
+
+    .quote {
+      background: rgba(255, 138, 0, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: var(--border-radius-sm);
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .quote:hover {
+      transform: translateX(5px);
+    }
+
+    .quote::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      font-size: 4rem;
+      color: rgba(255, 138, 0, 0.1);
+      font-family: serif;
+    }
+
+    .quote-ref {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+
+    .box {
+      background: var(--surface-light);
+      border-radius: var(--border-radius);
+      padding: 1.8rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    ul {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      box-shadow: var(--shadow);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+    }
+
+    th {
+      background-color: var(--primary);
+      color: var(--text-light);
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 15px;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(255, 138, 0, 0.05);
+    }
+
+    tr:hover {
+      background-color: rgba(255, 138, 0, 0.1);
+    }
+
+    .call-to-action {
+      background: linear-gradient(135deg, rgba(41, 98, 255, 0.15), rgba(255, 138, 0, 0.15));
+      border: 1px dashed var(--secondary);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      margin: 3rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: glowingBorder 3s infinite;
+    }
+
+    .call-to-action::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(41, 98, 255, 0.05) 0%, transparent 70%);
+      animation: rotate 15s linear infinite;
+    }
+
+    .call-to-action-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-title {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--secondary);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(45deg, var(--primary), var(--accent));
+      color: #121212;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .cta-btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s ease, height 0.4s ease;
+      z-index: -1;
+    }
+
+    .cta-btn:hover::after {
+      width: 200px;
+      height: 200px;
+    }
+
+    .conclusion {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: var(--surface);
+      border-radius: var(--border-radius);
+      position: relative;
+      animation: pulse 2s infinite;
+    }
+
+    .conclusion::before {
+      content: var(--om-symbol);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 10rem;
+      color: rgba(255, 255, 255, 0.02);
+      z-index: 0;
+    }
+
+    .conclusion p {
+      position: relative;
+      z-index: 1;
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, rgba(255, 138, 0, 0.3), transparent);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+      color: var(--accent);
+      position: relative;
+      cursor: help;
+      transition: all 0.3s ease;
+    }
+
+    .highlight:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--surface-light);
+      color: var(--text);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      z-index: 10;
+      box-shadow: var(--shadow);
+      animation: fadeInTooltip 0.3s ease;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--divider), transparent);
+      margin: 3rem 0;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background: var(--surface);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      z-index: 999;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      color: var(--accent);
+    }
+
+    .sidebar-toggle {
+      position: fixed;
+      top: 100px;
+      left: 10px;
+      background: var(--primary);
+      color: var(--text-light);
+      padding: 10px;
+      border-radius: var(--border-radius-sm);
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    /* Floating Action Button */
+    .fab {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary);
+      color: var(--text-light);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+      z-index: 1000;
+    }
+
+    .fab:hover {
+      transform: scale(1.1);
+      background: var(--primary-dark);
+    }
+
+    .fab::before {
+      content: "↑";
+      font-size: 1.5rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding: 20px 0;
+      margin: 30px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 20px 0;
+      width: 50%;
+      padding: 20px;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      padding-right: 40px;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      padding-left: 40px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: var(--glow);
+    }
+
+    .timeline-item:nth-child(odd)::before {
+      right: -10px;
+    }
+
+    .timeline-item:nth-child(even)::before {
+      left: -10px;
+    }
+
+    .timeline-content {
+      background: var(--surface);
+      padding: 20px;
+      border-radius: var(--border-radius-sm);
+      box-shadow: var(--shadow);
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInTooltip {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 138, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0); }
+    }
+
+    @keyframes glowingBorder {
+      0% { border-color: rgba(255, 138, 0, 0.3); box-shadow: 0 0 5px rgba(255, 138, 0, 0.3); }
+      50% { border-color: rgba(255, 138, 0, 0.6); box-shadow: 0 0 15px rgba(255, 138, 0, 0.6); }
+      100% { border-color: rgba(255, 138, 0, 0.3); box-shadow: 0 0 5px rgba(255, 138, 0, 0.3); }
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .scroll-animation {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .scroll-animation.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom Cursor */
+    .cursor {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 138, 0, 0.3);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease;
+    }
+
+    .cursor-trail {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 138, 0, 0.2);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transition: transform 0.2s ease, opacity 0.5s ease;
+      opacity: 0;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 1200px) {
+      .sidebar {
+        left: 0;
+      }
+      .sidebar-toggle {
+        display: none;
+      }
+      .timeline::before {
+        left: 50%;
+      }
+      .timeline-item:nth-child(odd) {
+        left: 0;
+        padding-right: 40px;
+      }
+      .timeline-item:nth-child(even) {
+        left: 50%;
+        padding-left: 40px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .container {
+        padding: 1.5rem;
+        margin: 20px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--surface);
+        padding: 1rem;
+        box-shadow: var(--shadow);
+      }
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 20px;
+      }
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+      .timeline-item::before {
+        left: 10px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      .claim-item {
+        padding: 1.2rem;
+      }
+      .sidebar {
+        left: -250px;
+      }
+      .sidebar-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <nav>
+    <div class="nav-container">
+      <a href="home.html" class="nav-logo">RiseUpHindu </a>
+      <div class="nav-links">
+        <a href="home.html#home">होम</a>
+        <a href="home.html#reading-path">पठन पथ</a>
+        <a href="home.html#articles">लेख</a>
+        <a href="home.html#mission">मिशन</a>
+        <a href="home.html#join">हमसे जुड़ें</a>
+      </div>
+      <div class="hamburger">☰</div>
+    </div>
+  </nav>
+
+  <div class="sidebar">
+    <ul>
+      <li><a href="#intro">परिचय</a></li>
+      <li><a href="#claim1">दावा 1: जगत सत्य</a></li>
+      <li><a href="#claim2">दावा 2: युद्ध क्यों</a></li>
+      <li><a href="#claim3">दावा 3: ब्रह्म दिखाओ</a></li>
+      <li><a href="#summary">सारांश</a></li>
+      <li><a href="#proofs">शास्त्रीय प्रमाण</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-toggle">☰</div>
+
+  <div class="container">
+    <header class="scroll-animation" id="intro">
+      <h1>🚩 "Brahma Satya, Jagat Mithya" – RationalOdia के दावे का खंडन</h1>
+      <p class="subtitle">सनातन दर्शन के मूल सिद्धांत को गलत समझने वाले दावों का तथ्यपूर्ण खंडन</p>
+    </header>
+
+    <div class="quote scroll-animation">
+      <strong>दावा:</strong> "जगत में दुख-सुख हैं, मित्र-शत्रु हैं, तो जगत 'मिथ्या' कैसे? अगर सब ब्रह्म हैं तो युद्ध क्यों? अगर जगन्नाथ बलभद्र सुभद्रा ब्रह्म हैं तो ब्रह्म पदार्थ दिखाओ, सब ब्रह्मर्षि हो जाएंगे?"
+    </div>
+
+    <div class="claim-list">
+      <li class="claim-item scroll-animation" id="claim1">
+        <div class="claim-title">
+          <i class="fas fa-times-circle"></i> दावा: जगत में सुख-दुख, मित्र-शत्रु हैं, तो जगत 'मिथ्या' कैसे?
+        </div>
+        <div class="rebuttal-section">
+          <h3><i class="fas fa-check-circle" style="color: var(--success);"></i> खंडन:</h3>
+          <div class="box">
+            <ul>
+              <li><strong><span class="highlight" data-tooltip="मूल सिद्धांत">ब्रह्म सत्य:</span></strong> शुद्ध, नित्य, अपरिवर्तनीय आत्मतत्व ही ब्रह्म है — यही अंतिम सत्य है।</li>
+              <li><strong><span class="highlight" data-tooltip="मूल सिद्धांत">जगत मिथ्या:</span></strong> इसका अर्थ झूठा नहीं, बल्कि <strong>अनित्य और परिवर्तनशील</strong> है।</li>
+              <li>
+                <div class="quote">
+                  जैसे सपना असली लगता है, पर जागते ही उसका अस्तित्व नहीं रहता — वैसा ही यह जगत भी है।
+                  <span class="quote-ref">— शंकराचार्य की व्याख्या</span>
+                </div>
+              </li>
+              <li>सुख-दुख अनुभवसिद्ध हैं, पर वे शाश्वत नहीं — इसीलिए <span class="highlight" data-tooltip="महत्वपूर्ण">परम सत्य नहीं</span>।</li>
+              <li>
+                <div class="quote">
+                  <strong>"अनित्यम असुखं लोकम्"</strong> – गीता 9.33 (यह संसार अनित्य और दुखमय है)
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="claim-item scroll-animation" id="claim2">
+        <div class="claim-title">
+          <i class="fas fa-times-circle"></i> दावा: अगर सब ब्रह्म हैं तो युद्ध क्यों होते हैं?
+        </div>
+        <div class="rebuttal-section">
+          <h3><i class="fas fa-check-circle" style="color: var(--success);"></i> खंडन:</h3>
+          <div class="box">
+            <p>उत्तर: क्योंकि <strong><span class="highlight" data-tooltip="मुख्य कारण">ब्रह्म जब माया से आवृत्त होता है</span></strong>, तब अहंकार, द्वेष आदि जन्म लेते हैं।</p>
+            <div class="quote">
+              "मायया अवृतं ज्ञानं तेन मुह्यन्ति जन्तवः" – गीता 5.15
+              <span class="quote-ref">— भगवद्गीता</span>
+            </div>
+            <p>जब ज्ञान होता है कि <span class="highlight" data-tooltip="आध्यात्मिक सत्य">'मैं ब्रह्म हूँ'</span>, तब युद्ध, ईर्ष्या आदि समाप्त हो जाते हैं।</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="claim-item scroll-animation" id="claim3">
+        <div class="claim-title">
+          <i class="fas fa-times-circle"></i> दावा: जगन्नाथ, बलभद्र, सुभद्रा ब्रह्म हैं तो ब्रह्म पदार्थ दिखाओ
+        </div>
+        <div class="rebuttal-section">
+          <h3><i class="fas fa-check-circle" style="color: var(--success);"></i> खंडन:</h3>
+          <div class="box">
+            <ul>
+              <li>"ब्रह्म" इंद्रियों से परे है — वो <strong><span class="highlight" data-tooltip="महत्वपूर्ण">अनुभव</span></strong> की चीज है, न कि दिखाने की।</li>
+              <li>
+                <div class="quote">
+                  "एकं सद्विप्रा बहुधा वदन्ति" – ऋग्वेद
+                  <span class="quote-ref">— ऋग्वेद 1.164.46</span>
+                </div>
+              </li>
+              <li>भगवान अनेक रूपों में लीलाएं करते हैं — वही ब्रह्म के <span class="highlight" data-tooltip="रूप">"साकार" रूप</span> हैं।</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </div>
+
+    <hr>
+
+    <div class="timeline scroll-animation" id="summary">
+      <h2>🕒 प्रमुख खंडनों का समयरेखा</h2>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>जगत सत्य?</h3>
+          <p>जगत अनुभवसिद्ध है, पर नश्वर है — इसलिए मिथ्या।</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>युद्ध क्यों?</h3>
+          <p>माया से ढके ब्रह्म का अज्ञान ही युद्ध का कारण।</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>ब्रह्म दिखाओ</h3>
+          <p>ब्रह्म इंद्रियातीत है, अनुभव से जाना जाता है।</p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2 class="scroll-animation" id="proofs">शास्त्रीय प्रमाण:</h2>
+    <div class="box scroll-animation">
+      <ul>
+        <li>"<span class="highlight" data-tooltip="विवेकचूडामणि">ब्रह्म सत्यं जगन्मिथ्या जीवो ब्रह्मैव नापरः</span>" – विवेकचूडामणि</li>
+        <li>"<span class="highlight" data-tooltip="बृहदारण्यक उपनिषद">नेति नेति</span>" – बृहदारण्यक उपनिषद (ब्रह्म शब्दातीत है)</li>
+        <li>"<span class="highlight" data-tooltip="केन उपनिषद">यो वेद निहितं गुहायाम्</span>" – केन उपनिषद (ब्रह्म हृदय की गहराई में है)</li>
+      </ul>
+    </div>
+
+    <div class="call-to-action scroll-animation">
+      <div class="call-to-action-content">
+        <div class="cta-title">❓ और जानें सनातन दर्शन के सत्य</div>
+        <p>वेदांत और शास्त्रों की गहराई में उतरें, और गलतफहमियों को दूर करें।</p>
+        <a href="vedanta_insights.html" target="_blank" class="cta-btn">अधिक पढ़ें</a>
+      </div>
+    </div>
+
+    <div class="conclusion scroll-animation">
+      <p>सनातन दर्शन का मूल सिद्धांत "ब्रह्म सत्यं, जगन्मिथ्या" गलतफहमियों का शिकार हुआ है। <span class="highlight" data-tooltip="निष्कर्ष">शास्त्र, तर्क और अनुभव</span> से यह स्पष्ट है कि ब्रह्म ही एकमात्र सत्य है, और जगत उसका अनित्य प्रकटीकरण है।</p>
+    </div>
+
+    <footer class="scroll-animation">
+      © वेदांत दृष्टि | यदि आप इस लेख का PDF या डाउनलोड करने योग्य संस्करण चाहते हैं तो संपर्क करें।
+    </footer>
+  </div>
+
+  <div class="fab"></div>
+  <div class="cursor"></div>
+  <div class="cursor-trail"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Particles.js Initialization
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 40, density: { enable: true, value_area: 800 } },
+        color: { value: ['#FF8A00', '#FFD600', '#2962FF'] },
+        shape: { type: 'circle' },
+        opacity: { value: 0.3, random: true },
+        size: { value: 3, random: true },
+        line_linked: { enable: false },
+        move: { enable: true, speed: 0.8, direction: 'none', random: true }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+        modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+      },
+      retina_detect: true
+    });
+
+    // Intersection Observer for Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollElements = document.querySelectorAll('.scroll-animation');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      scrollElements.forEach(element => {
+        observer.observe(element);
+      });
+
+      // Accordion for Claims
+      const claimItems = document.querySelectorAll('.claim-item');
+      claimItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const rebuttal = item.querySelector('.rebuttal-section');
+          const isActive = item.classList.contains('active');
+          claimItems.forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.rebuttal-section').classList.remove('active');
+          });
+          if (!isActive) {
+            item.classList.add('active');
+            rebuttal.classList.add('active');
+          }
+        });
+      });
+
+      // Hamburger Menu
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+      });
+
+      // Sidebar Toggle
+      const sidebarToggle = document.querySelector('.sidebar-toggle');
+      const sidebar = document.querySelector('.sidebar');
+      sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarToggle.textContent = sidebar.classList.contains('active') ? '✕' : '☰';
+      });
+
+      // Custom Cursor and Trail
+      const cursor = document.querySelector('.cursor');
+      const cursorTrail = document.querySelector('.cursor-trail');
+      let trailX = 0, trailY = 0;
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        trailX += (e.clientX - trailX) * 0.2;
+        trailY += (e.clientY - trailY) * 0.2;
+        cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+        cursorTrail.style.opacity = 1;
+      });
+
+      document.addEventListener('mouseout', () => {
+        cursorTrail.style.opacity = 0;
+      });
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.querySelector(anchor.getAttribute('href'));
+          target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Floating Action Button (Scroll to Top)
+      const fab = document.querySelector('.fab');
+      fab.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Debounce Scroll for Performance
+      let lastScrollTop = 0;
+      window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > 300) {
+          fab.style.opacity = 1;
+          fab.style.transform = 'scale(1)';
+        } else {
+          fab.style.opacity = 0;
+          fab.style.transform = 'scale(0)';
+        }
+        lastScrollTop = scrollTop;
+      });
+
+      fab.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      fab.style.opacity = 0;
+      fab.style.transform = 'scale(0)';
+    });
+  </script>
+</body>
+</html>

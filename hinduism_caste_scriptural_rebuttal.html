@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Hinduism Casteist? A Scriptural Rebuttal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF;
+            /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600;
+            /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 10px rgba(255, 138, 0, 0.3);
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 12px 36px rgba(255, 138, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0A0A0A 100%);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Parallax Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 25% 25%, rgba(255, 138, 0, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(41, 98, 255, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            transform: translateZ(-1px) scale(1.5);
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02) rotate(0.5deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 138, 0, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--text-light);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            padding-bottom: 10px;
+            font-size: 2.2rem;
+            position: relative;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .quote-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 30px 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: rgba(255, 138, 0, 0.2);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+        }
+
+        .conclusion-point {
+            background: linear-gradient(135deg, rgba(0, 128, 0, 0.15), rgba(41, 98, 255, 0.15));
+            border-left: 4px solid #4CAF50;
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 30px 0;
+            font-weight: 600;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .conclusion-point::before {
+            content: "✓";
+            color: #4CAF50;
+            margin-right: 0.5rem;
+        }
+
+        .final-conclusion {
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.15), rgba(41, 98, 255, 0.15));
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: var(--shadow);
+            animation: pulse 2s infinite;
+        }
+
+        .final-conclusion ul {
+            columns: 2;
+            column-gap: 2rem;
+        }
+
+        .final-conclusion li {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+
+        .final-quote {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(41, 98, 255, 0.1);
+            border-radius: var(--border-radius-sm);
+            border-left: 4px solid var(--secondary);
+            position: relative;
+        }
+
+        .final-quote::before,
+        .final-quote::after {
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            color: rgba(41, 98, 255, 0.3);
+            position: absolute;
+        }
+
+        .final-quote::before {
+            content: '"';
+            top: 10px;
+            left: 20px;
+        }
+
+        .final-quote::after {
+            content: '"';
+            bottom: 10px;
+            right: 20px;
+        }
+
+        .source-list {
+            columns: 2;
+            column-gap: 2rem;
+        }
+
+        .source-list li {
+            break-inside: avoid;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .source-list li:hover {
+            color: var(--accent);
+        }
+
+        .final-message {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.15), rgba(41, 98, 255, 0.15));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-to-action a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .call-to-action a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+            z-index: -1;
+        }
+
+        .call-to-action a:hover::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+            position: relative;
+            border: none;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            display: none;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--accent);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 138, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .delay-5 {
+            animation-delay: 1.0s;
+        }
+
+        .delay-6 {
+            animation-delay: 1.2s;
+        }
+
+        .delay-7 {
+            animation-delay: 1.4s;
+        }
+
+        .delay-8 {
+            animation-delay: 1.6s;
+        }
+
+        .delay-9 {
+            animation-delay: 1.8s;
+        }
+
+        .delay-10 {
+            animation-delay: 2.0s;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 138, 0, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 138, 0, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.2s ease, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            .sidebar {
+                display: block;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .final-conclusion ul,
+            .source-list {
+                columns: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#reading-path">Reading Path</a>
+                <a href="#mission">Mission</a>
+                <a href="#articles">Articles</a>
+                <a href="#join">Join Us</a>
+                <a href="disclamer.html">Disclaimer</a>
+                <a href="about_riseuphindu.html">About Us</a>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#varna">Varṇa by Birth</a></li>
+            <li><a href="#spiritual">Spiritual Growth</a></li>
+            <li><a href="#equality">Vedas on Equality</a></li>
+            <li><a href="#untouchability">Untouchability</a></li>
+            <li><a href="#law">Vedic Law</a></li>
+            <li><a href="#hierarchy">Scriptural Hierarchy</a></li>
+            <li><a href="#bhakti">Bhakti & Vedanta</a></li>
+            <li><a href="#examples">Real-World Examples</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#sources">Sources</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1 class="animate" id="intro">Is Hinduism Casteist?<br>A Scriptural Rebuttal to Misconceptions</h1>
+
+        <div class="card animate delay-1">
+            <h2>📖 Introduction</h2>
+            <p>
+                Hinduism, often referred to as <span class="highlight">Sanātana Dharma</span> (the Eternal Way), has
+                come under intense scrutiny in modern times. Critics—both internal and external—often portray it as a
+                religion that justifies <span class="highlight">casteism, untouchability, and discrimination</span>. But
+                is this
+                accusation rooted in truth?
+            </p>
+            <p>
+                This analysis examines the <span class="highlight">truth about caste, Varṇa, and equality in Hindu
+                    Dharma</span>, using evidence from the <span class="highlight">Vedas, Smritis, Mahābhārata,
+                    Rāmāyaṇa, Bhagavad Gītā, and Upanishads</span>—not politics or pop culture.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2" id="varna">
+            <h2>🧬 1. Varṇa Is By Birth, But Not a License for Discrimination</h2>
+            <h3>🔹 Scriptural Clarity on Birth-Based Varṇa</h3>
+            <ul>
+                <li><strong>Mahābhārata – Anuśāsana Parva 121:</strong><br>
+                    "Tapas, Śruti, and Janma (birth) are traits of a Brāhmaṇa."</li>
+                <li><strong>Mahābhāṣya of Patañjali (5.1.115 & 4.1.48):</strong><br>
+                    A Brāhmaṇa may lack austerity or knowledge but still be called so by birth. Yet, without <span
+                        class="highlight">tapas</span> and <span class="highlight">śruti</span>, he is <span
+                        class="highlight">incomplete</span>.</li>
+                <li><strong>Śatapatha Brāhmaṇa 5.5.4.9 & Manu Smṛti 10.4:</strong><br>
+                    There are only four Varṇas — Brāhmaṇa, Kṣatriya, Vaiśya, and Śūdra. <span class="highlight">No fifth
+                        exists</span>. Thus, modern identity politics projecting a "Dalit" class as separate from Śūdra
+                    is <span class="highlight">non-scriptural</span>.</li>
+            </ul>
+            <div class="conclusion-point">
+                Varṇa may be by birth, but <span class="highlight">moral superiority or spiritual rights are
+                    NOT confined to birth</span>. Dharma judges actions, not ancestry.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3" id="spiritual">
+            <h2>🤝 2. Are Lower Varṇas Denied Spiritual Growth? No.</h2>
+            <h3>🕯️ Alternate Access to Knowledge</h3>
+            <ul>
+                <li><strong>Brahma Sutra 1.3.36–38</strong> (with <span class="highlight">Shankara's
+                        Bhashya</span>):<br>
+                    Śūdras were prohibited from <span class="highlight">direct</span> Vedic study, but <span
+                        class="highlight">not</span> from spiritual wisdom, <span class="highlight">Bhakti, Puranas,
+                        Itihāsas, or Vedānta</span>.</li>
+                <li><strong>Valmiki Rāmāyaṇa – Ayodhya Kāṇḍa 64:</strong><br>
+                    Śravaṇa Kumāra, a Śūdra, is described as <span class="highlight">studying the scriptures</span> and
+                    <span class="highlight">maintaining sacred fires</span>.
+                </li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4" id="equality">
+            <h2>🛡️ 3. Vedas on Equality, Harmony & Respect</h2>
+            <ul>
+                <li><strong>Rig Veda 10.191.2–3</strong><br>
+                    "Speak one thought, unite in mind. May you be of one resolve."</li>
+                <li><strong>Atharva Veda 3.30.5–6</strong><br>
+                    "Eat together, worship together, unite like spokes around a hub."</li>
+                <li><strong>Atharva Veda 19.32.8 & 19.62.1</strong><br>
+                    "May I be loved by Brāhmaṇas, Kṣatriyas, Vaiśyas, Śūdras — by all."</li>
+                <li><strong>Yajur Veda 18.48 & 26.2</strong><br>
+                    "May light be with all — Brāhmaṇas, Kṣatriyas, Vaiśyas, and Śūdras."</li>
+            </ul>
+            <div class="conclusion-point">
+                The Vedas repeatedly call for <span class="highlight">shared prosperity, harmony, and equal
+                    treatment</span> across all Varṇas.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-5" id="untouchability">
+            <h2>❌ 4. Untouchability: A Later Social Evil, Not Vedic Dharma</h2>
+            <h3>🔍 Scriptural Condemnation of Discrimination</h3>
+            <ul>
+                <li><strong>Manu Smriti 4.247–251:</strong><br>
+                    It is <span class="highlight">sinful to reject food, water, or shelter</span> from others regardless
+                    of caste. Rejecting it brings <span class="highlight">ancestral disapproval</span>.</li>
+                <li><strong>Mahābhārata – Udyoga Parva 36.56:</strong><br>
+                    "Those who discriminate will not prosper, nor find peace or righteousness."</li>
+                <li><strong>Mahābhārata 13.48.48:</strong><br>
+                    "A righteous Śūdra deserves more honor than an immoral Brāhmaṇa."</li>
+                <li><strong>Valmiki Rāmāyaṇa – Bala Kāṇḍa 13:</strong><br>
+                    All four Varṇas are to be <span class="highlight">respected</span> and <span class="highlight">not
+                        disrespected</span>.</li>
+            </ul>
+            <div class="conclusion-point">
+                Discrimination and untouchability are <span class="highlight">post-Vedic distortions</span>,
+                not Dharmic principles.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-6" id="law">
+            <h2>⚖️ 5. Vedic Law Applies Equally to All Varṇas</h2>
+            <ul>
+                <li><strong>Manu Smṛti 8.323:</strong><br>
+                    "Abduction or harm to any woman is punishable by death—irrespective of caste."</li>
+                <li><strong>Yajur Veda 20.17:</strong><br>
+                    "Forgive any sins committed against Śūdras and Vaiśyas."</li>
+                <li><strong>Yajur Veda 30.22:</strong><br>
+                    "Whether tall, dwarf, Brāhmaṇa, or Śūdra—all are God's creation."</li>
+            </ul>
+            <div class="conclusion-point">
+                There is <span class="highlight">no legal inequality</span> in Dharmic justice.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-7" id="hierarchy">
+            <h2>📜 6. Vyasa Smṛti's Rule for Scriptural Hierarchy</h2>
+            <div class="quote-box">
+                "If there is a contradiction:<br>
+                • Shruti (Vedas) > Smriti > Purāṇa."<br>
+                <strong>— Vyāsa Smṛti 1.4</strong>
+            </div>
+            <div class="conclusion-point">
+                Therefore, <span class="highlight">no Puranic story</span> promoting caste hatred or inequality can
+                override the <span class="highlight">Vedas</span> and <span class="highlight">core Smritis</span>.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-8" id="bhakti">
+            <h2>🧘 7. Bhakti and Vedantic Teachings Promote Universal Oneness</h2>
+            <ul>
+                <li><strong>Bhagavad Gītā 5.18–19 & 6.29:</strong><br>
+                    "A wise man sees a Brāhmaṇa, a cow, a dog, or a dog-eater with equal vision."</li>
+                <li><strong>Iśa Upaniṣad 6–7:</strong><br>
+                    "He who sees all beings in the Self, and the Self in all beings, does not hate anyone."</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-9" id="examples">
+            <h2>📖 8. Real-World Scriptural Examples</h2>
+            <ul>
+                <li><span class="highlight">Śūdra in Anuśāsana Parva:</span> Honored in a sage's hermitage.</li>
+                <li><span class="highlight">Shravan Kumār (Śūdra):</span> Praised for Vedic study and <span
+                        class="highlight">Agnihotra</span>.</li>
+                <li><span class="highlight">Manu Smriti 3.112:</span> Brāhmaṇas <span class="highlight">must feed</span>
+                    Vaiśya and Śūdra guests.</li>
+                <li><span class="highlight">Manu Smriti 4.141:</span> "Never insult the handicapped, elderly, or
+                    low-born."</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="final-conclusion animate delay-10" id="conclusion">
+            <h2>✅ Conclusion: Dharma Is Inclusive, Not Exclusive</h2>
+            <p>Scriptural evidence clearly shows:</p>
+            <ul>
+                <li>1. <span class="highlight">Varṇa is by birth, but conduct is what earns respect.</span></li>
+                <li>2. <span class="highlight">Untouchability is condemned</span> across Vedas, Smritis, and Itihāsas.
+                </li>
+                <li>3. <span class="highlight">Spiritual equality is fundamental</span>, not forbidden to anyone.</li>
+                <li>4. <span class="highlight">Bhakti, Karma, and Jñāna are open to all seekers</span>, regardless of
+                    caste.</li>
+            </ul>
+        </div>
+
+        <div class="final-quote animate delay-1">
+            "A righteous Śūdra is better than an immoral Brāhmaṇa."<br>
+            <strong>— Mahābhārata 13.48.48</strong>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2" id="sources">
+            <h2>🗂️ Primary Scriptural Sources Cited</h2>
+            <div class="source-list">
+                <ul>
+                    <li>Rig Veda, Atharva Veda, Yajur Veda</li>
+                    <li>Valmiki Rāmāyaṇa, Mahābhārata</li>
+                    <li>Bhagavad Gītā, Iśa Upaniṣad</li>
+                    <li>Manu Smriti, Narada Smriti, Vyasa Smriti</li>
+                    <li>Brahma Sutras (with Shankara Bhāṣya)</li>
+                    <li>Patañjali's Mahābhāṣya</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="call-to-action animate delay-3">
+            <h2>📢 Spread the Truth</h2>
+            <p>Sanātana Dharma is rooted in equality and compassion. Share this blog to dispel myths and promote the
+                true essence of Hindu scriptures!</p>
+            <a href="#">Share This Blog</a>
+        </div>
+
+        <div class="final-message animate delay-4">
+            <h2>📣 Final Message:</h2>
+            <p>Let's reclaim Hinduism from misrepresentation and remind the world:</p>
+            <p><strong>Sanātana Dharma does not support caste hatred.</strong></p>
+            <p><strong>It is the path of Dharma, equality, compassion, and unity.</strong></p>
+        </div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <script>
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Custom Cursor and Trail
+            const cursor = document.querySelector('.cursor');
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+                cursorTrail.style.opacity = 1;
+            });
+
+            document.addEventListener('mouseout', () => {
+                cursorTrail.style.opacity = 0;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍 Busting the Myth of Nangeli and the "Breast Tax" — A Historical Perspective</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Merriweather:wght@700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #d32f2f;
+            /* Deep Red */
+            --primary-dark: #b71c1c;
+            --secondary: #1976d2;
+            /* Royal Blue */
+            --accent: #ffd600;
+            /* Gold */
+            --background: #121212;
+            --surface: #1e1e1e;
+            --surface-light: #2a2a2a;
+            --text: #e0e0e0;
+            --text-light: #ffffff;
+            --text-muted: #9e9e9e;
+            --divider: #424242;
+            --success: #66bb6a;
+            /* Medium Green */
+            --error: #ef5350;
+            /* Medium Red */
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+            --border-radius: 12px;
+            --border-radius-sm: 6px;
+            --glow: 0 0 12px rgba(211, 47, 47, 0.4);
+        }
+
+        /* CSS Reset */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background: var(--background) !important;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--background) !important;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #121212 100%) !important;
+            background-attachment: fixed;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Particle Overlay */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: transparent !important;
+            opacity: 0.3;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(211, 47, 47, 0.2);
+            position: relative;
+            animation: fadeIn 1s ease;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 1.5rem;
+            border-bottom: 2px solid rgba(211, 47, 47, 0.3);
+            animation: slideIn 0.8s ease-out;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: var(--text);
+        }
+
+        .claim-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .claim-item {
+            background: var(--surface-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            perspective: 1000px;
+        }
+
+        .claim-item:hover {
+            transform: translateY(-5px) rotateX(2deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .claim-item.active .rebuttal-section {
+            transform: rotateX(0deg);
+            opacity: 1;
+            height: auto;
+        }
+
+        .claim-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .claim-title i {
+            margin-right: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .rebuttal-section {
+            background: var(--surface);
+            border-radius: var(--border-radius-sm);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-left: 4px solid var(--success);
+            transform: rotateX(-90deg);
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: transform 0.5s ease, opacity 0.5s ease, height 0.5s ease;
+        }
+
+        .rebuttal-section.active {
+            transform: rotateX(0deg);
+            opacity: 1;
+            height: auto;
+        }
+
+        .quote {
+            background: rgba(211, 47, 47, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: var(--border-radius-sm);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .quote:hover {
+            transform: translateX(5px);
+        }
+
+        .quote::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 4rem;
+            color: rgba(211, 47, 47, 0.1);
+            font-family: serif;
+        }
+
+        .quote-ref {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: normal;
+        }
+
+        .section-box {
+            background: var(--surface-light);
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .section-box:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .warning-box {
+            background: rgba(239, 83, 80, 0.1);
+            border-left: 6px solid var(--error);
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            color: var(--error);
+        }
+
+        .info-box {
+            background: rgba(102, 187, 106, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            border-radius: var(--border-radius-sm);
+            font-size: 1em;
+            color: var(--text);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-sm);
+            margin: 1rem 0;
+            display: block;
+        }
+
+        .image-placeholder {
+            background: var(--surface-light);
+            color: var(--text-muted);
+            padding: 1rem;
+            text-align: center;
+            border-radius: var(--border-radius-sm);
+            margin: 1rem 0;
+        }
+
+        .call-to-action {
+            background: linear-gradient(135deg, rgba(41, 98, 255, 0.15), rgba(211, 47, 47, 0.15));
+            border: 1px dashed var(--secondary);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: glowingBorder 3s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(41, 98, 255, 0.05) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: #121212;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+            z-index: -1;
+        }
+
+        .cta-btn:hover::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        .conclusion {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .conclusion::before {
+            content: '🔍';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem;
+            color: rgba(255, 255, 255, 0.02);
+            z-index: 0;
+        }
+
+        .conclusion p {
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            background: rgba(255, 214, 0, 0.3);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            color: var(--accent);
+            position: relative;
+            cursor: help;
+            transition: all 0.3s ease;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface-light);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+            box-shadow: var(--shadow);
+            animation: fadeInTooltip 0.3s ease;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--divider), transparent);
+            margin: 3rem 0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background: var(--surface);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            transition: left 0.3s ease;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--accent);
+        }
+
+        .sidebar-toggle {
+            position: fixed;
+            top: 100px;
+            left: 10px;
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 10px;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: var(--text-light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            z-index: 1000;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: var(--glow);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInTooltip {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.2);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(211, 47, 47, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
+            }
+        }
+
+        @keyframes glowingBorder {
+            0% {
+                border-color: rgba(211, 47, 47, 0.3);
+                box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+            }
+
+            50% {
+                border-color: rgba(211, 47, 47, 0.6);
+                box-shadow: 0 0 15px rgba(211, 47, 47, 0.6);
+            }
+
+            100% {
+                border-color: rgba(211, 47, 47, 0.3);
+                box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(211, 47, 47, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: rgba(211, 47, 47, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.2s ease, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            .sidebar {
+                left: 0;
+            }
+
+            .sidebar-toggle {
+                display: none;
+            }
+
+            .timeline::before {
+                left: 50%;
+            }
+
+            .timeline-item:nth-child(odd) {
+                left: 0;
+                padding-right: 40px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 50%;
+                padding-left: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 1.5rem;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item::before {
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .claim-item {
+                padding: 1.2rem;
+            }
+
+            .sidebar {
+                left: -250px;
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#reading-path">Reading Path</a>
+                <a href="#mission">Mission</a>
+                <a href="#articles">Articles</a>
+                <a href="#join">Join Us</a>
+                <a href="disclamer.html">Disclaimer</a>
+                <a href="about_riseuphindu.html">About Us</a>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#claim1">Claim 1: Nangeli's Story</a></li>
+            <li><a href="#claim2">Claim 2: Breast Tax</a></li>
+            <li><a href="#claim3">Claim 3: Photos</a></li>
+            <li><a href="#summary">Summary</a></li>
+        </ul>
+    </div>
+    <div class="sidebar-toggle">☰</div>
+
+    <div class="container">
+        <header class="scroll-animation" id="intro">
+            <h1>🔍 Busting the Myth of Nangeli and the "Breast Tax"</h1>
+            <p class="subtitle">A historical perspective debunking the fictional narrative of Nangeli and the so-called
+                breast tax</p>
+        </header>
+
+        <p class="scroll-animation">For years, social media has circulated a poignant tale of Nangeli, a woman from
+            Kerala who allegedly cut off her breasts in protest against a so-called "breast tax" imposed on lower-caste
+            women. This narrative, often accompanied by emotional art, videos, and blog posts, has been used to question
+            Hinduism and paint a grim picture of caste-based oppression.</p>
+        <p class="scroll-animation">But how much of this is historically true? Let’s break down the propaganda, the
+            evidence (or lack thereof), and the motivations behind this narrative.</p>
+
+        <div class="quote scroll-animation">
+            <p>विभिन्न वेबसाइटों पर नांगेली का वामपंथी प्रोपोगेंडा</p>
+            <img src="1.jpg" alt="Propaganda illustration" height="190" class="image-placeholder"
+                onerror="this.src=''; this.nextElementSibling.style.display='block';">
+            <div class="image-placeholder" style="display: none;">Image not found: 1.jpg</div>
+        </div>
+
+        <div class="claim-list">
+            <li class="claim-item scroll-animation" id="claim1">
+                <div class="claim-title">
+                    <i class="fas fa-times-circle"></i> Claim: Nangeli cut off her breasts to protest the breast tax
+                </div>
+                <div class="rebuttal-section">
+                    <h3><i class="fas fa-check-circle" style="color: var(--success);"></i> Rebuttal:</h3>
+                    <div class="section-box">
+                        <p>The first recorded mention of Nangeli was in a <strong><span class="highlight"
+                                    data-tooltip="Source of the myth">fictional story by C.
+                                    Radhakrishnan</span></strong>, published in The Pioneer on March 8, 2007. Characters
+                            like Nangeli and her husband Kadappan were created for this story.</p>
+                        <p>In 2009, blogger Michael David amplified the tale, followed by news outlets like The Hindu
+                            and BBC in 2016.</p>
+                        <div class="quote">
+                            C. Radhakrishnan later admitted in a video interview that <strong>Nangeli was a fictional
+                                character</strong>.
+                            <span class="quote-ref">— Video Interview, KBT Reaction</span>
+                        </div>
+                        <p><a href="https://www.youtube.com/@kbtreaction-" target="_blank">Watch KBT Reaction</a></p>
+                        <iframe width="100%" height="315"
+                            src="https://www.youtube.com/embed/hhIxh2iHIno?si=ZXLnEOViAGITgLWS"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </li>
+
+            <li class="claim-item scroll-animation" id="claim2">
+                <div class="claim-title">
+                    <i class="fas fa-times-circle"></i> Claim: A "breast tax" was imposed on lower-caste women in
+                    Travancore
+                </div>
+                <div class="rebuttal-section">
+                    <h3><i class="fas fa-check-circle" style="color: var(--success);"></i> Rebuttal:</h3>
+                    <div class="section-box">
+                        <p>The term "breast tax" first appeared in R.N. Yesudasan’s book <em>A People's Revolt in
+                                Travancore</em> (1975) and later in <em>The History of the London Missionary Society in
+                                Travancore</em> (1980). Yesudasan, associated with Christian missionary movements,
+                            provided no primary sources.</p>
+                        <p><strong><span class="highlight" data-tooltip="Key fact">No official records</span></strong>
+                            from the Travancore kingdom mention such a tax. Historical sources like:</p>
+                        <ul>
+                            <li><em>Native Life in Travancore</em> (1883) by Samuel Mateer</li>
+                            <li><em>A History of Travancore</em> (1878) by P.S. Menon</li>
+                            <li><em>Travancore Tribes and Castes</em> (1937) by L.A. Krishna Iyer</li>
+                            <li><em>The Nayars Today</em> (1976) by C.J. Fuller</li>
+                            <li><em>The Land of Charity</em> (1871) by Samuel Mateer</li>
+                        </ul>
+                        <p>do not mention Nangeli or any “breast tax.”</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="claim-item scroll-animation" id="claim3">
+                <div class="claim-title">
+                    <i class="fas fa-times-circle"></i> Claim: Photos depict oppressed lower-caste women under the
+                    breast tax
+                </div>
+                <div class="rebuttal-section">
+                    <h3><i class="fas fa-check-circle" style="color: var(--success);"></i> Rebuttal:</h3>
+                    <div class="warning-box">
+                        <p>Two frequently used black-and-white photos are often shown to depict lower-caste women
+                            oppressed by the “breast tax.” However, these images are not related to Travancore:</p>
+                        <ul>
+                            <li><strong>First Photo:</strong> Actually of the Rodiyas, a marginalized Buddhist group in
+                                Sri Lanka.</li>
+                            <img src="4.jpg" alt="Rodiyas photo" width="300" class="image-placeholder"
+                                onerror="this.src=''; this.nextElementSibling.style.display='block';">
+                            <div class="image-placeholder" style="display: none;">Image not found: 4.jpg</div>
+                            <li><strong>Second Photo:</strong> Belongs to the Tiyan community in Malabar, not considered
+                                untouchable or oppressed in this context.</li>
+                            <img src="6.jpg" alt="Tiyan community photo" width="300" class="image-placeholder"
+                                onerror="this.src=''; this.nextElementSibling.style.display='block';">
+                            <div class="image-placeholder" style="display: none;">Image not found: 6.jpg</div>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </div>
+
+        <hr>
+
+        <div class="section-box scroll-animation">
+            <h2>📜 Historical Context: Clothing Norms</h2>
+            <p>Dutch traveler William van Neuhof, who visited Travancore in the 17th century, described the attire of
+                the queen and her attendants as being mostly topless. Even upper-caste Brahmin women, such as Savitri
+                Antharjanam, did not wear upper garments, as seen in archival photos and works by L.A. Krishna Iyer.</p>
+            <p>This indicates that <strong><span class="highlight" data-tooltip="Cultural norm">going topless was a norm
+                        across castes</span></strong> in pre-colonial Kerala — a cultural adaptation to climate, not a
+                caste-imposed rule.</p>
+            <div class="info-box">
+                <p>Visual and archaeological evidence from across India shows that bare-chested women were not uncommon,
+                    even among royalty and elite:</p>
+                <ul>
+                    <li>Chola queen Sembiyan Mahadevi</li>
+                    <li>Pāllava queens depicted in ancient temples</li>
+                    <li>Empresses and dancers from the Gupta and Maurya eras</li>
+                    <li>The Indus Valley civilization’s female figures</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-box scroll-animation">
+            <h2>👚 Colonial Influence on Clothing</h2>
+            <p>In many parts of India, particularly in matrilineal societies like Kerala, women chose attire based on
+                climate, not shame or oppression. The human body was not sexualized as in Abrahamic cultures.</p>
+            <div class="quote">
+                Books like <em>Clothing: A Global History</em> by Robert Ross explain how Christian missionaries imposed
+                strict dress codes, especially for women, altering indigenous norms.
+                <span class="quote-ref">— Robert Ross, Clothing: A Global History</span>
+            </div>
+            <p>Missionary influence, colonial rule, and Western concepts of "modesty" reshaped traditional dress norms
+                in urban areas, while rural areas retained traditional practices longer.</p>
+        </div>
+
+        <hr>
+
+        <div class="timeline scroll-animation" id="summary">
+            <h2>🕒 Key Rebuttals Timeline</h2>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Nangeli’s Story</h3>
+                    <p>Fictional, created by C. Radhakrishnan in 2007, with no historical basis.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Breast Tax</h3>
+                    <p>No official records exist; the term emerged in 1975 without primary sources.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Misleading Photos</h3>
+                    <p>Images are unrelated to Travancore, depicting Sri Lankan Rodiyas and Malabar Tiyans.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="call-to-action scroll-animation">
+            <div class="call-to-action-content">
+                <div class="cta-title">❓ Explore More Historical Truths</div>
+                <p>Dive deeper into debunking myths and uncovering the real history of India.</p>
+                <a href="historical_insights.html" target="_blank" class="cta-btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="conclusion scroll-animation">
+            <p>The tale of Nangeli and the breast tax is a powerful example of how <strong><span class="highlight"
+                        data-tooltip="Key lesson">false propaganda</span></strong> can spread when wrapped in emotion
+                and artistic presentation. We must always <strong><span class="highlight"
+                        data-tooltip="Call to action">verify what we consume</span></strong> to protect our
+                understanding of culture, history, and identity.</p>
+        </div>
+
+        <footer class="scroll-animation">
+            © Historical Truth | For a PDF or downloadable version of this article, please contact us.
+        </footer>
+    </div>
+
+    <div class="fab"></div>
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 40, density: { enable: true, value_area: 800 } },
+                color: { value: ['#d32f2f', '#ffd600', '#1976d2'] },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 0.8, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            scrollElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Accordion for Claims
+            const claimItems = document.querySelectorAll('.claim-item');
+            claimItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const rebuttal = item.querySelector('.rebuttal-section');
+                    const isActive = item.classList.contains('active');
+                    claimItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.rebuttal-section').classList.remove('active');
+                    });
+                    if (!isActive) {
+                        item.classList.add('active');
+                        rebuttal.classList.add('active');
+                    }
+                });
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Sidebar Toggle
+            const sidebarToggle = document.querySelector('.sidebar-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                sidebarToggle.textContent = sidebar.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Custom Cursor and Trail
+            const cursor = document.querySelector('.cursor');
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+                cursorTrail.style.opacity = 1;
+            });
+
+            document.addEventListener('mouseout', () => {
+                cursorTrail.style.opacity = 0;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Floating Action Button (Scroll to Top)
+            const fab = document.querySelector('.fab');
+            fab.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Debounce Scroll for Performance
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > 300) {
+                    fab.style.opacity = 1;
+                    fab.style.transform = 'scale(1)';
+                } else {
+                    fab.style.opacity = 0;
+                    fab.style.transform = 'scale(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            fab.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            fab.style.opacity = 0;
+            fab.style.transform = 'scale(0)';
+        });
+    </script>
+</body>
+
+</html>

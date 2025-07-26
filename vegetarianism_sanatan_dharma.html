@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 सनातन धर्म में शाकाहार</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF;
+            /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600;
+            /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 10px rgba(255, 138, 0, 0.3);
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 12px 36px rgba(255, 138, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-logo::before {
+            content: var(--om-symbol);
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            color: var(--text-light);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            padding-bottom: 10px;
+            font-size: 2.2rem;
+            position: relative;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        ul li::before {
+            content: '•';
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .source-list li::before {
+            content: '📖';
+            opacity: 0.7;
+        }
+
+        .conclusion-box {
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.15), rgba(41, 98, 255, 0.15));
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 40px 0;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        .quote-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 30px 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 4rem;
+            color: rgba(255, 138, 0, 0.2);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+            cursor: help;
+            position: relative;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background: var(--surface);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 10;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-to-action a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+            position: relative;
+            border: none;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .final-thought {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            font-size: 1.1rem;
+            color: var(--accent);
+            position: relative;
+            padding: 20px;
+            background: rgba(255, 138, 0, 0.1);
+            border-radius: var(--border-radius-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .final-thought:hover {
+            transform: translateY(-3px);
+        }
+
+        .final-thought::before,
+        .final-thought::after {
+            content: "✨";
+            position: absolute;
+            opacity: 0.5;
+            color: var(--accent);
+        }
+
+        .final-thought::before {
+            left: 20px;
+            top: 0;
+        }
+
+        .final-thought::after {
+            right: 20px;
+            bottom: 0;
+        }
+
+        .hashtags {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--text-muted);
+            font-style: italic;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .hashtags span {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .hashtags span:hover {
+            background: rgba(255, 138, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--text);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 138, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .delay-5 {
+            animation-delay: 1.0s;
+        }
+
+        .delay-6 {
+            animation-delay: 1.2s;
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .call-to-action {
+                padding: 25px;
+            }
+
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .call-to-action {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links" id="navLinks">
+                <a href="home.html#home">होम</a>
+                <a href="home.html#reading-path">पठन पथ</a>
+                <a href="home.html#mission">मिशन</a>
+                <a href="home.html#articles">लेख</a>
+                <a href="home.html#join">हमसे जुड़ें</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="animate"><i class="fas fa-leaf"></i> सनातन धर्म में शाकाहार</h1>
+
+        <div class="card animate delay-1">
+            <p>
+                <span class="highlight" data-tooltip="सनातन धर्म">सनातन धर्म</span>, वेदों में निहित शाश्वत आध्यात्मिक
+                मार्ग, <span class="highlight" data-tooltip="अहिंसा">अहिंसा</span> — अहिंसा के सिद्धांत पर अत्यधिक जोर
+                देता है। यह मूल्य केवल नैतिक नहीं है, बल्कि गहराई से आध्यात्मिक है, जो हिंदू धार्मिक जीवन की आधारशिला
+                बनाता है। दैनिक जीवन में अहिंसा का सबसे मजबूत अभिव्यक्ति <span class="highlight"
+                    data-tooltip="शाकाहार की प्रथा">शाकाहार की प्रथा</span> है।
+            </p>
+            <p>
+                आधुनिक प्राथमिकता या जीवनशैली प्रवृत्ति से बहुत दूर, सनातन धर्म में शाकाहार एक <span class="highlight"
+                    data-tooltip="पवित्र प्रतिबद्धता">पवित्र प्रतिबद्धता</span> है, जिसे वेदों, मनु स्मृति और महाभारत
+                सहित प्राचीन शास्त्रों द्वारा पुष्टि की गई है। आइए इन पूजनीय ग्रंथों में मांस के सेवन और शाकाहारी जीवन
+                के गुणों के बारे में क्या कहा गया है, इसे देखें।
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2">
+            <h2><i class="fas fa-om"></i> वेद मांस के सेवन के बारे में क्या कहते हैं?</h2>
+            <p>
+                <span class="highlight" data-tooltip="वेद">वेद</span>, सनातन धर्म के सबसे प्राचीन शास्त्र, मांस खाने की
+                कड़ी निंदा करते हैं, इसे राक्षसी प्रवृत्तियों, अशुद्धता और आध्यात्मिक पतन से जोड़ते हैं।
+            </p>
+
+            <h3><i class="fas fa-fire"></i> अथर्ववेद</h3>
+            <ul>
+                <li><span class="highlight" data-tooltip="अथर्ववेद 2.18.4">2.18.4</span> – <span class="highlight"
+                        data-tooltip="मांस खाने वाले राक्षसों (पिशाचों)">मांस खाने वाले राक्षसों (पिशाचों)</span> को
+                    नष्ट करने के लिए अग्नि का आह्वान करता है, मांस खाने को आसुरी (राक्षसी) व्यवहार के साथ समान करता है।
+                </li>
+                <li><span class="highlight" data-tooltip="अथर्ववेद 8.6.23">8.6.23</span> – स्पष्ट रूप से <span
+                        class="highlight" data-tooltip="मांस के सेवन पर प्रतिबंध">मांस के सेवन पर प्रतिबंध</span> लगाता
+                    है, मांस खाने वालों को अशुद्ध बताता है और समाज से उनके निष्कासन की मांग करता है।</li>
+            </ul>
+
+            <h3><i class="fas fa-music"></i> सामवेद</h3>
+            <ul>
+                <li><span class="highlight" data-tooltip="सामवेद 1.8.18">1.8.18</span> – फिर से, अग्नि को <span
+                        class="highlight" data-tooltip="मांस खाने वालों को नष्ट करने">मांस खाने वालों को नष्ट
+                        करने</span> के लिए बुलाया जाता है, जो मांस के सेवन और इसके आध्यात्मिक परिणामों की दैवीय
+                    अस्वीकृति का प्रतीक है।</li>
+            </ul>
+
+            <h3><i class="fas fa-pray"></i> ऋग्वेद</h3>
+            <ul>
+                <li><span class="highlight" data-tooltip="ऋग्वेद 10.87.16">10.87.16</span> – विभिन्न पशु मांस, जिसमें
+                    <span class="highlight" data-tooltip="मानव और घोड़े का मांस">मानव और घोड़े का मांस</span> शामिल है,
+                    के सेवन की कड़ी निंदा करता है और गंभीर दैवीय दंड की धमकी देता है।</li>
+            </ul>
+
+            <h3><i class="fas fa-book-open"></i> यजुर्वेद (तैत्तिरीय संहिता 2.2.10)</h3>
+            <ul>
+                <li>मनु के प्राधिकार की पुष्टि करता है, यह संकेत देता है कि <span class="highlight"
+                        data-tooltip="उनके नियम — विशेष रूप से आहार पर">उनके नियम — विशेष रूप से आहार पर</span> — दैवीय
+                    रूप से स्वीकृत हैं और आध्यात्मिक शुद्धिकरण के लिए हैं।</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3">
+            <h2><i class="fas fa-scroll"></i> मनु स्मृति: शाकाहार पर नैतिक स्पष्टता</h2>
+            <p>
+                <span class="highlight" data-tooltip="मनु स्मृति">मनु स्मृति</span>, नैतिक और धार्मिक आचरण का विवरण देने
+                वाली एक धर्मशास्त्र, <span class="highlight"
+                    data-tooltip="शाकाहारी जीवन पर सबसे स्पष्ट और विस्तृत नियम">शाकाहारी जीवन पर सबसे स्पष्ट और विस्तृत
+                    नियम</span> प्रदान करती है।
+            </p>
+
+            <h3><i class="fas fa-ban"></i> निषिद्ध खाद्य पदार्थ</h3>
+            <ul>
+                <li><span class="highlight" data-tooltip="मनु 5.5">मनु 5.5</span> – <span class="highlight"
+                        data-tooltip="द्विज">द्विज</span> व्यक्तियों को लहसुन, प्याज, मशरूम और किसी भी अशुद्ध खाद्य
+                    पदार्थ, मांस की तो बात ही छोड़ दें, खाने से मना करता है।</li>
+                <li>श्लोक <span class="highlight" data-tooltip="मनु 5.11, 5.15, 5.17">5.11, 5.15, 5.17</span> –
+                    निम्नलिखित के सेवन पर प्रतिबंध लगाते हैं:
+                    <ul>
+                        <li>मांसाहारी पक्षी</li>
+                        <li>एक खुर वाले जानवर</li>
+                        <li>अकेले या अज्ञात जानवर</li>
+                        <li>मछली और पांच नाखून वाले जानवर</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3><i class="fas fa-balance-scale"></i> आध्यात्मिक परिणाम</h3>
+            <ul>
+                <li><span class="highlight" data-tooltip="मनु 5.45–48">5.45–48</span> – मांस खाने को गंभीर पाप के रूप
+                    में वर्णित करता है:
+                    <ul>
+                        <li>निर्दोष प्राणियों को मारना सांसारिक और आध्यात्मिक सुख दोनों को रोकता है।</li>
+                        <li>सच्ची खुशी <span class="highlight" data-tooltip="हानि से बचने">हानि से बचने</span> में निहित
+                            है।</li>
+                        <li>मांस का सेवन <span class="highlight" data-tooltip="स्वर्ग से दूर ले जाता है">स्वर्ग से दूर
+                                ले जाता है</span> और मुक्ति में बाधा डालता है।</li>
+                    </ul>
+                </li>
+                <li><span class="highlight" data-tooltip="मनु 5.53–54">5.53–54</span> – घोषणा करता है कि <span
+                        class="highlight" data-tooltip="मांस न खाना अश्वमेध यज्ञों के बराबर पुण्य">मांस न खाना अश्वमेध
+                        यज्ञों के बराबर पुण्य</span> के बराबर है जो सौ वर्षों तक किए गए हों। कोई भी फल या तपस्वी खाद्य
+                    अभ्यास इसकी तुलना में पुण्य में नहीं ठहरता।</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4">
+            <h2><i class="fas fa-shield-alt"></i> महाभारत: अहिंसा में गहराई</h2>
+            <p>
+                <span class="highlight" data-tooltip="महाभारत का अनुशासन पर्व (अध्याय 115)">महाभारत का अनुशासन पर्व
+                    (अध्याय 115)</span> शाकाहार पर सबसे <span class="highlight"
+                    data-tooltip="विस्तृत आध्यात्मिक प्रवचन">विस्तृत आध्यात्मिक प्रवचन</span> प्रस्तुत करता है।
+            </p>
+
+            <h3><i class="fas fa-book"></i> प्रमुख शिक्षाएँ:</h3>
+            <ul>
+                <li>श्लोक <span class="highlight" data-tooltip="10–11">10–11</span> – तपस्वी कभी मांस का सेवन नहीं करते।
+                    जो करते हैं, वे भ्रमित हैं और राक्षसों की तरह हैं।</li>
+                <li>श्लोक <span class="highlight" data-tooltip="15–16">15–16</span> – मांस खाने वाले <span
+                        class="highlight" data-tooltip="स्वर्गीय लोकों में प्रवेश से वंचित">स्वर्गीय लोकों में प्रवेश से
+                        वंचित</span> हैं और आध्यात्मिक विकास से वर्जित हैं।</li>
+                <li>श्लोक <span class="highlight" data-tooltip="8">8</span> – मांस न खाना <span class="highlight"
+                        data-tooltip="हर महीने अश्वमेध यज्ञ करने के बराबर पुण्य">हर महीने अश्वमेध यज्ञ करने के बराबर
+                        पुण्य</span> कमाता है।</li>
+                <li>श्लोक <span class="highlight" data-tooltip="42–43">42–43</span> – वैदिक अनुष्ठानों के लिए जानवरों को
+                    मारना एक <span class="highlight" data-tooltip="जघन्य पाप">जघन्य पाप</span> है। जो ऐसा करते हैं, वे
+                    <span class="highlight" data-tooltip="स्वर्ग नहीं, नरक जाते हैं">स्वर्ग नहीं, नरक जाते हैं</span>।
+                </li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-5">
+            <h2><i class="fas fa-lotus"></i> आध्यात्मिक और नैतिक महत्व</h2>
+            <p>ये शास्त्र एक साथ पुष्टि करते हैं कि:</p>
+            <ul>
+                <li><span class="highlight" data-tooltip="अहिंसा सर्वोच्च धर्म">अहिंसा सर्वोच्च धर्म</span> है।</li>
+                <li>मांस खाना <span class="highlight"
+                        data-tooltip="नकारात्मक कर्म, पुनर्जनम और आध्यात्मिक अशुद्धता">नकारात्मक कर्म, पुनर्जनम और
+                        आध्यात्मिक अशुद्धता</span> की ओर ले जाता है।</li>
+                <li>शाकाहार मुक्ति का एक प्रत्यक्ष मार्ग है, जो शरीर, मन और आत्मा को ब्रह्मांडीय सामंजस्य के साथ संरेखित
+                    करता है।</li>
+                <li>यह <span class="highlight" data-tooltip="धन, यश, दीर्घायु और अंतिम शांति">धन, यश, दीर्घायु और अंतिम
+                        शांति</span> प्रदान करता है (महाभारत 115.35)।</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-1">
+            <h2><i class="fas fa-exclamation-circle"></i> भ्रांतियों का समाधान</h2>
+            <p>कुछ लोग तर्क देते हैं कि वैदिक अनुष्ठानों में <span class="highlight" data-tooltip="पशु बलि">पशु
+                    बलि</span> मांस के सेवन को उचित ठहराती है। लेकिन महाभारत स्पष्ट रूप से इसका खंडन करता है:</p>
+            <div class="quote-box">
+                "जो लोग वैदिक अनुष्ठानों के नाम पर जानवरों को मारते हैं, वे नरक के लिए नियत हैं।" (अनुशासन पर्व 115.43)
+            </div>
+            <p>यह <span class="highlight" data-tooltip="आध्यात्मिक करुणा">आध्यात्मिक करुणा</span> की ओर <span
+                    class="highlight" data-tooltip="विकास">विकास</span> करने का आह्वान है।</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2">
+            <h2><i class="fas fa-check-circle"></i> निष्कर्ष: धर्म के साथ संरेखित जीवनशैली</h2>
+            <p>
+                सनातन धर्म के पवित्र ग्रंथ <span class="highlight" data-tooltip="शाकाहार को उच्चतर जीवनशैली">शाकाहार को
+                    उच्चतर जीवनशैली</span> के रूप में स्पष्ट रूप से समर्थन करते हैं। मांस का सेवन अशुद्धता, दर्द और पतन
+                से जुड़ा है, जबकि शाकाहार दैवीय सिद्धांतों, आंतरिक शांति और मोक्ष (मुक्ति) के साथ संरेखित है।
+            </p>
+            <div class="conclusion-box">
+                शाकाहारी जीवनशैली चुनकर, कोई केवल आहार नियम का पालन नहीं करता — वह करुणा, स्पष्टता और ब्रह्मांडीय संरेखण
+                के मार्ग पर चलता है।
+            </div>
+            <p class="final-thought">
+                धर्म के साथ चलना सभी जीवित प्राणियों के साथ सामंजस्य में चलना है।
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3">
+            <h3><i class="fas fa-book"></i> स्रोत और संदर्भ</h3>
+            <ul class="source-list">
+                <li>.ऋग्वेद – 10.87.16</li>
+                <li>.अथर्ववेद – 2.18.4, 8.6.23</li>
+                <li>.सामवेद – 1.8.18</li>
+                <li>.यजुर्वेद – तैत्तिरीय संहिता 2.2.10</li>
+                <li>.मनु स्मृति – 5.5, 5.11, 5.15, 5.17, 5.45–48, 5.53–54</li>
+                <li>.महाभारत – अनुशासन पर्व 115.8, 115.10–11, 115.15–16, 115.42–43</li>
+            </ul>
+        </div>
+
+
+        <div class="hashtags animate delay-5">
+            <span>#शाकाहार</span>
+            <span>#सनातन_धर्म</span>
+            <span>#अहिंसा</span>
+            <span>#वेद</span>
+            <span>#मनु_स्मृति</span>
+            <span>#महाभारत</span>
+            <span>#धर्म</span>
+            <span>#मोक्ष</span>
+        </div>
+    </div>
+
+    <div class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
+
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#FF8A00' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('#navLinks');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

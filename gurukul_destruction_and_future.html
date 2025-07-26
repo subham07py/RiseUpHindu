@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How They Destroyed Gurukuls to Control India's Future</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF;
+            /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600;
+            /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 10px rgba(255, 138, 0, 0.3);
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 12px 36px rgba(255, 138, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0A0A0A 100%);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Parallax Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 25% 25%, rgba(255, 138, 0, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(41, 98, 255, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            transform: translateZ(-1px) scale(1.5);
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02) rotate(0.5deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 138, 0, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--text-light);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            padding-bottom: 10px;
+            font-size: 2.2rem;
+            position: relative;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 30px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+            position: relative;
+            cursor: help;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface-light);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 10;
+            box-shadow: var(--shadow);
+        }
+
+        .quote-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 30px 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: rgba(255, 138, 0, 0.2);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: var(--surface);
+            border-radius: var(--border-radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            transform: translateZ(0);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid var(--divider);
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.2), rgba(41, 98, 255, 0.2));
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(255, 138, 0, 0.1);
+            transform: scale(1.01);
+        }
+
+        .final-message {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255, 138, 0, 0.15), rgba(41, 98, 255, 0.15));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .final-message::before {
+            content: var(--om-symbol);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5rem;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .final-message p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-to-action a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .call-to-action a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+            z-index: -1;
+        }
+
+        .call-to-action a:hover::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+            position: relative;
+            border: none;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            display: none;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--accent);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 138, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .delay-5 {
+            animation-delay: 1.0s;
+        }
+
+        .delay-6 {
+            animation-delay: 1.2s;
+        }
+
+        .delay-7 {
+            animation-delay: 1.4s;
+        }
+
+        .delay-8 {
+            animation-delay: 1.6s;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 138, 0, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 138, 0, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.2s ease, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            .sidebar {
+                display: block;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+   
+
+    <div class="container">
+        <h1 class="animate" id="intro">How They Destroyed Gurukuls to Control India's Future</h1>
+
+        <div class="card animate delay-1" id="pre-british">
+            <h2>🕉️ Before the British: Bharat's Glorious System of Education</h2>
+            <p>
+                Before colonial rule, <span class="highlight"
+                    data-tooltip="Historical estimate of educational institutions">India had over 7 lakh (700,000)
+                    Gurukuls</span>. These weren't
+                just schools — they were <span class="highlight" data-tooltip="Holistic learning centers">centers of
+                    holistic life learning</span>.
+            </p>
+            <ul>
+                <li>Students learned <span class="highlight"
+                        data-tooltip="Diverse subjects taught in Gurukuls">Sanskrit, astronomy, mathematics, Ayurveda,
+                        philosophy, martial
+                        arts, music, and above all — Dharma</span>.</li>
+                <li>Education was <span class="highlight" data-tooltip="Accessible to all">free</span>. Gurus gave
+                    knowledge <span class="highlight" data-tooltip="Spiritual motivation">not for
+                        money, but for moksha</span> (liberation).</li>
+                <li>Students lived with their <span class="highlight" data-tooltip="Teacher as guide">Guru</span>,
+                    served them, and were shaped into <span class="highlight" data-tooltip="Focus on character">ethical,
+                        disciplined, courageous humans, not mere workers</span>.</li>
+            </ul>
+            <p>📚 Knowledge was not a race for marks — it was a <span class="highlight"
+                    data-tooltip="Path to enlightenment">path to wisdom</span> and <span class="highlight"
+                    data-tooltip="Life's purpose">purpose</span>.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2 pulse" id="macaulay">
+            <h2>👨🏻‍⚖️ 1835: The Turning Point — Macaulay's Conspiracy</h2>
+            <p>
+                In 1835, <span class="highlight" data-tooltip="British politician and historian">Lord Thomas Babington
+                    Macaulay</span>, a British politician, wrote a letter
+                to the British Parliament saying:
+            </p>
+            <div class="quote-box">
+                "We must break the Indian education system... we must make them English in taste, morals and intellect."
+            </div>
+            <p>
+                This was not reform. It was <span class="highlight"
+                    data-tooltip="Deliberate cultural disruption">cultural warfare</span>.
+            </p>
+            <h3>🎯 The goal?</h3>
+            <ul>
+                <li>Destroy the <span class="highlight" data-tooltip="Undermining cultural pride">self-respect</span> of
+                    Indians.</li>
+                <li>Replace <span class="highlight" data-tooltip="Shift from wisdom to compliance">wisdom with
+                        obedience</span>.</li>
+                <li>Turn proud Dharmic people into <span class="highlight" data-tooltip="Servants of the Empire">clerks,
+                        translators, and servants of the British
+                        Empire</span>.</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3" id="dismantled">
+            <h2>🏚️ How They Dismantled the Gurukuls</h2>
+            <p>
+                The Gurukul system didn't collapse — <span class="highlight" data-tooltip="Systematic destruction">it
+                    was deliberately uprooted</span>.
+            </p>
+            <ul>
+                <li>❌ <span class="highlight" data-tooltip="Economic sabotage">Funding was cut.</span></li>
+                <li>❌ <span class="highlight" data-tooltip="Land appropriation">Temple lands, which supported Gurukuls,
+                        were seized.</span></li>
+                <li>❌ <span class="highlight" data-tooltip="Cultural devaluation">Sanskrit was called a "dead
+                        language".</span></li>
+                <li>❌ Gurus were branded <span class="highlight"
+                        data-tooltip="Defamation of traditional teachers">"illiterate"</span> by English-trained elites.
+                </li>
+            </ul>
+            <p>
+                The British labeled ancient Indian knowledge as <span class="highlight"
+                    data-tooltip="Cultural denigration">primitive</span>, while their system
+                taught <span class="highlight" data-tooltip="Colonial loyalty">loyalty to the Crown, not to the nation
+                    or Dharma</span>.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4" id="psychological">
+            <h2>💔 The Psychological Attack</h2>
+            <p>Over time, even Hindus started to:</p>
+            <ul>
+                <li>Feel <span class="highlight" data-tooltip="Cultural inferiority complex">ashamed</span> of their own
+                    dress, language, and traditions.</li>
+                <li>Believe their <span class="highlight" data-tooltip="Devaluation of indigenous knowledge">own
+                        teachers were backward</span>.</li>
+                <li>Worship <span class="highlight" data-tooltip="Colonial mindset">foreign approval</span> over
+                    indigenous wisdom.</li>
+            </ul>
+            <p>🎭 A class was created that <span class="highlight" data-tooltip="Cultural alienation">looked Indian but
+                    thought British</span>.</p>
+            <p>We began <span class="highlight" data-tooltip="Self-deprecation">laughing at our own culture</span> and
+                took pride in <span class="highlight" data-tooltip="Colonial servitude">serving those who ruled
+                    us</span>.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-5" id="independence">
+            <h2>🇮🇳 1947: Freedom Without De-Colonization</h2>
+            <p>Even after Independence:</p>
+            <ul>
+                <li>The <span class="highlight" data-tooltip="Persistence of colonial systems">same colonial education
+                        system continued</span>.</li>
+                <li>Gurukuls remained ignored.</li>
+                <li>Our history books <span class="highlight" data-tooltip="Distorted historical narrative">glorified
+                        Macaulay</span> as the man who "modernized" India —
+                    when in truth, he <span class="highlight" data-tooltip="Cultural erosion">hollowed it from
+                        within</span>.</li>
+            </ul>
+            <p>We removed the British, but <span class="highlight" data-tooltip="Lingering colonial influence">kept
+                    their chains</span> — in our <span class="highlight" data-tooltip="Education and mindset">textbooks,
+                    our mindset, and our goals</span>.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-6 pulse" id="losses">
+            <h2>🧠 What We Lost</h2>
+            <p>Our temples were not selfie spots — they were <span class="highlight"
+                    data-tooltip="Centers of knowledge">universities of life</span>.</p>
+            <p>Our saints and rishis were not "jobless babas" — they were <span class="highlight"
+                    data-tooltip="Multifaceted scholars">scientists, philosophers,
+                    psychologists, and visionaries</span>.</p>
+            <p>Gurukuls produced:</p>
+            <ul>
+                <li>Thinkers 🧠</li>
+                <li>Warriors 🛡️</li>
+                <li>Philosophers 🕉️</li>
+                <li>Builders of civilization 🏛️</li>
+            </ul>
+            <p>Today's schools produce:</p>
+            <ul>
+                <li>Job-seekers 🤝</li>
+                <li>Grade chasers 📊</li>
+                <li>Competitive minds with <span class="highlight" data-tooltip="Loss of cultural identity">confused
+                        identities</span> ❓</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-7" id="comparison">
+            <h2>🧘 The Gurukul vs Modern School</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Gurukul System</th>
+                        <th>Modern System</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Purpose-driven</td>
+                        <td>Profit-driven</td>
+                    </tr>
+                    <tr>
+                        <td>Wisdom + Dharma</td>
+                        <td>Data + Confusion</td>
+                    </tr>
+                    <tr>
+                        <td>Disciplined life</td>
+                        <td>Stressful race</td>
+                    </tr>
+                    <tr>
+                        <td>Grounded identity</td>
+                        <td>Identity crisis</td>
+                    </tr>
+                    <tr>
+                        <td>Teacher is Guru</td>
+                        <td>Teacher is employee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-8 pulse" id="revival">
+            <h2>🌱 It's Not Too Late: Revive What They Tried to Erase</h2>
+            <p>You are <span class="highlight" data-tooltip="Empowering identity">not born to beg for jobs</span>.</p>
+            <p>You are born to <span class="highlight" data-tooltip="Cultural legacy">build legacies, to live with
+                    Dharma, and to carry forward the
+                    knowledge they tried to destroy</span>.</p>
+            <p>If you don't learn your Dharma, someone else will teach you to <span class="highlight"
+                    data-tooltip="Cultural abandonment">leave it</span>.</p>
+            <div class="call-to-action">
+                <p>What <span class="highlight" data-tooltip="Core principles">Dharma</span> truly means <a
+                        href="#">click here</a></p>
+                <p>What our <span class="highlight" data-tooltip="Sacred texts">scriptures</span> actually teach <a
+                        href="#">click here</a></p>
+                <p>How to live it in the <span class="highlight" data-tooltip="Modern application">real world</span>
+                    today <a href="#">click here</a></p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="final-message animate delay-1">
+            <h2>📣 Final Message: Reconnect With Your Roots</h2>
+            <p>❝ If you cut a tree from its roots, it may stand for a while — but it will never grow. ❞</p>
+            <p>We are the tree.</p>
+            <p>Dharma is our root. It's time to reconnect.</p>
+            <p>Don't just study for marks.</p>
+            <p>Learn for your legacy.</p>
+        </div>
+
+        <div class="call-to-action animate delay-2">
+            <h2>📢 Spread the Truth</h2>
+            <p>The destruction of Gurukuls was a calculated move to disconnect us from our roots. Share this blog to
+                awaken others to our true heritage!</p>
+            <a href="#">Share This Blog</a>
+        </div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <script>
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Custom Cursor and Trail
+            const cursor = document.querySelector('.cursor');
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+                cursorTrail.style.opacity = 1;
+            });
+
+            document.addEventListener('mouseout', () => {
+                cursorTrail.style.opacity = 0;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

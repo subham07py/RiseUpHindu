@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 श्री राधा के शास्त्रीय प्रमाण</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            --secondary: #2962FF;
+            --accent: #FFD600;
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --text: #E6E6E6;
+            --shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+            --border-radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            color: var(--text);
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-logo::before {
+            content: "ॐ";
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--secondary);
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .scripture-block {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 138, 0, 0.2);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .verse-reference {
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .sanskrit-text {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1.1rem;
+            color: #BBB;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .english-translation {
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .hindi-translation {
+            color: #AAA;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--accent);
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            cursor: help;
+            position: relative;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background: var(--surface);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 10;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .acharya-name {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .sub-section-heading {
+            font-weight: bold;
+            color: var(--secondary);
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 1.5rem;
+        }
+
+        ul li {
+            margin-bottom: 0.7rem;
+        }
+
+        .note {
+            font-style: italic;
+            color: #888;
+            margin: 1rem 0;
+        }
+
+        .link-box {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(26, 26, 26, 0.7);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 138, 0, 0.2);
+            box-shadow: var(--shadow);
+        }
+
+        .link-box a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        .link-box a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: rgba(255, 138, 0, 0.2);
+            margin: 2rem 0;
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--text);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .scripture-block {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links" id="navLinks">
+                <a href="home.html#home">होम</a>
+                <a href="home.html#reading-path">पठन पथ</a>
+                <a href="home.html#mission">मिशन</a>
+                <a href="home.html#articles">लेख</a>
+                <a href="home.html#join">हमसे जुड़ें</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1><i class="fas fa-book-open"></i> श्री राधा के शास्त्रीय प्रमाण</h1>
+
+        <p>भगवान महादेव (शिव) माता पार्वती से निम्नलिखित कहते हैं:</p>
+
+        <div class="scripture-block">
+            <span class="verse-reference">नारद पंचरात्र (2.3.50)</span>
+            <span class="sanskrit-text">अपूर्व राधिकाख्यानं गोपनीयं सुदुर्लभम् । सद्यो मुक्तिप्रदं शुद्धं वेदसारं
+                सुपुण्यदम्।</span>
+            <span class="english-translation">The discussions regarding <span class="highlight"
+                    data-tooltip="श्री राधा">Śrīmatī Rādhārāņī</span> are extremely confidential, rarely spoken and very
+                difficult to understand. (For those qualified to hear), it, at once, grants liberation, being all-pure,
+                supremely auspicious, and the essence of all the Vedas.</span>
+            <span class="hindi-translation">श्रीमती राधारानी के विषय में जो चर्चा है, वह अत्यंत गोपनीय है, बहुत कम कही
+                जाती है और समझने में बहुत कठिन है। (जो सुनने के योग्य हैं, उनके लिए) यह तुरन्त मोक्ष प्रदान करने वाली
+                है, क्योंकि यह सर्वशुद्ध, परम मंगलमय है और समस्त वेदों का सार है।</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">ब्रह्मवैवर्त पुराण, प्रकृति खंड 48.21</span>
+            <span class="sanskrit-text">mad işțadeva kāntāya rādhāyā caritam satī atīva gopanīyam</span>
+            <span class="english-translation"><span class="highlight" data-tooltip="श्री राधा">Śrīmatī Rādhārānī</span>
+                is the beloved of my worshippable Lord (<span class="highlight" data-tooltip="श्री कृष्ण">Śrī
+                    Kṛṣņa</span>). Narration about Her is extremely confidential.</span>
+            <span class="hindi-translation">श्रीमती राधारानी मेरे पूज्य प्रभु (श्रीकृष्ण) की प्रियतमा हैं। उनकी कथा
+                अत्यंत गोपनीय है।</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">पद्म पुराण 5.69.117-118</span>
+            <span class="sanskrit-text">तत्प्रिया प्रकृतिस्त्वाद्या राधिका कृष्णवल्लभा । तत्कलाकोटिकोट्यंशा
+                दुर्गाद्यास्त्रिगुणात्मिकाः ।</span>
+            <span class="english-translation">The ādi prakṛtī is <span class="highlight" data-tooltip="श्री राधा">Śrī
+                    Rādhikā</span>, beloved of Krsna. <span class="highlight" data-tooltip="दुर्गा">Durga</span> and the
+                other goddesses in the world of the three modes are a million-millionth part of one of Her
+                expansions.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">अथर्ववेद (पिप्पलाद शाखा, पुरुष बोधिनि श्रुति)</span>
+            <span class="sanskrit-text">राधिका यस्यांशो लक्श्मिदुर्गादि शक्तिर।</span>
+            <span class="english-translation"><span class="highlight" data-tooltip="लक्ष्मी, दुर्गा">Lakshmi,
+                    Durga</span> and other shaktis are all expansions of <span class="highlight"
+                    data-tooltip="श्री राधा">Shrimati Radhika</span>.</span>
+            <span class="hindi-translation">लक्ष्मी दुर्गा आदि शक्तियाँ श्रीमती राधिका की ही अंश हैं।</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">पद्म पुराण 5.81.52-55</span>
+            <span class="sanskrit-text">गोपनादुच्यते गोपी राधिका कृष्णवल्लभा । देवी कृष्णमयी प्रोक्ता राधिका परदेवता ।
+                सर्वलक्ष्मीस्वरूपा सा कृष्णाह्लादस्वरूपिणी। ततः सा प्रोच्यते विप्र ह्लादिनीति मनीषिभिः ।
+                तत्कलाकोटिकोट्यंश दुर्गाद्यास्त्रिगुणात्मिकाः । सा तु साक्षान्महालक्ष्मीः कृष्णो नारायणः प्रभुः ।
+                नैतयोर्विद्यते भेदः स्वल्पोऽपि मुनिसत्तम ।</span>
+            <span class="english-translation">The goddess, dear to Krsna, and the highest deity is called <span
+                    class="highlight" data-tooltip="श्री राधा">Rādhika</span>. She is the original form of all the
+                lakṣmīs and is the form of Krsna's pleasure potency. Therefore, O brāhmaņa, she is called <span
+                    class="highlight" data-tooltip="ह्लादिनी शक्ति">Hladini</span> by the wise. Durga and others are a
+                part of the croreth portion of Radha. She is actually Mahalaksmi, and Krsna is lord Nārāyaņa. O best
+                sage, there is not the slightest difference between the two.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">सनत्कुमार संहिता [298]</span>
+            <span class="sanskrit-text">tasyādyā prakṛtī rādhikā nityā nirguņā sarvālań
+                kāra-śobhitāprasannāśeşa-lāvaṇya-sundarī</span>
+            <span class="english-translation"><span class="highlight" data-tooltip="श्री राधा">Śrī Rādhikā</span> is ādi
+                prakṛtī (śakti). She is eternal and devoid of any material quality. She is adorned with all ornaments,
+                joyful, and more beautiful than all beauty.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">सनत्कुमार संहिता [72-73], पद्म पुराण 5.81.52-53</span>
+            <span class="sanskrit-text">.....देवी कृष्णमयी प्रोक्ता राधिका परदेवता ॥ ५२ सर्वलक्ष्मीस्वरूपा सा
+                कृष्णाह्लादस्वरूपिणी । ततः सा प्रोच्यते विप्र ह्लादिनीति मनीषिभिः ॥</span>
+            <span class="english-translation"><span class="highlight" data-tooltip="श्री राधा">Śrī Rādhikā</span> is the
+                Supreme Goddess, the Parā prakṛtī. She is the complete embodiment of all the Lakṣmīs. She is the
+                personification of the joy of Lord Krşņa (raso vai sah.) Thus, wise describe Her as <span
+                    class="highlight" data-tooltip="ह्लादिनी शक्ति">Hlādinī-śakti</span> (pleasure-giving
+                potency).</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">नारद पुराण 1.82.190</span>
+            <span class="sanskrit-text">sarasvatīśā durgeśā</span>
+            <span class="english-translation"><span class="highlight" data-tooltip="श्री राधा">Śrī Rādhikā</span> is the
+                controller of <span class="highlight" data-tooltip="सरस्वती">Sarasvati</span>. Śrī Rādhikā is the
+                controller of <span class="highlight" data-tooltip="दुर्गा">Durgā</span>.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">पुरुष-बोधिनी उपनिषद्, प्रथमः प्रपाठकः, अथर्व वेद</span>
+            <span class="sanskrit-text">rādhikā ceti yasyā aṁśo lakṣmī-durgādikā śaktir</span>
+            <span class="english-translation"><span class="highlight" data-tooltip="श्री राधा">Śrī Rādhikā</span>'s
+                expansions (amśas) are personified energies such as <span class="highlight"
+                    data-tooltip="लक्ष्मी, दुर्गा">Lakṣmī and Durgā</span>.</span>
+        </div>
+
+        <h2><i class="fas fa-star"></i> श्रीमती राधारानी का कोई समकक्ष नहीं</h2>
+        <div class="scripture-block">
+            <span class="verse-reference">पद्म पुराण, पाताल खंड 71.38-42</span>
+            <span class="english-translation">[नारद कहते हैं] मैंने सभी लोकों में स्वतंत्र रूप से भ्रमण किया है, लेकिन
+                <span class="highlight" data-tooltip="श्री राधा">Śrī Rādhikā</span> जैसा रूप कहीं नहीं देखा! मैंने
+                ब्रह्मलोक, रुद्रलोक या इंद्रलोक में भी ऐसी कन्या नहीं देखी जो इस कन्या की एक करोड़वें हिस्से जितनी सुंदर
+                हो! मैंने <span class="highlight" data-tooltip="पार्वती">महामाया</span>, पर्वत की पुत्री को देखा है,
+                जिसका रूप सभी चर और अचर प्राणियों को मोहित करता है। मैंने <span class="highlight"
+                    data-tooltip="लक्ष्मी, सरस्वती">लक्ष्मी, सरस्वती</span>, कांति, विद्या और सभी श्रेष्ठ स्त्रियों को
+                देखा है, लेकिन वे उनके मधुर रूप की छाया को भी नहीं छू सकीं! मैंने कहीं भी इतनी कोमल और सुंदर कन्या नहीं
+                देखी!</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">नारद पुराण 1.82.151</span>
+            <span class="sanskrit-text">...durgārādhyā ramārādhyā....</span>
+            <span class="english-translation"><span class="highlight" data-tooltip="श्री राधा">Śrī Rādhikā</span> is
+                worshipped by <span class="highlight" data-tooltip="दुर्गा">Durgā</span>. Śrī Rādhikā is worshipped by
+                <span class="highlight" data-tooltip="लक्ष्मी">Ramā (Lakṣmī)</span>.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">स्कंद पुराण [वैष्णव खंड, भागवत माहात्म्य 2.6, 2.9-14]</span>
+            <span class="sanskrit-text">.... रुक्मिण्यादिसमावेशो मयात्रैव विलोकितः....</span>
+            <span class="hindi-translation">द्वारका की रानियाँ (<span class="highlight"
+                    data-tooltip="रुक्मिणी">रुक्मिणी</span> आदि) राधा और कृष्ण की सेवा करने की अत्यधिक इच्छुक रहती हैं।
+                श्रीकृष्ण की सभी नायिकाएँ वास्तव में राधिका जी के अंशों का विस्तार हैं।</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">देवी भागवतम् 9.13.38</span>
+            <span class="english-translation">She is the Mother of all the worlds; but no one is Her mother(unborn). She
+                is fortunate, respected and proud. She is the Ruling Lady of <span class="highlight"
+                    data-tooltip="श्री कृष्ण">Śrī Kṛṣṇa</span>'s Life and Soul and ever dearer to Him than His Prāņa
+                (vital breath).</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">चैतन्य चरितामृत, आदि 4.89</span>
+            <span class="english-translation"><span class="highlight" data-tooltip="श्री राधा">Shri Radha</span> is
+                parama-devata, the Supreme Goddess, and She is worshipable for everyone. She is the protectress of all,
+                and She is the mother of the entire universe.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">नारद पंचरात्र, वृहद् ब्रह्म संहिता (4.25)</span>
+            <span class="sanskrit-text">यः कृष्णः सापि राधा च या राधा कृष्ण एव सः।...</span>
+            <span class="english-translation">That transcendental form who is <span class="highlight"
+                    data-tooltip="श्री कृष्ण">Krishna</span> is certainly <span class="highlight"
+                    data-tooltip="श्री राधा">Radha</span>. That who is Radha is certainly Krishna. Both are one and the
+                same.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">ब्रह्मवैवर्त पुराण, प्रकृतिखण्ड, अध्याय ४८, श्लोक ३८</span>
+            <span class="sanskrit-text">राधा भजति तं कृष्णं स च ताज्य परस्परम् । उभयोः सर्वसाम्यं च सदा सन्तो वदन्ति च
+                ॥</span>
+            <span class="english-translation"><span class="highlight" data-tooltip="श्री राधा">Radha</span> worships
+                Shri <span class="highlight" data-tooltip="श्री कृष्ण">Krishna</span> and Krishna praises Shriradha.
+                There is always harmony between them, such is the promise of saints.</span>
+            <span class="hindi-translation">राधा श्रीकृष्ण की भक्ति करती हैं और श्रीकृष्ण श्रीराधा की प्रशंसा करते हैं।
+                उनके बीच सदा सामंजस्य रहता है, ऐसा संतों का कथन है।</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">श्रीमद्देवीभागवत महापुराण, 9/50/16</span>
+            <span class="sanskrit-text">कृष्णाचया नाधिकारो यतो राधार्चनं विना । वैष्णवेस्सकलेस्तस्मात् कर्तव्यं
+                राधिकार्चनम् ॥</span>
+            <span class="english-translation">Because a person does not even have the right to worship Shri <span
+                    class="highlight" data-tooltip="श्री कृष्ण">Krishna</span> without worshiping <span
+                    class="highlight" data-tooltip="श्री राधा">Shriradha ji</span>, hence it is the duty of Vaishnavas
+                to worship Radhaji.</span>
+            <span class="hindi-translation">क्योंकि श्रीराधाजी की पूजा के बिना किसी को श्रीकृष्ण की पूजा करने का अधिकार
+                भी नहीं है, अतः वैष्णवों का कर्तव्य है कि वे राधाजी की पूजा करें।</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">शिव पुराण 2.5.29.53</span>
+            <span class="sanskrit-text">तस्य नारी समाख्याता राधेति जगदम्बिका। प्रकृतेः परमा मूर्तिः पंचमी सुविहारिणी ॥
+                ५३ || बहुगोपाश्च गोप्यश्च तत्र संति तदंगजाः। सुविहारपरा नित्यं राधाकृष्णानुवर्तिनः ॥ ५४ ॥</span>
+            <span class="english-translation">His (<span class="highlight" data-tooltip="श्री कृष्ण">Krishna</span>)
+                wife <span class="highlight" data-tooltip="श्री राधा">Rādhā</span> is the mother of the universe. Her
+                form is greater than Prakṛti. It is the fifth sportive form. Many cowherds and cowherdesses born of her
+                live there. They are sportively inclined and follow Rādhā and Krşņa.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">गर्गसंहिता, मथुराखण्ड, अध्याय १८, श्लोक १७-२२</span>
+            <span class="sanskrit-text">कथं लिखसि राधे त्वं कथं दुःखं करोषि हि । सर्वा तस्मै वदिष्यामि व्यथां त्वल्लेखनं
+                विना ॥</span>
+            <span class="english-translation">Hey <span class="highlight" data-tooltip="श्री राधा">Radhee</span>! Why do
+                you need to write anything? Why do you even grieve? I will go and tell all the words of your heart to
+                Shri <span class="highlight" data-tooltip="श्री कृष्ण">Krishna</span>.</span>
+            <span class="hindi-translation">हे राधे! तुम्हें कुछ लिखने की क्या आवश्यकता है? तुम दुखी क्यों होती हो? मैं
+                तुम्हारे हृदय के सभी शब्द श्रीकृष्ण को बता दूँगा।</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">ब्रह्माण्ड पुराण, मध्यभाग, अध्याय ४३, श्लोक ०८</span>
+            <span class="sanskrit-text">या राधा जगदुद्भवस्थितिलयेष्वाराध्यते वा जनै, शब्दं
+                बोधयतीशवक्त्रविगलत्प्रेमामृतास्वाद नम् ।</span>
+            <span class="english-translation">At the time of the origin, condition and destruction of the world, who is
+                worshipped by the name '<span class="highlight" data-tooltip="श्री राधा">Radha</span>', she is the owner
+                of Ras, the master of rasikas, and Radha, who guides everyone, always protect me.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">स्कंद पुराण, खंड 2, भागवत माहात्म्य, अध्याय 3</span>
+            <span class="english-translation">Like the moon, the mind of <span class="highlight"
+                    data-tooltip="श्री कृष्ण">Śrīkṛṣņa</span>, accompanied by the refulgence from the face of <span
+                    class="highlight" data-tooltip="श्री राधा">Shri Radha</span>, always shines, beautifying the
+                Vrindavan Forest by its rays.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">मत्स्य पुराण 13.37</span>
+            <span class="sanskrit-text">रुक्मिणी द्वारवत्यान्तु राधा वृन्दावने वने ॥</span>
+            <span class="english-translation">As <span class="highlight" data-tooltip="रुक्मिणी">Rukmini</span> is the
+                chief queen in Dvārakā, <span class="highlight" data-tooltip="श्री राधा">Rādhā</span> is the chief gopi
+                in Vrndāvana.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">आदि पुराण</span>
+            <span class="english-translation">This verse, spoken by Lord <span class="highlight"
+                    data-tooltip="श्री कृष्ण">Krsna</span> to Arjuna, is cited from the Adi Purāņa. O Partha, in all the
+                three planetary systems, this earth is especially fortunate, for on earth is the town of Vrndāvana. And
+                there the gopīs are especially glorious because among them is My腐蚀 My <span class="highlight"
+                    data-tooltip="श्री राधा">Śrīmatī Rādhārānī</span>.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">अग्नि पुराण (श्रील जीव गोस्वामी के उद्धरण)</span>
+            <span class="sanskrit-text">....tatraikam radhikam vina radha tad-bhava-samlina....</span>
+            <span class="english-translation">At dawn the Gopis inquired from Krishna's servant, Uddhava, about the
+                Lord's pastimes and recreation. Only <span class="highlight" data-tooltip="श्री राधा">Srimati
+                    Radharani</span>, immersed in thought of Krishna, withdrew Her interest in the talks. Then Radha,
+                who is worshiped by the residents of Her Vrindavan village, spoke up in the midst of her girl friends
+                (Sakhis). Her words were full of pure transcendental knowledge and expressed the ultimate portion of the
+                Vedas.</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">राधतापनी उपनिषद्, अथर्व वेद</span>
+            <span class="sanskrit-text">येयं राधा यश्च कृष्णो रसाब्धिर्देहश्चैकः क्रीडनार्थे द्विधाभूत ।</span>
+            <span class="english-translation">The <span class="highlight" data-tooltip="श्री राधा">Radha</span> and
+                <span class="highlight" data-tooltip="श्री कृष्ण">Krishna</span> who are oceans of rasa are one, but
+                have taken two forms for the purpose of play.</span>
+            <span class="hindi-translation">जो यें राधा और जो यें कृष्ण रस के सागर हैं वे एक ही हैं, पर खेल के लिये दो
+                रूप बने हुये हैं।</span>
+        </div>
+
+        <div class="scripture-block">
+            <span class="verse-reference">ब्रह्मवैवर्त पुराण, श्रीकृष्णजन्मखण्ड, अध्याय 97, छंद 49/50</span>
+            <span class="sanskrit-text">ये वा द्विषन्ति निन्दन्ति पापिनच हसन्ति च। कृष्णप्राणाधिकादेवदेवीं च राधिकां
+                वराम् ।। ब्रह्महत्याशतं ते च लभन्ते नात्र संशयः। तत्पापेन च पच्यन्ते कुम्भीपाके च रौरखे ॥</span>
+            <span class="english-translation">Those who hate, ridicule, or criticize <span class="highlight"
+                    data-tooltip="श्री राधा">Shri Radhika</span>, who is dearer to <span class="highlight"
+                    data-tooltip="श्री कृष्ण">Krishna</span> than His own life, undoubtedly incur the sin of hundreds of
+                Brahmahatyas. Due to that sin, they suffer for a long time in the hells of Kumbhipaka and
+                Raurava.</span>
+            <span class="hindi-translation">श्रीकृष्ण की प्राण प्रिया श्री राधिकाजी से जो लोग द्वेष करते हैं उनका उपहास
+                करते हैं, निन्दा करते हैं, उन पापी जीवों को निस्संदेह सैकड़ों ब्रह्मत्याओं का पाप लगता है जिसके कारण वे
+                कुंभीपाक और रौरव के नरकों में बहुत काल तक पीड़ित होते हैं।</span>
+        </div>
+
+        <hr>
+
+        <h2><i class="fas fa-book"></i> श्रीमद्भागवतम्, विष्णु पुराण और महाभारत में श्रीमती राधारानी</h2>
+        <h3>श्रीमद्भागवतम् में श्रीमती राधारानी</h3>
+        <p>कई आचार्य कहते हैं कि <span class="highlight" data-tooltip="शुकदेव">शुकब्रह्म</span>, जिन्होंने भागवतम् का
+            पाठ किया, राधाकृष्ण के शुद्ध भक्त थे, और उनकी लीलाओं का उल्लेख करने से वे चेतना खो देते थे और इसलिए सात
+            दिनों में इसे पूरा नहीं कर पाते। अतः वे उनका उल्लेख सामान्य संज्ञाओं जैसे <span class="highlight"
+                data-tooltip="कोई गोपी">काचित्</span>, <span class="highlight" data-tooltip="वह वधू">सावधुः</span>, और
+            <span class="highlight" data-tooltip="प्रिया">प्रिया</span> आदि से करते हैं। [अप्रत्यक्ष रूप से राधारानी का
+            उल्लेख]</p>
+        <div class="scripture-block">
+            <span class="verse-reference">कौशिकी संहिता</span>
+            <span class="sanskrit-text">श्रीराधानाममात्रेण मूर्च्छा षाण्मासिकी भवेत्। अतो नोच्चारितं स्पष्टं
+                परीक्षिद्धितकृन्मुनिः ॥</span>
+            <span class="english-translation">Due to being absorbed in the state of Brahman, <span class="highlight"
+                    data-tooltip="शुकदेव गोस्वामी">Shukadeva Goswami</span> would faint for six months merely by
+                uttering the name "<span class="highlight" data-tooltip="श्री राधा">Radha</span>." As <span
+                    class="highlight" data-tooltip="परीक्षित">Parikshit</span>'s life was limited to seven days,
+                Shukadeva Goswami did not directly mention Radhaji's name for his benefit.</span>
+            <span class="hindi-translation">शुकदेवजी ब्रह्मभावावेश के कारण "राधा" शब्द से छः महीनो के लिये मुर्छित हो
+                जाते थे, और परिक्षित् की आयु सप्तदिनावधि ही शेष थी, अतः उनके हित की कामना से शुकदेवजी ने राधाजी का
+                प्रत्यक्ष नाम नहीं लिया है।</span>
+        </div>
+        <p>इन संदर्भों के अलावा, श्लोक में <span class="highlight" data-tooltip="आराधित">अनयाराधितो</span> वाक्यांश में
+            उनका नाम दिया गया है:</p>
+        <div class="scripture-block">
+            <span class="verse-reference">श्रीमद्भागवतम् (10.30.28)</span>
+            <span class="sanskrit-text">अनयाराधितो नूनं भगवान् हरिरीश्वरः । यन्नो विहाय गोविन्दः प्रीतो यामनयद् रहः ॥ २८
+                ॥</span>
+            <span class="english-translation">Certainly this particular gopi has perfectly worshiped the all-powerful
+                Personality of Godhead, <span class="highlight" data-tooltip="श्री कृष्ण">Govinda</span>, since He was
+                so pleased with Her that He abandoned the rest of us and brought Her to a secluded place.</span>
+        </div>
+        <p><span class="highlight" data-tooltip="विश्वनाथ चक्रवर्ती">Śrīla Viśvanātha Cakravarti</span> explains that
+            the word ärādhitaḥ refers to <span class="highlight" data-tooltip="श्री राधा">Śrīmatī Rādhārāņī</span>. He
+            comments, "The sage Sukadeva Gosvāmī has tried with all endeavor to keep Her name hidden, but now it
+            automatically shines forth from the moon of his mouth. That he has spoken Her name is indeed Her mercy, and
+            thus the word ärādhitaḥ is like the rumbling of a kettledrum sounded to announce Her great good fortune."
+        </p>
+        <p>The name "<span class="highlight" data-tooltip="श्री राधा">Rādhā</span>" is derived from the root word <span
+                class="highlight" data-tooltip="पूजा">ārādhana</span>, which means "worship." The personality who excels
+            all in worshiping Krsna may therefore be called Rādhikā, the greatest servitor.</p>
+        <div class="scripture-block">
+            <span class="verse-reference">श्रील जीव गोस्वामी का टीका</span>
+            <span class="sanskrit-text">अनयाराधितो नूनं भगवान् हरिरीश्वरः ... गोविन्दः प्रीतो यामनयद् रहः ॥ ŚB
+                10.30.28</span>
+            <span class="english-translation">This is a verse spoken by the gopis who <span class="highlight"
+                    data-tooltip="श्री कृष्ण">Krsna</span> deserted in the Rāsa-lilā at the height of their bliss. While
+                searching for Him, from seeing the footprints, they realized He had not left alone but with another
+                gopi. They wondered who this special gopi was.</span>
+        </div>
+        <p>श्रीमद्भागवतम् और विष्णु पुराण में एक घटना का उल्लेख है जहाँ भगवान कृष्ण एक विशेष गोपी के साथ रास मंडल से चले
+            जाते हैं। (वह विशेष गोपी कोई और नहीं बल्कि <span class="highlight" data-tooltip="श्री राधा">श्री राधा</span>
+            हैं)</p>
+        <div class="scripture-block">
+            <span class="verse-reference">श्रीमद्भागवतम् 10.32.4</span>
+            <span class="sanskrit-text">काचित् कराम्बुजं शौरेर्जगृहेऽञ्जलिना</span>
+            <span class="english-translation">One gopi joyfully took <span class="highlight"
+                    data-tooltip="श्री कृष्ण">Krsna</span>'s hand between her folded palms... <span class="highlight"
+                    data-tooltip="कोई गोपी">Kacit</span> refers to "one" of them. That one is <span class="highlight"
+                    data-tooltip="श्री राधा">Radharani</span>.</span>
+        </div>
+        <p>श्रीमद्भागवतम् 10.30.26 में वर्णन है कि कृष्ण के एक विशेष गोपी के साथ रास नृत्य छोड़ने के बाद अन्य गोपियाँ उस
+            विशेष गोपी (<span class="highlight" data-tooltip="श्री राधा">राधारानी</span>) की खोज में निकल पड़ती हैं।</p>
+        <ul>
+            <li>श्रीमद्भागवतम् 10.30.27: [गोपियों ने कहा:] यहाँ हमें किसी गोपी के पदचिह्न दिखाई दे रहे हैं जो नंद महाराज
+                के पुत्र के साथ चल रही होगी। उसने अवश्य ही अपने कंधे पर उसका हाथ रखा होगा, जैसे एक हाथी अपनी सूंड को
+                साथी हथिनी के कंधे पर रखता है।</li>
+            <li>श्रीमद्भागवतम् 10.30.30: उस विशेष गोपी के ये पदचिह्न हमें बहुत परेशान कर रहे हैं। सभी गोपियों में से
+                केवल उसे ही एकांत स्थान पर ले जाया गया... देखो, यहाँ हमें उसके पदचिह्न दिखाई नहीं दे रहे! जाहिर है कि
+                घास और अंकुर उसके कोमल तलवों को चोट पहुँचा रहे थे, और इसलिए प्रेमी ने अपनी प्रियतमा को उठा लिया।</li>
+            <li>श्रीमद्भागवतम् 10.30.32-33: श्री कृष्ण उस विशेष गोपी के लिए फूल तोड़ते हैं और उसके लिए फूलों का मुकुट
+                बनाते हैं और उसके बाल संवारते हैं।</li>
+        </ul>
+        <div class="scripture-block">
+            <span class="verse-reference">विष्णु पुराण, रासलीला खंड, पुस्तक 5, अध्याय 13, श्लोक 30–39</span>
+            <span class="sanskrit-text">ये लीलाललितगामी कृष्णचन्द्रके ध्वजा, वज्र, अंकुश और कमल आदिकी रेखाओंसे सुशोभित
+                पदचिह्न तो देखो ॥ ३२ ॥ और देखो, उनके साथ कोई पुण्यवती मदमाती युवती भी आ गयी है, उसके ये घने छोटे-छोटे और
+                पतले चरणचिह्न दिखायी दे रहे हैं। ३३ ॥ यहाँ निश्चय ही दामोदरने ऊँचे होकर पुष्पचयन किये हैं; इसी कारण यहाँ
+                उन महात्माके चरणोंके केवल अग्रभाग ही अंकित हुए हैं॥ ३४॥ यहाँ बैठकर उन्होंने निश्चय ही किसी बड़भागिनीका
+                पुष्पोंसे श्रृंगार किया है; अवश्य ही उसने अपने पूर्वजन्ममें सर्वात्मा श्रीविष्णुभगवान्की उपासना की होगी
+                ॥ ३५ ॥ और यह देखो, पुष्पबन्धनके सम्मानसे गर्विता होकर उसके मान करनेपर श्रीनन्दनन्दन उसे छोड़कर इस
+                मार्गसे चले गये हैं ॥ ३६ मन्दगामिनी गोपी कृष्णचन्द्रके पीछे-पीछे गयी है। वह अपने गन्तव्य स्थानको
+                तीव्रगतिसे गयी है, इसीसे उसके चरणचिह्नोंके अग्रभाग कुछ नीचे दिखायी देते हैं ॥ ३७ ॥ यहाँ वह सखी उनके
+                हाथमें अपना पाणिपल्लव देकर चली है, इसीसे उसके चरणचिह्न पराधीन से दिखलायी देते हैं ॥</span>
+            <span class="english-translation">In the Vishnu Purana, during the description of Rasa Leela in the chapter
+                13 of book 5, there are seven shlokas (shlokas 32-38) describing <span class="highlight"
+                    data-tooltip="श्री कृष्ण">Krishna</span> leaving the Rasa Mandala and going off with a special Gopi
+                into the forest. The other Gopis also describe their footprints, and Krishna's adorning her with flowers
+                and leaving her some distance away. This is almost the same as in the Srimad Bhagavatam. The word used
+                here (where there it is Anayaradhito) is Vishnur Abhyarchito Yaya - Vishnu was worshipped extensively by
+                her. Therefore we can infer that this Gopika is <span class="highlight" data-tooltip="श्री राधा">Srimati
+                    Radharani</span>.</span>
+        </div>
+        <div class="scripture-block">
+            <span class="verse-reference">भ्रमर-गीता, श्रीमद्भागवतम् 10.47.11</span>
+            <span class="sanskrit-text">काचिन्मधुकरं दृष्ट्वा ध्यायन्ती कृष्णसङ्गमम् । प्रियंप्रस्थापितं दूतं
+                कल्पयित्वेदमब्रवीत् ॥ ११ ||</span>
+            <span class="english-translation">One of the gopis, while meditating on Her previous association with <span
+                    class="highlight" data-tooltip="श्री कृष्ण">Krsna</span>, saw a honeybee before Her and imagined it
+                to be a messenger sent by Her beloved. Thus She spoke as follows. The word "<span class="highlight"
+                    data-tooltip="कोई गोपी">kacin</span>" in this verse, meaning "one of the gopis" refers to <span
+                    class="highlight" data-tooltip="श्री राधा">Radha</span>. All these evidences point to only one
+                thing, that unnamed special gopi and the greatest devotee of Shri Krishna is undoubtedly Shri Radha
+                Rani. As it is clearly mentioned in other scriptures and Puranas that she is none other than Shri
+                Radha.</span>
+        </div>
+
+        <hr>
+
+        <h2><i class="fas fa-scroll"></i> महाभारत में पंचरात्र का उल्लेख</h2>
+        <div class="scripture-block">
+            <span class="verse-reference">महाभारत, शान्ति पर्व, अध्याय 359, श्लोक 68; अध्याय 337, श्लोक 63</span>
+            <span class="sanskrit-text">पञ्चरात्रस्य कृत्स्नस्य वक्ता नारायणः स्वयम्। ज्ञानेष्वेतेषु राजेन्द्र
+                सर्वेष्वेतद्विशिष्यते ॥</span>
+            <span class="english-translation">The narrator of the <span class="highlight"
+                    data-tooltip="पंचरात्र">PANCHARAATRA</span> philosophy, in its entirety, is shri <span
+                    class="highlight" data-tooltip="नारायण">naaraayana</span> himself. Among the sources of knowledge,
+                this is superior and the best, O raajendra.</span>
+        </div>
+        <p>और नारद पंचरात्र में <span class="highlight" data-tooltip="श्री राधा">राधारानी</span> का स्पष्ट उल्लेख है।
+        </p>
+
+        <h3>श्रीमती राधारानी सबसे गोपनीय तत्त्व हैं</h3>
+        <div class="scripture-block">
+            <span class="verse-reference">नारद पंचरात्र (2.3.50)</span>
+            <span class="sanskrit-text">अपूर्व राधिकाख्यानं गोपनीयं सुदुर्लभम् । सद्यो मुक्तिप्रदं शुद्धं वेदसारं
+                सुपुण्यदम्।</span>
+            <span class="english-translation">The discussions regarding <span class="highlight"
+                    data-tooltip="श्री राधा">Śrimati Rādhārānī</span> are extremely confidential, rarely spoken and very
+                difficult to understand. (For those qualified to hear), it, at once, grants liberation, being all-pure,
+                supremely auspicious, and the essence of all the Vedas.</span>
+            <span class="hindi-translation">श्रीमती राधारानी के विषय में जो चर्चा है, वह अत्यंत गोपनीय है, बहुत कम कही
+                जाती है और समझने में बहुत कठिन है। (जो सुनने के योग्य हैं, उनके लिए) यह तुरन्त मोक्ष प्रदान करने वाली
+                है, क्योंकि यह सर्वशुद्ध, परम मंगलमय है और समस्त वेदों का सार है।</span>
+        </div>
+
+        <hr>
+
+        <h2><i class="fas fa-university"></i> महाभारत में श्रीमती राधारानी</h2>
+        <div class="scripture-block">
+            <span class="verse-reference">महाभारत, सभा पर्व, अध्याय 38</span>
+            <span class="sanskrit-text">ततः सर्वदशार्हाणामाडुकस्य च याः स्त्रियः । नन्दगोपस्य महिषी यशोदा लोकविश्रुता ।।
+                रेवती च महाभागा रुक्मिणी च पतिव्रता । सत्या जाम्बवती चोभे गान्धारी शिंशुमापि वा ।। विशोका लक्ष्मणा
+                साध्वी सुमित्रा केतुमा तथा । वासुदेवमहिष्योऽन्याः श्रिया सार्धं ययुस्तदा ।। विभूर्ति द्रष्टुमनसः केशवस्य
+                वराङ्गनाः । प्रीयमाणाः सभां जग्मुरालोकयितुमच्युतम् ।।</span>
+            <span class="english-translation">In Sabha parva, chapter 38 Of Mahabharat, <span class="highlight"
+                    data-tooltip="श्री राधा">Śrī Rādhā</span> is mentioned as Sriji. She is listed separately from
+                listed wives of Krishna. Some people have their own claim from this verse that Shriji is used for
+                Astabharyas or Laxmi or Droupadi or Subhadra.</span>
+            <ul>
+                <li>अष्टभार्या: "<span class="highlight" data-tooltip="श्री जी">Shri Ji</span>" का उल्लेख कृष्ण की
+                    पत्नियों (<span class="highlight" data-tooltip="रुक्मिणी, सत्यभामा, जाम्बवती">Rukmini, Satyabhama,
+                        Jambavati</span> आदि) के बाद किया गया है। श्री जी से पहले रुक्मिणी का अलग उल्लेख एक अलग व्यक्ति
+                    को इंगित करता है।</li>
+                <li>लक्ष्मी जी: इस संदर्भ में लक्ष्मी का उल्लेख नहीं है। लक्ष्मी सामान्यतः नारायण से संबंधित है, विशेष
+                    रूप से कृष्ण से नहीं। इस दृश्य में लक्ष्मी की उपस्थिति का कोई शास्त्रीय प्रमाण नहीं है।</li>
+                <li>द्रौपदी: इस अध्याय या आसपास के श्लोकों में द्रौपदी का उल्लेख नहीं है। द्रौपदी पांडवों की पत्नी है,
+                    कृष्ण की नहीं। संदर्भ द्रौपदी के चरित्र या कहानी से मेल नहीं खाता।</li>
+                <li>सुभद्रा: महाभारत में सुभद्रा का अलग से उल्लेख है, इस श्लोक में नहीं। सुभद्रा कृष्ण की बहन है, पत्नी
+                    नहीं। संदर्भ कृष्ण की पत्नियों पर जोर देता है, न कि बहन पर।</li>
+            </ul>
+            <p class="note">निष्कर्ष: श्लोक की संरचना और भाषा एक विशिष्ट महिला व्यक्ति को इंगित करती है, जो सूचीबद्ध
+                पत्नियों से अलग है। कृष्ण की दैवीय महिमा (<span class="highlight" data-tooltip="विभूति">Vibhuti</span>)
+                पर जोर दिया गया है, जो निस्संदेह इस श्लोक में राधा को उनकी दैवीय सहचरी के रूप में उल्लेख करता है।</p>
+        </div>
+        <div class="scripture-block">
+            <span class="verse-reference">महाभारत, सभा पर्व, अध्याय 38</span>
+            <span class="sanskrit-text">गोविन्द द्वारकावासिन् कृष्ण गोपीजनप्रिय ।। ४१ ।। कौरवैः परिभूतां मां किं न
+                जानासि केशव । हे नाथ हे रमानाथ व्रजनाथार्तिनाशन । कौरवार्णवमग्नां मामुद्धरस्व जनार्दन ।। ४२ ।।</span>
+            <span class="english-translation">O <span class="highlight" data-tooltip="श्री कृष्ण">Govinda</span>! O
+                Krishna, resident of Dwarka! O <span class="highlight" data-tooltip="केशव">Keshav</span>, dear to the
+                gopis! The Kauravas are insulting me, do You not know? O Lord! O Ramānātha! O Vrajanātha! O Janardana,
+                destroyer of distress! I am drowning in the ocean of the Kauravas, please deliver me!</span>
+            <span class="hindi-translation">हे गोविन्द! हे द्वारकावासी श्रीकृष्ण! हे गोपांगनाओंके प्राणवल्लभ केशव! कौरव
+                मेरा अपमान कर रहे हैं, क्या आप नहीं जानते? हे नाथ! हे रमानाथ! हे व्रजनाथ! हे संकटनाशन जनार्दन! मैं
+                कौरवरूप समुद्रमें डूबी जा रही हूँ, मेरा उद्धार कीजिये।। ४१-४२ ।।</span>
+            <p class="note">द्रौपदी-वस्त्रहरण की घटना के दौरान महाभारत में गोपियों का नाम आता है। जब वह असहाय हो जाती
+                है, तो वह गोविंद को पुकारती है - हे गोपांगनाओंके प्राणवल्लभ केशव।</p>
+        </div>
+        <div class="scripture-block">
+            <span class="verse-reference">महाभारत, खिलभाग, हरिवंश, विष्णु पर्व, अध्याय 20 (रासक्रीडा)</span>
+            <span class="english-translation">This chapter of Harivamśa describes the gopis and the Raasleela. If there
+                are Gopis and Raasleela somewhere, then the Queen of Gopis, <span class="highlight"
+                    data-tooltip="रासेश्वरी श्री राधारानी">Raseshwari Shri Radharani</span> is already included in
+                it!</span>
+        </div>
+
+        <hr>
+
+        <h2><i class="fas fa-users"></i> प्रामाणिक आचार्यों ने अपने कार्यों में श्रीमती राधारानी का उल्लेख किया है</h2>
+        <h3>आदि शंकराचार्य ने श्री राधा का नाम लिया है</h3>
+        <div class="scripture-block">
+            <span class="sub-section-heading">अच्युताष्टकम्</span>
+            <span class="sanskrit-text">अच्युतं केशवं सत्यभामाधवं माधवं श्रीधरं राधिकाराधितम् । इन्दिरामन्दिरं चेतसा
+                सुन्दरं देवकीनन्दने नन्दजे सन्दधे ॥ 2 ॥</span>
+            <span class="english-translation">I offer my obeisances to Lord <span class="highlight"
+                    data-tooltip="केशव">Keshav</span>, Who is infallible (Acyuta). Who is the consort of <span
+                    class="highlight" data-tooltip="सत्यभामा">Satyabhama</span>, Madhva, Shridhara, Who is longed-for by
+                <span class="highlight" data-tooltip="श्री राधा">Radhika</span>, Who is the temple of <span
+                    class="highlight" data-tooltip="लक्ष्मी">Laxmi (Indira)</span>, Who is beautiful by thought, Who is
+                dear to Devki, and Who is dear to all.</span>
+        </div>
+        <div class="scripture-block">
+            <span class="sub-section-heading">यमुनाष्टकम्</span>
+            <span class="sanskrit-text">जलान्तकेलिकारिचारुराधिकाङ्गरागिणी स्वभर्तुरन्यदुर्लभाङ्गसङ्गतांश भागिनी
+                स्वदत्तसुप्तसप्तसिन्धुभेदनातिकोविदा । धुनोतु मे मनोमले कलिन्दनन्दिनी सदा ॥६ ॥</span>
+            <span class="english-translation">6.1: (Salutations to Devi Yamuna) Your River-Body is coloured by the touch
+                of the Beautiful <span class="highlight" data-tooltip="श्री राधा">Radharani</span> who used to play
+                within Your Waters (with <span class="highlight" data-tooltip="श्री कृष्ण">Sri Krishna</span>). 6.2: You
+                Nourish others with that Sacred Touch (of Radha-Krishna), which is so difficult to obtain.</span>
+        </div>
+        <div class="scripture-block">
+            <span class="sub-section-heading">नारायण स्तोत्रम्</span>
+            <span class="sanskrit-text">मंजुलगुंजाभूषा मायामानुषवेषा ॥ राधाऽधरमधुरसिका रजनीकरकुलतिलका ॥</span>
+            <span class="english-translation">Oh Lord who wears Garland of pretty Gunja seeds, Oh Lord who takes the
+                form of the invisible man, <span class="highlight" data-tooltip="नारायण">Narayana</span>. Oh Lord who
+                enjoys the honey from the lips of <span class="highlight" data-tooltip="श्री राधा">Radha</span>, Oh lord
+                who is the crown of the princes of the dynasty of the moon, Narayana.</span>
+        </div>
+        <div class="scripture-block">
+            <span class="sub-section-heading">जगन्नाथाष्टकम्</span>
+            <span class="sanskrit-text">परंब्रह्मापीड़ः कुवलय-दलोत्फुल्ल-नयनों निवासी नीलाद्री निहित -चरणोऽनन्त-शिरसि ।
+                रसानन्दी राधा-सरस-वपुरालिङ्गन-सुखो जगन्नाथः स्वामी नयन-पथगामी भवतु मे।</span>
+            <span class="english-translation">He is the ornament of the head of Brahm and His eyes are like the
+                full-blown petals of the lotus. He resides on the Nilacala Hill, and His lotus feet are placed on the
+                heads of Ananta Deva. Lord Jagannatha is overwhelmed by the mellow of love and He becomes joyful in the
+                embracing of the body of <span class="highlight" data-tooltip="श्री राधा">Sri Radharani</span>, which is
+                like a cool pond. May that Jagannatha Swami be the object of my vision.</span>
+        </div>
+
+        <h3>वैष्णव सम्प्रदाय</h3>
+        <div class="scripture-block acharya-section">
+            <span class="acharya-name">वेदांत देशिक:</span>
+            <p>श्री वैष्णव दार्शनिक और रामानुजाचार्य के शिष्य। उन्होंने अपने कार्य में राधा का उल्लेख किया।</p>
+            <span class="sub-section-heading">यदवाभ्युदयम्, सर्ग 10, श्लोक 71</span>
+            <span class="sanskrit-text">देवकी दनुजस्थूणा दिव्यं धाम बजाङ्गणम् । रमा राधादयश्चेति राशिभेदैर्न भिद्यसे ॥
+                ७१ ॥</span>
+            <span class="english-translation">You are the same, (na bhidhyasE-do not differ) even when Your place of
+                manifestation differ such as, <span class="highlight" data-tooltip="देवकी">Devaki</span> or the pillar
+                in the house of Hiranyakasipu, or the courtyard of the mansion of Nanda or when You are in Vaikunta.
+                Your consorts differ, <span class="highlight" data-tooltip="लक्ष्मी">Lakshmi</span> in Vaikunta, <span
+                    class="highlight" data-tooltip="श्री राधा">Radha</span> or Neela in gokula etc.</span>
+        </div>
+        <div class="scripture-block acharya-section">
+            <span class="acharya-name">श्रीपद वल्लभाचार्य:</span>
+            <p>रुद्र संप्रदाय के सबसे प्रमुख आचार्य, अपने कार्य 'पुरुषोत्तम-सहस्र-नाम-स्तोत्रम्', श्लोक 183 में कहते
+                हैं:</p>
+            <span class="english-translation"><span class="highlight" data-tooltip="श्री कृष्ण">Krsna</span> is the Lord
+                who appeared in specific forms in the hearts of those gopis who were feeling separation from him and
+                seeing the entire universe filled with his thoughts. Krsna is the Lord who drove away the pride of <span
+                    class="highlight" data-tooltip="श्री राधा">Rādhā</span> that she had developed during her special
+                rendezvous with Krsna during the Rāsa Lilā.</span>
+        </div>
+        <div class="scripture-block acharya-section">
+            <span class="acharya-name">श्रीपद निम्बार्काचार्य:</span>
+            <p>उन्होंने श्री राधे को समर्पित एक संपूर्ण अष्टकम् रचा है। यह है "<span class="highlight"
+                    data-tooltip="राधाष्टकम्">राधाष्टकम्</span>"।</p>
+            <span class="sub-section-heading">राधाष्टकम्</span>
+            <span class="sanskrit-text">नमस्ते श्रियै राधिकायै परायै नमस्ते नमस्ते मुकुन्दप्रियायै । सदानन्दरूपे प्रसीद
+                त्वमन्तः प्रकाशे स्फुरन्ती मुकुन्देन सार्धम् ॥ १॥</span>
+            <span class="english-translation">Obeisances to <span class="highlight" data-tooltip="श्री राधा">Śri
+                    Rādhikā</span>, who is the goddess of pure goodness, who is the most powerful power, the embodiment
+                of the bliss potency. Obeisances to Śrī Rādhikā, who is the beloved of Lord <span class="highlight"
+                    data-tooltip="श्री कृष्ण">Krsna</span>. O goddess, you and Śrī Kṛṣņa, both are non-different and
+                always stay together. Please illuminate light and splendidly manifest with Lord Krsna inside my
+                heart.</span>
+        </div>
+
+        <hr>
+
+        <h2><i class="fas fa-book"></i> अन्य शास्त्रीय संदर्भ</h2>
+        <div class="scripture-block">
+            <span class="verse-reference">ब्रह्मवैवर्त पुराण, श्रीकृष्णजन्मखण्ड, अध्याय 97, छंद 49/50</span>
+            <span class="sanskrit-text">ये वा द्विषन्ति निन्दन्ति पापिनच हसन्ति च। कृष्णप्राणाधिकादेवदेवीं च राधिकां
+                वराम् ।। ब्रह्महत्याशतं ते च लभन्ते नात्र संशयः। तत्पापेन च पच्यन्ते कुम्भीपाके च रौरखे ॥</span>
+            <span class="english-translation">Those who hate, ridicule, or criticize <span class="highlight"
+                    data-tooltip="श्री राधा">Shri Radhika</span>, who is dearer to <span class="highlight"
+                    data-tooltip="श्री कृष्ण">Krishna</span> than His own life, undoubtedly incur the sin of hundreds of
+                Brahmahatyas. Due to that sin, they suffer for a long time in the hells of Kumbhipaka and
+                Raurava.</span>
+            <span class="hindi-translation">श्रीकृष्ण की प्राण प्रिया श्री राधिकाजी से जो लोग द्वेष करते हैं उनका उपहास
+                करते हैं, निन्दा करते हैं, उन पापी जीवों को निस्संदेह सैकड़ों ब्रह्मत्याओं का पाप लगता है जिसके कारण वे
+                कुंभीपाक और रौरव के नरकों में बहुत काल तक पीड़ित होते हैं।</span>
+        </div>
+        <div class="scripture-block">
+            <span class="verse-reference">नारद पंचरात्र (2.6.8)</span>
+            <span class="sanskrit-text">दैवदोपेण महता ये च निन्दन्ति राधिकाम् । वामाचाराश्च मूर्खाश्च पापिनश्च हरिद्विषः
+                ॥</span>
+            <span class="english-translation">If due to great divine fault (past karma) someone criticizes <span
+                    class="highlight" data-tooltip="श्री राधा">Shri Radhika</span>, then that person is a Vamamargi
+                (left-path follower), foolish, sinful, and a direct hater of Shri <span class="highlight"
+                    data-tooltip="श्री हरि">Hari</span>.</span>
+            <span class="hindi-translation">यदि कोई दैवदोष (पूर्वकर्मों) से कोई श्री राधिका की निन्दा करता है तो वह
+                वाममार्गी, मूर्ख, पापी तथा साक्षात श्री हरि का द्वेषी है।</span>
+        </div>
+        <div class="scripture-block">
+            <span class="verse-reference">रासेश्वरि नमस्तेऽस्तु कृष्ण प्राणाधिकप्रिये</span>
+            <span class="english-translation">O Queen of Rasa, obeisances to You, who are dearer than <span
+                    class="highlight" data-tooltip="श्री कृष्ण">Krishna</span>'s very life.</span>
+        </div>
+
+        <div class="link-box">
+            <p><a href="Scriptural Evidence Of ShriRadha.pdf">इसे पीडीएफ प्रारूप में देखें</a></p>
+            <p>ये सभी संदर्भ मुझे यहाँ से प्राप्त हुए <a href="https://www.instagram.com/p/C_0TYYXSdhm/" target="_blank">(यहाँ क्लिक करें)</a></p>
+            <p><a href="radha_archaeology.html" style="background: var(--secondary);">राधा जी की मान्यता के पुरातात्विक
+                    प्रमाण देखें</a></p>
+        </div>
+    </div>
+
+    <div class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#FF8A00' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } }
+        });
+
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.scripture-block').forEach((element, index) => {
+                if (element.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    element.style.animationDelay = `${index * 0.1}s`;
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

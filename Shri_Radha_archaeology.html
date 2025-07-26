@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 राधा जी की मान्यता के पुरातात्विक प्रमाण</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            --secondary: #2962FF;
+            --accent: #FFD600;
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --text: #E6E6E6;
+            --shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+            --border-radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            color: var(--text);
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-logo::before {
+            content: "ॐ";
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .categories {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .categories a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .categories a:hover {
+            color: var(--accent);
+        }
+
+        .post-date {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-image {
+            width: 100%;
+            max-width: 960px;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: 1.5rem auto;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .featured-image:hover {
+            transform: translateY(-5px);
+        }
+
+        .content-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            border: 1px solid rgba(255, 138, 0, 0.2);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .content-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .content-card img:hover {
+            transform: translateY(-5px);
+        }
+
+        .content-card figcaption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 0.5rem;
+        }
+
+        .highlight {
+            color: var(--accent);
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            cursor: help;
+            position: relative;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background: var(--surface);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 10;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .ra-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: var(--text);
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .ra-button:hover {
+            background: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .ra-button i {
+            margin-right: 0.5rem;
+        }
+
+        .home-link {
+            display: block;
+            margin: 2rem auto;
+            text-align: center;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            width: fit-content;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .home-link:hover {
+            transform: scale(1.05);
+            background: var(--accent);
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--text);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .content-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links" id="navLinks">
+                <a href="home.html#home">होम</a>
+                <a href="home.html#reading-path">पठन पथ</a>
+                <a href="home.html#mission">मिशन</a>
+                <a href="home.html#articles">लेख</a>
+                <a href="home.html#join">हमसे जुड़ें</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="categories">
+            <a href="category/archaeology.html" data-tooltip="पुरातत्व">पुरातत्व</a> |
+            <a href="category/natraj-nachiketa.html" data-tooltip="नटराज नचिकेता">नटराज नचिकेता</a>
+        </div>
+        <h1><i class="fas fa-university"></i> राधा जी की मान्यता के पुरातात्विक प्रमाण</h1>
+        <div class="post-date"><time datetime="2024-11-18T18:27:15+05:30">18 नवंबर, 2024</time></div>
+
+        <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/12/20241204_225756.jpg?resize=960%2C1200&ssl=1"
+            alt="राधा जी" class="featured-image">
+
+        <div class="content-card">
+            <p>प्रायः <span class="highlight" data-tooltip="श्री कृष्ण की सहचरी">राधा जी</span> के अस्तित्व को लेकर झगडा
+                होता रहता है। कोई राधा जी के अस्तित्व को मानता है और कोई नहीं मानता है। हालांकि हम इस स्ट्रीम में उनके
+                अस्तित्व पर कोई बात नहीं करेगें किंतु उनकी मान्यताओं के साक्ष्य पुरातात्विक रूप से कितने प्राचीन मिल
+                जाते हैं, इस पर विचार करेगें क्योंकि कुछ राधा जी को केवल <span class="highlight"
+                    data-tooltip="मुगल साम्राज्य">मुगल काल</span> के बाद मानते हैं तो कुछ <span class="highlight"
+                    data-tooltip="भक्ति संत">चैतन्य महाप्रभु</span> के द्वारा राधा जी का कांसेप्ट मानते हैं। हालांकि यह
+                स्ट्रीम अस्तित्व के विषय में नहीं है किंतु इसका उद्देश्य यह है कि एक बार इन आने वाले प्रमाणों को देखकर
+                दोनों पक्षों को पुनः पुनः अपने–अपने मत पर विचार करना चाहिए। बाकी राधा जी का अस्तित्व और <span
+                    class="highlight" data-tooltip="देवotional practice">भक्ति</span> आदि की बात को हम दर्शकों के विवेक
+                और स्वतंत्र मान्यताओं के सम्मान पर छोडते हैं।</p>
+            <h2><i class="fas fa-book"></i> गातासत्तसई में उल्लेख</h2>
+            <p>अगर राधा जी की मान्यता को लेकर विचार किया जाए तो हाल‌ <span class="highlight"
+                    data-tooltip="सातवाहन राजा">सातवाहन राजा</span> के प्राकृत ग्रंथ <span class="highlight"
+                    data-tooltip="प्रथम शताब्दी का ग्रंथ">गातासत्तसई</span> को अवश्य देखना चाहिए। राजा हाल सातवाहन का
+                समय लगभग पहली शताब्दी माना जाता है। इस ग्रंथ में राधा जी का उल्लेख आता है। जो कि राधा जी के संबंध में
+                प्राचीन लोक मान्यता की पुष्टि करता है।</p>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/11/img_20241118_1845461082430360914661567.jpg?resize=1024%2C678&ssl=1"
+                    alt="गातासत्तसई" loading="lazy">
+                <figcaption>गातासत्तसई में राधा जी का उल्लेख</figcaption>
+            </figure>
+            <p>यहां <span class="highlight" data-tooltip="राधा">राधा</span> शब्द का प्राकृत सम्भवतः <span
+                    class="highlight" data-tooltip="प्राकृत भाषा">महाराष्ट्री प्राकृत</span> का प्रयोग किया गया है। राधा
+                – <span class="highlight" data-tooltip="प्राकृत रूप">राहिआएं</span>।</p>
+            <h2><i class="fas fa-scroll"></i> अभिलेखीय साक्ष्य</h2>
+            <p>अभिलेखीय साक्ष्यों में मालवा से प्राप्त <span class="highlight" data-tooltip="परमार वंश">परमार वंश</span>
+                के ताम्रपत्र जो कि 9–10 ईस्वी का है, उसमें राधा जी का उल्लेख “<span class="highlight"
+                    data-tooltip="श्लोक">तत् राधाविरहातुरं मुररिपोः</span>” से हुआ है, यहां <span class="highlight"
+                    data-tooltip="श्री कृष्ण">मुरारि</span> शब्द श्री कृष्ण के लिए प्रयुक्त हुआ है।</p>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/11/img_20241118_1849185123139498990732295.jpg?resize=1024%2C722&ssl=1"
+                    alt="परमार ताम्रपत्र" loading="lazy">
+                <figcaption>परमार वंश के ताम्रपत्र में राधा जी का उल्लेख</figcaption>
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/11/img_20241118_1850052260132147107683691.jpg?resize=1024%2C553&ssl=1"
+                    alt="परमार ताम्रपत्र" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/11/img_20241118_1850509142445874118353737.jpg?resize=1024%2C705&ssl=1"
+                    alt="राधा कृष्ण अंकन" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/11/img_20241118_1851319059956277963563519.jpg?resize=1024%2C821&ssl=1"
+                    alt="राधा कृष्ण अंकन" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/11/img_20241118_185200442828453032323577.jpg?resize=1024%2C867&ssl=1"
+                    alt="राधा कृष्ण अंकन" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/11/img_20241118_1852407290977071985506902.jpg?resize=1024%2C751&ssl=1"
+                    alt="राधा कृष्ण अंकन" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/11/img_20241118_1853423692902792486351915.jpg?resize=1024%2C825&ssl=1"
+                    alt="राधा कृष्ण अंकन" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/11/img_20241118_1854183177794340426976074.jpg?resize=1024%2C807&ssl=1"
+                    alt="राधा कृष्ण अंकन" loading="lazy">
+            </figure>
+            <figure>
+                <img src="https://i0.wp.com/sanatansamiksha.com/wp-content/uploads/2024/11/img_20241118_1854463075898891505064681.jpg?resize=1024%2C838&ssl=1"
+                    alt="राधा कृष्ण अंकन" loading="lazy">
+            </figure>
+            <p>जैसे मंदिर पर <span class="highlight" data-tooltip="कृष्ण की बाल लीलाएं">बाल लीला</span> के विभिन्न
+                चित्रण हैं, वैसे ही <span class="highlight" data-tooltip="राधा और कृष्ण">राधा कृष्ण</span> का भी अंकन
+                है।</p>
+            <h2><i class="fas fa-check-circle"></i> निष्कर्ष</h2>
+            <p>इन सब प्रमाणों से स्पष्ट है कि राधा जी की मान्यता <span class="highlight"
+                    data-tooltip="मुगल साम्राज्य">मुगलों</span> या <span class="highlight"
+                    data-tooltip="भक्ति संत">चैतन्य महाप्रभु</span> के बाद या समय से शुरू नहीं हुई थी, अपितु लोक मान्यता
+                में यह उससे काफी प्राचीन काल से चली आ रही है। शेष हम दर्शकों के विवेक और मान्यताओं पर छोडते हैं।</p>
+            <p style="text-align: center; margin-top: 1rem;">
+                <a href="https://sanatansamiksha.com/2024/11/18/radha/" target="_blank" class="home-link" style="background: var(--secondary);">Sanatan
+                    Samiksha</a>
+            </p>
+            <a href="home.html" class="home-link">Home</a>
+            <a href="scriptural_evidence_shri_radha.html" class="home-link" style="background: var(--secondary);">Proof
+                From Scriptures</a>
+        </div>
+    </div>
+
+    <div class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#FF8A00' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } }
+        });
+
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.content-card, .featured-image').forEach((element, index) => {
+                if (element.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    element.style.animationDelay = `${index * 0.1}s`;
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

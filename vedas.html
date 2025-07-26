@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 Shruti - The Sacred Hindu Scriptures</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF8A00; /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF; /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600; /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 12px rgba(255, 138, 0, 0.4);
+            --shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+            --shadow-hover: 0 14px 40px rgba(255, 138, 0, 0.4);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .devanagari {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        /* Particle Overlay */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo::before {
+            content: var(--om-symbol);
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 2rem;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .om-symbol {
+            text-align: center;
+            font-size: 4rem;
+            margin: 2rem 0;
+            color: var(--primary);
+            opacity: 0.3;
+            animation: pulse 3s infinite;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            color: var(--text-light);
+            margin: 3rem 0 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.5rem;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -40px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text);
+        }
+
+        /* Scripture Cards */
+        .scripture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .scripture-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .scripture-card:hover {
+            transform: translateY(-10px) scale(1.02) rotate(0.5deg);
+            box-shadow: var(--shadow-hover);
+            border: 1px solid rgba(255, 138, 0, 0.4);
+        }
+
+        .scripture-card:nth-child(1) { animation-delay: 0.1s; }
+        .scripture-card:nth-child(2) { animation-delay: 0.2s; }
+        .scripture-card:nth-child(3) { animation-delay: 0.3s; }
+        .scripture-card:nth-child(4) { animation-delay: 0.4s; }
+        .scripture-card:nth-child(5) { animation-delay: 0.5s; }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--text-light);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card-header h4 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            min-height: 120px;
+            color: var(--text);
+        }
+
+        .card-footer {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 138, 0, 0.1);
+            text-align: center;
+        }
+
+        .read-btn {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            background: transparent;
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid var(--accent);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .read-btn:hover {
+            background: var(--accent);
+            color: var(--surface);
+            transform: translateY(-2px);
+            box-shadow: var(--glow);
+        }
+
+        .read-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+            z-index: -1;
+        }
+
+        .read-btn:hover::after {
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            display: none;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--accent);
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: var(--text-light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            z-index: 1000;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: var(--glow);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .cta-section a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-section a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+            z-index: -1;
+        }
+
+        .cta-section a:hover::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 138, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0); }
+        }
+
+        @keyframes glowingBorder {
+            0% { border-color: rgba(255, 138, 0, 0.3); box-shadow: 0 0 5px rgba(255, 138, 0, 0.3); }
+            50% { border-color: rgba(255, 138, 0, 0.6); box-shadow: 0 0 15px rgba(255, 138, 0, 0.6); }
+            100% { border-color: rgba(255, 138, 0, 0.3); box-shadow: 0 0 5px rgba(255, 138, 0, 0.3); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 138, 0, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 138, 0, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.2s ease, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            .sidebar {
+                display: block;
+            }
+            .timeline::before {
+                left: 50%;
+            }
+            .timeline-item:nth-child(odd) {
+                left: 0;
+                padding-right: 40px;
+            }
+            .timeline-item:nth-child(even) {
+                left: 50%;
+                padding-left: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+            }
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            .timeline-item::before {
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.8rem;
+            }
+            .scripture-grid {
+                grid-template-columns: 1fr;
+            }
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.6rem;
+            }
+            .container {
+                padding: 10px;
+                margin: 10px;
+            }
+            .om-symbol {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links" id="navLinks">
+                <a href="home.html#home">Home</a>
+                <a href="home.html#reading-path">Reading Path</a>
+                <a href="home.html#mission">Mission</a>
+                <a href="home.html#articles">Articles</a>
+                <a href="home.html#join">Join Us</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#vedas">The Vedas</a></li>
+            <li><a href="#upavedas">The Upavedas</a></li>
+            <li><a href="#cta">Spread the Knowledge</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="om-symbol scroll-animation">ॐ</div>
+
+        <div class="card scroll-animation" id="vedas">
+            <h2><i class="fas fa-book"></i> The Vedas</h2>
+            <p>The Vedas are the oldest sacred texts of Hinduism, considered eternal divine knowledge (<span class="highlight" data-tooltip="Key term">Shruti</span>) revealed to ancient sages. They form the foundation of Hindu philosophy, rituals, and spirituality.</p>
+
+            <div class="scripture-grid">
+                <div class="scripture-card">
+                    <div class="card-header">
+                        <h4>Rig Veda</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>The oldest Veda containing hymns dedicated to various deities. It consists of 1,028 hymns divided into 10 mandalas.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="rigveda.html" class="read-btn">Explore</a>
+                    </div>
+                </div>
+
+                <div class="scripture-card">
+                    <div class="card-header">
+                        <h4>Atharva Veda</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Contains spells, charms, and incantations for daily life along with philosophical hymns. It's considered the knowledge storehouse of atharvanas.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="atharvaveda.html" class="read-btn">Explore</a>
+                    </div>
+                </div>
+
+                <div class="scripture-card">
+                    <div class="card-header">
+                        <h4>Sama Veda</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>The "Veda of melodies" containing musical notations of Rig Vedic hymns. It forms the basis of Indian classical music.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="samaveda.html" class="read-btn">Explore</a>
+                    </div>
+                </div>
+
+                <div class="scripture-card">
+                    <div class="card-header">
+                        <h4>Yajur Veda</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>The Veda of rituals and ceremonies, containing prose mantras for worship. It has both Krishna (black) and Shukla (white) recensions.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="yajurveda.html" class="read-btn">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card scroll-animation" id="upavedas">
+            <h2><i class="fas fa-scroll"></i> The Upavedas</h2>
+            <p>Upavedas are auxiliary Vedas that deal with applied knowledge. Each Veda has an Upaveda associated with it, forming the basis of various arts and sciences.</p>
+
+            <div class="scripture-grid">
+                <div class="scripture-card">
+                    <div class="card-header">
+                        <h4>Ayurveda</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>The science of life and longevity, associated with the Rig Veda. It encompasses holistic healing through herbs, diet, and lifestyle.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="ayurveda.html" class="read-btn">Explore</a>
+                    </div>
+                </div>
+
+                <div class="scripture-card">
+                    <div class="card-header">
+                        <h4>Dhanurveda</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>The martial arts and military science, associated with the Yajur Veda. It covers archery, weaponry, and combat strategies.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="dhanurveda.html" class="read-btn">Explore</a>
+                    </div>
+                </div>
+
+                <div class="scripture-card">
+                    <div class="card-header">
+                        <h4>Gandharveda</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>The art of music, dance, and performing arts, associated with the Sama Veda. It's the foundation of Indian classical arts.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="gandharveda.html" class="read-btn">Explore</a>
+                    </div>
+                </div>
+
+                <div class="scripture-card">
+                    <div class="card-header">
+                        <h4>Silpaveda</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>The science of architecture and crafts, associated with the Atharva Veda. It includes Vastu Shastra and temple architecture.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="silpaveda.html" class="read-btn">Explore</a>
+                    </div>
+                </div>
+
+                <div class="scripture-card">
+                    <div class="card-header">
+                        <h4>Arthaveda</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>The science of economics, statecraft, and governance. It deals with wealth creation and social organization.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="arthaveda.html" class="read-btn">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section scroll-animation" id="cta">
+            <h2>📢 Share the Wisdom</h2>
+            <p>Spread the knowledge of the sacred Vedas and Upavedas!</p>
+            <a href="https://x.com/intent/tweet?text=Explore the eternal wisdom of the Vedas and Upavedas! #HinduScriptures #Shruti">Share This Article</a>
+            <p class="hashtag">#HinduScriptures #Shruti #Vedas #DharmaFacts</p>
+        </div>
+    </div>
+
+    <div class="fab"></div>
+
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 30, density: { enable: true, value_area: 800 } },
+                color: { value: ['#FF8A00', '#FFD600', '#2962FF'] },
+                shape: { type: 'circle' },
+                opacity: { value: 0.2, random: true },
+                size: { value: 2, random: true },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 0.5, direction: 'none', random: true }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            scrollElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Hamburger Menu
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Custom Cursor and Trail
+            const cursor = document.querySelector('.cursor');
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+                cursorTrail.style.opacity = 1;
+            });
+
+            document.addEventListener('mouseout', () => {
+                cursorTrail.style.opacity = 0;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Floating Action Button (Scroll to Top)
+            const fab = document.querySelector('.fab');
+            fab.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Debounce Scroll for Performance
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > 300) {
+                    fab.style.opacity = 1;
+                    fab.style.transform = 'scale(1)';
+                } else {
+                    fab.style.opacity = 0;
+                    fab.style.transform = 'scale(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            fab.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            fab.style.opacity = 0;
+            fab.style.transform = 'scale(0)';
+        });
+    </script>
+</body>
+</html>
