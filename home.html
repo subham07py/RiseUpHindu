@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RiseUpHindu - Revive Sanatan Dharma | Explore Hindu & Jagannath Heritage</title>
+    <meta name="description"
+        content="Join RiseUpHindu to explore and revive Sanatan Dharma with special focus on Jagannath culture. Discover sacred texts, Odia heritage, and our mission to restore cultural pride through truth, tech, and tradition." />
+    <meta name="keywords"
+        content="Sanatan Dharma, Hinduism, Jagannath Culture, Puri Temple, Odia Heritage, Vedic, Hindu culture, ancient India, Gurukul, Mahabharata, Ramayana, Bhagavad Gita, Indian history, cultural revival" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            --primary-dark: #E65100;
+            --secondary: #2962FF;
+            --accent: #FFD600;
+            --jagannath-red: #E53E3E;
+            --jagannath-yellow: #F6E05E;
+            --jagannath-blue: #3182CE;
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --success: #00C853;
+            --error: #D50000;
+            --om-symbol: "ॐ";
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 12px 36px rgba(255, 138, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --glow: 0 0 10px rgba(255, 138, 0, 0.3);
+            --jagannath-glow: 0 0 15px rgba(229, 62, 62, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0A0A0A 100%);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Jagannath Theme Elements */
+        .jagannath-theme {
+            border-color: var(--jagannath-red);
+            background: linear-gradient(135deg, rgba(229, 62, 62, 0.1), rgba(49, 130, 206, 0.1));
+        }
+
+        .jagannath-theme::before {
+            background: linear-gradient(to right, var(--jagannath-red), var(--jagannath-yellow), var(--jagannath-blue));
+        }
+
+        .jagannath-badge {
+            background: linear-gradient(45deg, var(--jagannath-red), var(--jagannath-blue));
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+            border-bottom: 3px solid var(--jagannath-red);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo::before {
+            content: "🕉️";
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--jagannath-red), var(--jagannath-yellow));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger:hover {
+            transform: rotate(90deg);
+            color: var(--jagannath-yellow);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+            background: url('https://source.unsplash.com/1600x900/?jagannath,puri') center/cover no-repeat;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.7);
+            z-index: 1;
+        }
+
+        header h1,
+        header p {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            background: linear-gradient(45deg, var(--jagannath-red), var(--jagannath-yellow));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 2px 10px rgba(229, 62, 62, 0.3);
+        }
+
+        h1::after {
+            content: "🕉️";
+            position: absolute;
+            right: -3rem;
+            top: 0;
+            font-size: 3rem;
+            opacity: 0.7;
+            color: var(--jagannath-yellow);
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.4rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            max-width: 800px;
+            margin: 1rem auto;
+        }
+
+        h2 {
+            color: var(--text-light);
+            margin-top: 4rem;
+            padding-bottom: 1rem;
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--jagannath-red), transparent);
+            border-radius: 3px;
+        }
+
+        h3 {
+            color: var(--text-light);
+            margin-top: 3rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+
+        h3::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: var(--jagannath-red);
+            border-radius: 50%;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            margin-bottom: 3rem;
+            color: var(--text);
+            position: relative;
+            padding-left: 2.5rem;
+            border-left: 4px solid var(--jagannath-red);
+        }
+
+        .intro-text strong {
+            color: var(--text-light);
+            font-weight: 600;
+            position: relative;
+        }
+
+        .intro-text strong::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--jagannath-red), var(--jagannath-yellow));
+        }
+
+        /* Jagannath Special Section */
+        .jagannath-feature {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin: 4rem 0;
+            padding: 2rem;
+            background: rgba(26, 26, 26, 0.7);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--jagannath-red);
+            box-shadow: var(--jagannath-glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .jagannath-feature::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/800x600/?jagannath') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .jagannath-feature-content {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .jagannath-feature-image {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            max-width: 500px;
+        }
+
+        .jagannath-feature-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .jagannath-feature:hover .jagannath-feature-image img {
+            transform: scale(1.05);
+        }
+
+        /* Reading Path Section */
+        .reading-path {
+            margin-top: 5rem;
+        }
+
+        .reading-path-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .book-card {
+            background-color: var(--surface);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border-top: 4px solid var(--jagannath-red);
+        }
+
+        .book-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(229, 62, 62, 0.2), rgba(246, 224, 94, 0.2));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--jagannath-glow);
+            background: var(--surface-light);
+        }
+
+        .book-card:hover::before {
+            opacity: 1;
+        }
+
+        .book-card h4 {
+            color: var(--text-light);
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .book-card p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .book-card .buy-link {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--jagannath-red), var(--primary-dark));
+            color: var(--text-light);
+            padding: 12px 24px;
+            border-radius: var(--border-radius-sm);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-right: 12px;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--glow);
+        }
+
+        .book-card .buy-link:hover {
+            background: linear-gradient(45deg, var(--primary-dark), var(--jagannath-red));
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(229, 62, 62, 0.5);
+        }
+
+        /* Odia Scripture Section */
+        .odia-scriptures {
+            margin-top: 5rem;
+            background: rgba(26, 26, 26, 0.5);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--jagannath-blue);
+            position: relative;
+        }
+
+        .odia-scriptures::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/800x600/?odisha,temple') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .odia-scriptures h2 {
+            color: var(--jagannath-yellow);
+            position: relative;
+            z-index: 1;
+        }
+
+        .odia-scriptures h2::after {
+            background: linear-gradient(90deg, var(--jagannath-yellow), transparent);
+        }
+
+        /* Article List */
+        .article-list {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .article-list li {
+            padding: 2rem;
+            background-color: var(--surface);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-list li::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--jagannath-red), var(--jagannath-yellow));
+            transition: height 0.4s ease;
+        }
+
+        .article-list li:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--jagannath-glow);
+        }
+
+        .article-list li:hover::before {
+            height: 100%;
+        }
+
+        .article-list li a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            display: block;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .article-list li a::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--jagannath-red);
+            transition: transform 0.3s ease;
+        }
+
+        .article-list li a:hover {
+            color: var(--jagannath-yellow);
+        }
+
+        .article-list li a:hover::before {
+            transform: translateX(8px);
+            color: var(--jagannath-yellow);
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(229, 62, 62, 0.2), rgba(246, 224, 94, 0.2));
+            border: 1px solid var(--divider);
+            padding: 4rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-top: 5rem;
+            box-shadow: var(--jagannath-glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: "🕉️";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 12rem;
+            opacity: 0.05;
+            z-index: 0;
+            animation: rotate 20s linear infinite;
+        }
+
+        .cta-section h3 {
+            color: var(--jagannath-yellow);
+            font-size: 2.2rem;
+            margin-bottom: 1.8rem;
+            position: relative;
+            z-index: 1;
+            border-bottom: none;
+            padding-left: 0;
+        }
+
+        .cta-section h3::before {
+            display: none;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--jagannath-red), var(--jagannath-blue));
+            color: var(--text-light);
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.3rem;
+            transition: all 0.4s ease;
+            box-shadow: var(--jagannath-glow);
+            position: relative;
+            z-index: 1;
+            border: none;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--jagannath-blue), var(--jagannath-yellow));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 0 20px rgba(229, 62, 62, 0.7);
+        }
+
+        .cta-button:hover::before {
+            opacity: 1;
+        }
+
+        .cta-button span {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Rath Yatra Countdown */
+        .rath-yatra-countdown {
+            background: linear-gradient(135deg, rgba(229, 62, 62, 0.2), rgba(49, 130, 206, 0.2));
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 3rem 0;
+            text-align: center;
+            border: 1px solid var(--jagannath-yellow);
+        }
+
+        .countdown-title {
+            color: var(--jagannath-yellow);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .countdown-box {
+            background: rgba(10, 10, 10, 0.7);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+            min-width: 80px;
+            box-shadow: var(--shadow);
+        }
+
+        .countdown-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--jagannath-yellow);
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 6rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+            padding: 3rem 0;
+            position: relative;
+            background: rgba(10, 10, 10, 0.8);
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 15%;
+            width: 70%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--jagannath-red), transparent);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--jagannath-yellow);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.5rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--jagannath-yellow);
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        .float {
+            animation: float 3s infinite ease-in-out;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .delay-5 {
+            animation-delay: 1s;
+        }
+
+        .delay-6 {
+            animation-delay: 1.2s;
+        }
+
+        .delay-7 {
+            animation-delay: 1.4s;
+        }
+
+        .delay-8 {
+            animation-delay: 1.6s;
+        }
+
+        /* Cursor Trail */
+        .cursor-trail {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle, rgba(229, 62, 62, 0.5), transparent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.2s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 3.2rem;
+            }
+
+            h1::after {
+                right: -2.5rem;
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .intro-text {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .jagannath-feature {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h1::after {
+                right: -2rem;
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .reading-path-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-list {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-button {
+                padding: 16px 32px;
+                font-size: 1.2rem;
+            }
+
+            .cta-section {
+                padding: 2.5rem;
+            }
+
+            .countdown-container {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h1::after {
+                right: -1.5rem;
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .book-card {
+                padding: 1.8rem;
+            }
+
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 14px 28px;
+            }
+
+            .cta-section {
+                padding: 2rem;
+            }
+
+            .cta-section h3 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links">
+                <a href="#home"><i class="fas fa-home"></i> Home</a>
+                <a href="#reading-path"><i class="fas fa-book"></i> Scriptures</a>
+                <a href="#jagannath"><i class="fas fa-om"></i> Jagannath Culture</a>
+                <a href="#mission"><i class="fas fa-dharmachakra"></i> Mission</a>
+                <a href="#articles"><i class="fas fa-scroll"></i> Articles</a>
+                <a href="#join"><i class="fas fa-hands-helping"></i> Join Us</a>
+                <a href="disclamer.html"><i class="fas fa-info-circle"></i> Disclaimer</a>
+                <a href="about_riseuphindu.html"><i class="fas fa-users"></i> About Us</a>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="animate" id="home">
+            <h1>Rise Up Hindu</h1>
+            <p class="subtitle">Exploring and preserving Hindu heritage with special focus on Jagannath culture and Odia
+                traditions</p>
+        </header>
+
+        <main>
+            <section class="intro-section animate delay-1">
+                <h2>🛡️ Reviving Sanatan Dharma is not an option — it's a duty</h2>
+                <p class="intro-text">
+                    Sanatan Dharma is not just a belief system. It is the original software of
+                    civilization — a timeless framework for <strong>righteous living (Dharma),</strong>
+                    <strong>higher knowledge (Jnana),</strong> and <strong>liberation (Moksha)</strong>.
+                </p>
+                <p class="intro-text">
+                    But today, our roots are being attacked — <strong>through miseducation, cultural erasure, and
+                        propaganda.</strong>
+                </p>
+                <p class="intro-text">
+                    If we don't rise now, we lose <strong>our identity, our wisdom, and our civilization.</strong>
+                </p>
+            </section>
+
+            <!-- Jagannath Culture Feature Section -->
+            <section class="jagannath-feature animate delay-2" id="jagannath">
+                <div class="jagannath-feature-content">
+                    <a href="https://www.shreejagannatha.in/" target="_blank">
+                        <h2>🕉️ Jagannath Culture: The Living Dharma of Odisha</h2>
+                    </a>
+                    <p class="intro-text">
+                        The Jagannath tradition represents one of the most vibrant living expressions of Sanatan Dharma.
+                        The sacred triad of <strong>Jagannath, Balabhadra, and Subhadra</strong> embodies the cosmic
+                        principles
+                        of preservation, creation, and destruction.
+                    </p>
+                    <p class="intro-text">
+                        The <strong>Rath Yatra</strong> is not just a festival but a cosmic drama that plays out
+                        annually,
+                        reminding us of the Lord's journey to bless all beings, regardless of caste or creed.
+                    </p>
+                    <p class="intro-text">
+                        Explore the <strong>Mahaprasad</strong> tradition, the unique temple architecture, and the
+                        profound philosophical teachings embedded in Odia Hindu culture.
+                    </p>
+                </div>
+                <div class="jagannath-feature-image">
+                    <img src="11.jpg" alt="Jagannath Puri Temple">
+                </div>
+            </section>
+
+            <!-- Rath Yatra Countdown
+            <section class="rath-yatra-countdown animate delay-3">
+                <h3 class="countdown-title">🚩 Countdown to Next Rath Yatra</h3>
+                <div class="countdown-container" id="countdown">
+                    <div class="countdown-box">
+                        <div class="countdown-value" id="days">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-value" id="hours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-value" id="minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-value" id="seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section class="reading-path animate delay-2" id="reading-path">
+                <h2>📚 Sacred Scriptures of Sanatana Dharma</h2>
+                <p class="intro-text">
+                    Begin your sacred journey with this <strong>spiritually structured reading path</strong> — from
+                    modern clarity to eternal scriptures:
+                </p>
+                <div class="reading-path-grid">
+                    <div class="book-card animate delay-3">
+                        <h4>🔰 1. B.O.S.S – Basics of Sanatan Sanskriti</h4>
+                        <p>An encyclopedic guide to Sanatan Dharma based on 7 years of research. Perfect for all —
+                            Indian or non-Indian, Hindu or non-Hindu — who wish to understand the core map of our
+                            spiritual, scientific, and philosophical culture.</p>
+                        <a href="https://yoddha.store/product/basics-of-sanatan-sanskriti-hindi/" target="_blank"
+                            class="buy-link">BUY: Hindi</a>
+                        <a href="https://yoddha.store/product/basics-of-sanatan-sanskriti-english/" target="_blank"
+                            class="buy-link">BUY: English</a>
+                    </div>
+                    <div class="book-card animate delay-4">
+                        <h4>🌅 2. Vedic Dincharya – The Ideal Vedic Routine</h4>
+                        <p>Learn daily Sanatani routines, sadhanas, and shlokas aligned with Ayurveda, astrology, and
+                            modern life. A guide to make your life healthier, more peaceful, dharmic, and prosperous —
+                            for yourself and society.</p>
+                        <a href="https://yoddha.store/product/vaidik-dincharya-hindi/" target="_blank"
+                            class="buy-link">BUY</a>
+                    </div>
+                    <div class="book-card animate delay-5">
+                        <h4>🔥 3. Brahmacharya – The Lost Vedic Superpower</h4>
+                        <p>Uncover the ancient science of celibacy that produced the greatest Rishis and kings. This
+                            book shows how modern youth can conquer addiction, distraction, and degeneration, and
+                            channel their energy toward spiritual and material excellence.</p>
+                        <a href="https://yoddha.store/product/brahmacharya-hindi/" target="_blank"
+                            class="buy-link">BUY</a>
+                    </div>
+                    <div class="book-card animate delay-6">
+                        <h4>🕉️ 4. Bhagavad Gita</h4>
+                        <p>The timeless wisdom of Shri Krishna to Arjuna. Teaches the essence of Dharma, Karma Yoga,
+                            detachment, and the path to liberation.</p>
+                        <a href="https://www.veducation.world/library/Sastra-%E0%A4%B6%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0/gita/bhagavad-gita/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE--%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B8"
+                            target="_blank" class="buy-link">READ</a>
+                    </div>
+                    <div class="book-card animate delay-7">
+                        <h4>📖 5. Ramayana</h4>
+                        <p>Life of Maryada Purushottam Shri Ram. An eternal guide to duty, truth, sacrifice, family, and
+                            ideal leadership.</p>
+                        <a href="https://archive.org/details/valmiki-ramayan-part-1-gita-press" target="_blank"
+                            class="buy-link">READ Part 1</a>
+                        <a href="https://archive.org/details/valmiki-ramayan-part-2-gita-press" target="_blank"
+                            class="buy-link">READ Part 2</a>
+                    </div>
+                    <div class="book-card animate delay-8">
+                        <h4>📘 6. Bhagavata MahaPuran</h4>
+                        <p>The heart of Bhakti Yoga and cosmic understanding. Explores avatars of Vishnu, the nature of
+                            creation, and pure devotion as a path to God.</p>
+                        <a href="https://archive.org/details/srimad-bhagavat-mahapuran-2-volume-set-sanskrit-hindi/Srimad%20Bhagavat%20Mahapuran%20Volume%201%20Sanskrit%20Hindi/"
+                            target="_blank" class="buy-link">READ</a>
+                    </div>
+                    <div class="book-card animate delay-1">
+                        <h4>⚔️ 7. Mahabharata</h4>
+                        <p>The most detailed mirror of Dharma vs Adharma. Real-world dilemmas, royal politics,
+                            philosophy, and the full spiritual spectrum — from the might of warriors to the wisdom of
+                            sages.</p>
+                        <a href="https://archive.org/details/unabridged-mahabharata-6-volumes-set-in-hindi-by-veda-vyasa-compressed"
+                            target="_blank" class="buy-link">READ</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Odia Scriptures Section -->
+            <section class="odia-scriptures animate delay-3">
+                <h2>📜 Sacred Odia Hindu Scriptures</h2>
+                <p class="intro-text">
+                    Odisha has preserved unique Hindu traditions through its sacred texts and practices. Explore these
+                    profound works that embody Jagannath consciousness:
+                </p>
+                <div class="reading-path-grid">
+                    <div class="book-card animate delay-4">
+                        <h4>🕉️ Jagannath Ashtakam <span class="jagannath-badge">Odia Tradition</span></h4>
+                        <p>Eight powerful verses praising Lord Jagannath, composed by Adi Shankaracharya during his
+                            visit to Puri.</p>
+                        <a href="jagannath.html" class="buy-link">READ</a>
+                    </div>
+                    <div class="book-card animate delay-5">
+                        <h4>📖 Gita Govinda <span class="jagannath-badge">Jayadeva</span></h4>
+                        <p>The immortal Sanskrit poem by Jayadeva describing the divine love of Radha and Krishna,
+                            composed in 12th century Odisha.</p>
+                        <a href="https://dn720003.ca.archive.org/0/items/gita.govinda-jayadeva/Gita%20Govinda%20-%20Jayadeva.pdf"
+                            class="buy-link" target="_blank">READ</a>
+                    </div>
+                    <div class="book-card animate delay-6">
+                        <h4>📚 Mahabharata in Odia <span class="jagannath-badge">Sarala Das</span></h4>
+                        <p>The first major composition in Odia literature by Sarala Das, offering unique Odia
+                            perspectives on the epic.</p>
+                        <a href="https://archive.org/details/mahabharat-v.-03-sabhaparba-s-das-ne.-fw/Mahabharat%2C%20v.01%20Adyaparba%20%28S%20Das%2C%20ne.%29%20fw/"
+                            class="buy-link" target="_blank">READ</a>
+                    </div>
+                    <div class="book-card animate delay-7">
+                        <h4>🌊 Purushottam Mahatmya <span class="jagannath-badge">Sacred Geography</span></h4>
+                        <p>A sacred section glorifying lord Jagannath and Puri Dham's divine power, rituals and spritual
+                            significance.</p>
+                        <a href="#" class="buy-link">READ</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mission-statement animate delay-2" id="mission">
+                <h2>🌱 Dharma is inherited, but it must be revived</h2>
+                <p class="intro-text">
+                    We are the descendants of <span style="color: var(--jagannath-yellow);">Rishis, not rebels.</span>
+                </p>
+                <p class="intro-text">
+                    But if our temples become empty, and our youth grow ignorant, then even the greatest civilization
+                    will turn into <span style="color: var(--jagannath-yellow);">a museum relic.</span>
+                </p>
+                <p class="intro-text">
+                    That's why RiseUpHindu exists —
+                    <br>To <span style="color: var(--jagannath-yellow);">awaken the youth, restore pride, and guide
+                        people back to
+                        the path of Dharma</span> using <span style="color: var(--jagannath-yellow);">truth + tech +
+                        tradition.</span>
+                </p>
+                <p class="intro-text">
+                    🌍 This is not just learning. This is returning to your roots.
+                    <br>Read. Think. Then rise.
+                    <br>Your ancestors left you the greatest legacy — Now it's your time to reclaim it.
+                </p>
+            </section>
+
+            <section class="cta-section animate delay-3" id="join">
+                <h3 class="pulse">Want To Join For Cultural Revival?</h3>
+                <p>Join us in our mission to protect our culture and heritage.</p>
+                <a href="https://www.instagram.com/satvaindiaofficial/" class="cta-button"><span>Click here to join
+                        SATVA (Sanatani Alliance for Truth, Virtue and Ascension)</span></a>
+            </section>
+
+            <section class="articles-section animate delay-4" id="articles">
+                <h2>📚 Articles & Research</h2>
+                <ol class="article-list">
+                    <li>
+                        <a href="aryan_invasion_myth.html">Aryan Invasion Theory - Myth or Reality?</a>
+                    </li>
+                    <li>
+                        <a href="sachi_ramayan_debunked.html">Debunking Sachi Ramayan</a>
+                    </li>
+                    <li>
+                        <a href="shri_ram_dharma_debunking_myths.html">Common Misconceptions About Ramayana</a>
+                    </li>
+                    <li>
+                        <a href="odisha_hindu_scriptures.html">Odisha in Ancient Hindu Scriptures</a>
+                    </li>
+                    <li>
+                        <a href="jagannath_culture_history.html">The Ancient History of Jagannath Culture</a>
+                    </li>
+                    <li>
+                        <a href="puri_temple_architecture.html">Sacred Architecture of Puri Temple</a>
+                    </li>
+                    <li>
+                        <a href="mahaprasad_science.html">The Science Behind Jagannath Mahaprasad</a>
+                    </li>
+                    <li>
+                        <a href="child_marriage_vedic_rebuttal.html">Child Marriage in Sanatan Dharma - The Truth</a>
+                    </li>
+                    <li>
+                        <a href="vegetarianism_sanatan_dharma.html">Vegetarianism in Hindu Tradition</a>
+                    </li>
+                    <li>
+                        <a href="vedic_scientific_miracles.html">Scientific Insights in the Vedas</a>
+                    </li>
+                    <li>
+                        <a href="sanskrit_vs_prakrit.html">Sanskrit vs. Prakrit</a>
+                    </li>
+                    <li>
+                        <a href="perspectives_indian_caste_system.html">Perspectives on the Indian Caste System</a>
+                    </li>
+                    <li>
+                        <a href="hinduism_caste_scriptural_rebuttal.html">Is Hinduism Casteist?</a>
+                    </li>
+                    <li>
+                        <a href="gurukul_destruction_and_future.html">The Decline of Gurukuls and Revival</a>
+                    </li>
+                    <li>
+                        <a href="ambedkar_manusmriti_facts.html">Did Dr. B.R. Ambedkar Burned Manusmriti?</a>
+                    </li>
+                    <li>
+                        <a href="ambedkar_degrees_fact_check.html">Did Dr. B.R. Ambedkar Really Have 32 Degrees?</a>
+                    </li>
+                    <li>
+                        <a href="debunking_slavery_myths_sanatan_dharma.html">Debunking Slavery in Sanatan Dharma</a>
+                    </li>
+                    <li>
+                        <a href="nalanda_vedic_hindu_roots.html">Nalanda & Hindu Foundations</a>
+                    </li>
+                    <li>
+                        <a href="varna_system_scriptural_clarification.html">The Varna System</a>
+                    </li>
+                    <li>
+                        <a href="debunking_womens_vedic_authority_part1.html">Woman's Vedic Authority</a>
+                    </li>
+                    <li>
+                        <a href="roe.html">Death of Rational Odia Claim</a>
+                    </li>
+                    <li>
+                        <a href="brahma_mithya.html">"Brahma Satya, Jagat Mithya" – RationalOdia के दावे का खंडन</a>
+                    </li>
+                    <li>
+                        <a href="nangeli.html">Busting the Myth of Nangeli and the "Breast Tax"</a>
+                    </li>
+                    <li>
+                        <a href="bisar-mohanty.html">The Unsung Legend of Bisar Mohanty</a>
+                    </li>
+                    <li>
+                        <a href="understanding_manusmriti_4_80.html">Manusmriti 4.80</a>
+                    </li>
+                    <li>
+                        <a href="indus_hindu.html">सिंधु सभ्यता में हिंदु तथ्य</a>
+                    </li>
+                    <li>
+                        <a href="Shri_Radha_archaeology.html">Evidence of Sri Radha</a>
+                    </li>
+                </ol>
+            </section>
+        </main>
+
+        <footer class="animate delay-5">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#reading-path">Scriptures</a>
+                <a href="#jagannath">Jagannath Culture</a>
+                <a href="#mission">Mission</a>
+                <a href="disclamer.html">Disclaimer</a>
+                <a href="about_riseuphindu.html">About Us</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/realiology.c0m/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/Sanatan0070?t=dLfd4PajjlbN0dAsFXpvzw&s=09" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p>© 2025 RiseUpHindu | ज्ञानं शक्ति (Knowledge is Power)</p>
+            <p>Dedicated to the preservation and accurate representation of Hindu heritage</p>
+            <p style="margin-top: 1rem; color: var(--jagannath-yellow);">जय जगन्नाथ 🙏</p>
+        </footer>
+    </div>
+
+    <div class="cursor-trail"></div>
+
+    <script>
+        // Intersection Observer for Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            // Hamburger Menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Cursor Trail
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Rath Yatra Countdown
+            function updateCountdown() {
+                // Set the date for next Rath Yatra (July 4, 2025)
+                const rathYatraDate = new Date('July 4, 2025 00:00:00').getTime();
+                const now = new Date().getTime();
+                const distance = rathYatraDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+                document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        });
+    </script>
+</body>
+
+</html>
