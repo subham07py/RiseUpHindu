@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕉️ पुरी और श्री जगन्नाथ का आधुनिक इतिहास</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF8A00;
+            /* Saffron */
+            --primary-dark: #E65100;
+            --secondary: #2962FF;
+            /* Deep Blue */
+            --secondary-dark: #0039CB;
+            --accent: #FFD600;
+            /* Gold */
+            --background: #0A0A0A;
+            --surface: #1A1A1A;
+            --surface-light: #262626;
+            --text: #E6E6E6;
+            --text-light: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --divider: #3A3A3A;
+            --glow: 0 0 10px rgba(255, 138, 0, 0.3);
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 12px 36px rgba(255, 138, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --om-symbol: "ॐ";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-logo::before {
+            content: var(--om-symbol);
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-content,
+        .card-image {
+            flex: 1 1 45%;
+            min-width: 300px;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .card-image img:hover {
+            transform: scale(1.05);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+            color: var(--text-light);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            padding-bottom: 10px;
+            font-size: 2.2rem;
+            position: relative;
+            border-bottom: 2px solid rgba(255, 138, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: var(--om-symbol);
+            position: absolute;
+            left: -35px;
+            top: 0;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-top: 20px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        ul li::before {
+            content: '•';
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .source-list li::before {
+            content: '📖';
+            opacity: 0.7;
+        }
+
+        .quote-box {
+            background: rgba(255, 138, 0, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            margin: 30px 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 4rem;
+            color: rgba(255, 138, 0, 0.2);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+        }
+
+        .highlight {
+            background: rgba(255, 138, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+            font-weight: 600;
+            cursor: help;
+            position: relative;
+        }
+
+        .highlight:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background: var(--surface);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            z-index: 10;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-to-action a:hover {
+            background: var(--text-light);
+            color: var(--primary);
+            text-decoration: none;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 138, 0, 0.5), transparent);
+            margin: 50px 0;
+            position: relative;
+            border: none;
+        }
+
+        .divider::after {
+            content: var(--om-symbol);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--surface);
+            padding: 0 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .hashtags {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--text-muted);
+            font-style: italic;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .hashtags span {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .hashtags span:hover {
+            background: rgba(255, 138, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--text);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+        }
+
+        .fab::before {
+            content: "↑";
+            font-size: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--accent);
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--primary-dark);
+        }
+
+        .hidden-con {
+            display: none;
+        }
+
+        .hidden-con.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.2);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 138, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 138, 0, 0);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .delay-5 {
+            animation-delay: 1.0s;
+        }
+
+        .delay-6 {
+            animation-delay: 1.2s;
+        }
+
+        .delay-7 {
+            animation-delay: 1.4s;
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .card-content,
+            .card-image {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .call-to-action {
+                padding: 25px;
+            }
+
+            h2::before {
+                left: -25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .call-to-action {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">RiseUpHindu</a>
+            <div class="nav-links" id="navLinks">
+                <a href="home.html#home">होम</a>
+                <a href="home.html#reading-path">पठन पथ</a>
+                <a href="home.html#mission">मिशन</a>
+                <a href="home.html#articles">लेख</a>
+                <a href="home.html#join">हमसे जुड़ें</a>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="animate"><i class="fas fa-temple"></i> पुरी और श्री जगन्नाथ का आधुनिक इतिहास</h1>
+
+        <div class="card animate delay-1">
+            <div class="card-content">
+                <h2><i class="fas fa-crown"></i> खुरदा के गजपति और जगन्नाथ मंदिर</h2>
+                <p>
+                    1568 ईस्वी में अंतिम स्वतंत्र <span class="highlight" data-tooltip="गजपति राजा">गजपति राजा</span>
+                    <span class="highlight" data-tooltip="मुकुंद देव">मुकुंद देव</span> की मृत्यु के साथ, ओडिशा बंगाल के
+                    अफगान शासकों के हाथों में चला गया, और लंबे समय तक अराजकता रही। हालांकि, सेना के सरदार जनार्दन
+                    राउत्राय के पुत्र <span class="highlight" data-tooltip="रामचंद्र राउत्राय">रामचंद्र राउत्राय</span>
+                    ने अवसर का लाभ उठाया और खुरदा को केंद्र बनाकर एक राज्य स्थापित किया। उन्होंने स्वयं को <span
+                        class="highlight" data-tooltip="रामचंद्र देव">रामचंद्र देव</span> के नाम से ओडिशा का स्वतंत्र
+                    संप्रभु राजा घोषित किया। मुगल सम्राट अकबर की ओर से <span class="highlight"
+                        data-tooltip="मान सिंह">मान सिंह</span> ने उन्हें <span class="highlight"
+                        data-tooltip="जगन्नाथ मंदिर">जगन्नाथ मंदिर</span> का वंशानुगत अधीक्षक (सुपरिंटेंडेंट) के रूप में
+                    मान्यता दी और उन्हें प्रतिष्ठित गजपति राजा की उपाधि का उपयोग करने की अनुमति दी।
+                </p>
+            </div>
+            <div class="card-image">
+                <img src="13.jpg" alt="Jagannatha Temple">
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-2">
+            <div class="card-content">
+                <h2><i class="fas fa-shield-alt"></i> अफगान आक्रमण और नवकळेबर</h2>
+                <p>
+                    अफगान के ओडिशा पर विजय के दौरान, अफगान सेना के एक जनरल, जो <span class="highlight"
+                        data-tooltip="कालापहाड़">कालापहाड़</span> के नाम से कुख्यात था, ने जगन्नाथ मंदिर पर हमला किया।
+                    हालांकि, परिच्छा <span class="highlight" data-tooltip="दिव्यासिंह पटनायक">दिव्यासिंह पटनायक</span>
+                    के निर्देश पर, पुजारी और पुरी के निवासियों ने भगवान की लकड़ी की मूर्तियों को <span class="highlight"
+                        data-tooltip="चिल्का झील">चिल्का झील</span> की ओर ले गए। कालापहाड़ ने मूर्तियों को ले जाने की
+                    कोशिश की और उन्हें आग के हवाले कर दिया। जब रामचंद्र देव खुरदा साम्राज्य के शासक बने, उन्होंने <span
+                        class="highlight" data-tooltip="नवकळेबर">नवकळेबर</span> (नया अवतार) की प्रक्रिया के अनुसार नई
+                    लकड़ी की मूर्तियाँ बनवाईं और उन्हें पुरी मंदिर में पुनर्स्थापित किया। नियमित अनुष्ठानों, जिसमें
+                    <span class="highlight" data-tooltip="अन्न महाप्रसाद">अन्न महाप्रसाद</span> (पका हुआ भोजन) और सभी
+                    उत्सवों का पालन शामिल था, को पुनर्जनन दिया गया। इसलिए रामचंद्र देव को ‘<span class="highlight"
+                        data-tooltip="द्वितीय इंद्रद्युम्न">द्वितीय इंद्रद्युम्न</span>’ माना गया।
+                </p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-3">
+            <div class="card-image">
+                <img src="18.jpg" alt="Mughal Era">
+            </div>
+            <div class="card-content">
+                <h2><i class="fas fa-sword"></i> मुगल काल और मंदिर पर हमले</h2>
+                <p>
+                    सम्राट <span class="highlight" data-tooltip="अकबर">अकबर</span> की मृत्यु 1605 ईस्वी में होने तक सब
+                    कुछ लगभग सुचारू रूप से चला। लेकिन सम्राट <span class="highlight"
+                        data-tooltip="जहाँगीर">जहाँगीर</span> के सिंहासन पर बैठने के बाद समस्याएँ शुरू हुईं। उनके काल और
+                    उसके बाद, जगन्नाथ मंदिर पर कई बार हमले हुए। रामचंद्र देव की मृत्यु 1600 ईस्वी में होने के बाद, <span
+                        class="highlight" data-tooltip="पुरुषोत्तम देव II">पुरुषोत्तम देव II</span> (1608-1621 ईस्वी) के
+                    शासनकाल में भी इसी तरह के आक्रमण देखे गए। हालांकि, सम्राट <span class="highlight"
+                        data-tooltip="शाहजहाँ">शाहजहाँ</span> के शासनकाल में जगन्नाथ मंदिर को मुगल हमलों से बचाया गया।
+                    लेकिन <span class="highlight" data-tooltip="औरंगजेब">औरंगजेब</span> के सिंहासन पर बैठने के साथ ही
+                    समस्याएँ फिर से शुरू हो गईं। उन्होंने बंगाल के सूबेदार <span class="highlight"
+                        data-tooltip="एकरम खान">एकरम खान</span> को जगन्नाथ मंदिर को ध्वस्त करने का आदेश दिया। हालांकि,
+                    तत्कालीन गजपति राजा <span class="highlight" data-tooltip="दिव्यासिंह देव">दिव्यासिंह देव</span>
+                    (1688-1716) ने चतुराई से मंदिर को बचाया और भगवानों को एक सुरक्षित स्थान पर स्थानांतरित कर दिया।
+                    <span class="highlight" data-tooltip="मुर्शिद कुली खान">मुर्शिद कुली खान</span> के सूबेदार के
+                    कार्यकाल के दौरान जगन्नाथ की पूजा पुरी में पुनर्स्थापित की गई।
+                </p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card animate delay-4">
+            <div class="card-content">
+                <h2><i class="fas fa-peace"></i> खुरदा के गजपति और शांति</h2>
+                <p>
+                    इसके बाद खुरदा के गजपति राजाओं ने शांतिपूर्वक शासन किया और लंबे समय तक भगवान या मंदिर पर कोई हमला
+                    नहीं हुआ। हालांकि, 1727 ईस्वी में बंगाल के तत्कालीन नाजिम द्वारा नियुक्त नायब नाजिम <span
+                        class="highlight" data-tooltip="तकी खान">तकी खान</span> ने खुरदा पर हमला किया ताकि राज्य को लूटा
+                    जा सके। उस समय <span class="highlight" data-tooltip="रामचंद्र देव II">रामचंद्र देव II</span>
+                    (1727-1736 ईस्वी) गजपति राजा थे। उन्हें जगन्नाथ को स्थानांतरित करना पड़ा। तकी खान की मृत्यु 1735
+                    ईस्वी में होने के साथ ही मंदिर और जगन्नाथ पर हमले समाप्त हो गए। मुर्शिद कुली खान द्वारा <span
+                        class="highlight" data-tooltip="मीर हबीब">मीर हबीब</span> को नायब नाजिम के रूप में नियुक्त किए
+                    जाने के बाद, भगवानों की मूर्तियों को मंदिर में वापस लाया गया। अंततः मुस्लिम खतरा समाप्त हो गया।
+                </p>
+                <a href="#" class="read-more" id="show-hide-con">और पढ़ें</a>
+                <div class="hidden-con">
+                    <p>
+                        1751 ईस्वी में, ओडिशा मराठों के अधीन आ गया। हालांकि उनकी प्रशासनिक व्यवस्था मुगलों से बेहतर नहीं
+                        थी, उनके शासनकाल में जगन्नाथ की पूजा कभी बाधित नहीं हुई। हालांकि, खुरदा के गजपति राजाओं से मंदिर
+                        के अधीक्षण का अधिकार छीन लिया गया था, और मराठा गवर्नरों ने विशेष अधिकारियों को नियुक्त करके
+                        मंदिर का प्रबंधन सीधे अपने हाथ में ले लिया था।
+                    </p>
+                    <p>
+                        <span class="highlight" data-tooltip="बीर किशोर देव">बीर किशोर देव</span> (1737-1793 ईस्वी) के
+                        शासनकाल के दौरान, मराठों ने चार परगनों (गाँवों के समूह) पर कब्जा कर लिया, जिसमें <span
+                            class="highlight" data-tooltip="पुरुषोत्तम क्षेत्र">पुरुषोत्तम क्षेत्र</span> भी शामिल था,
+                        जिसमें जगन्नाथ मंदिर स्थित है। खुरदा के राजा ने मंदिर के प्रबंधन पर नियंत्रण खो दिया।
+                    </p>
+                    <p>
+                        ब्रिटिशों ने 1803 ईस्वी में ओडिशा पर कब्जा कर लिया और उनका शासन 1947 तक जारी रहा। 1858 तक, भारत
+                        और ओडिशा का शासन इंग्लैंड की ईस्ट इंडिया कंपनी के पास था और उसके बाद ब्रिटिश सरकार के पास।
+                        जगन्नाथ मंदिर के संबंध में, ब्रिटिशों ने गैर-हस्तक्षेप की नीति अपनाई।
+                    </p>
+                    <p>
+                        यह मुख्य रूप से ब्रिटिश गवर्नर जनरल <span class="highlight" data-tooltip="लॉर्ड वेलेजली">लॉर्ड
+                            वेलेजली</span> के निर्देश के कारण था। मराठों के खिलाफ युद्ध के दौरान, अगस्त 1803 में,
+                        उन्होंने सेना प्रमुख <span class="highlight" data-tooltip="कैंपबेल">कैंपबेल</span> को सेवकों,
+                        जनता, और जगन्नाथ मंदिर के साथ व्यवहार और आचरण के लिए सख्त निर्देश जारी किया था।
+                    </p>
+                    <p class="quote-box">
+                        “जगन्नाथ में आपके आगमन पर, आप पगोडा (मंदिर) के प्रति उचित सम्मान और ब्राह्मणों तथा
+                        तीर्थयात्रियों की धार्मिक भावनाओं को संरक्षित करने के लिए हर संभव सावधानी बरतेंगे। आप ब्राह्मणों
+                        को ऐसी सुरक्षा प्रदान करेंगे जो उनके व्यक्तियों, अनुष्ठानों, और समारोहों की पवित्रता के लिए
+                        पूर्ण सुरक्षा प्रदान करे, और आप अपने अधीनस्थों को इस महत्वपूर्ण विषय पर आपके आदेशों का सटीकता और
+                        सतर्कता के साथ पालन करने का निर्देश देंगे।”
+                    </p>
+                    <p>
+                        हालांकि, ब्रिटिश शासन के शुरुआती दौर में, उन्होंने मंदिर का प्रबंधन सीधे करने का प्रयास किया।
+                        लेकिन कुछ ब्रिटिश लोग, विशेष रूप से ईसाई मिशनरी, इसका विरोध करते थे, क्योंकि यह एक हिंदू मंदिर
+                        था। उस समय खुरदा राज को समाप्त कर दिया गया था, और ओडिशा के गजपति राजा को ब्रिटिशों के खिलाफ
+                        विद्रोह के कारण कैद कर लिया गया था। बाद में उन्हें रिहा किया गया और केवल मंदिर के प्रबंधन के लिए
+                        पुरी में रहने की अनुमति दी गई।
+                    </p>
+                    <p>
+                        इस प्रकार गजपति राजा के मंदिर के संरक्षक और अधीक्षक बनने की प्राचीन परंपरा को पुनर्जनन दिया गया।
+                        1876 में मंदिर के प्रशासन को पूरी तरह से राजा के हाथों में सौंप दिया गया।
+                    </p>
+                    <p>
+                        स्वतंत्रता के बाद, सरकार धर्मनिरपेक्ष रही और धार्मिक प्रथाओं और पूजा की प्रणाली में कोई बदलाव
+                        नहीं हुआ। हालांकि, ‘<span class="highlight"
+                            data-tooltip="पुरी श्री जगन्नाथ मंदिर (प्रशासन) अधिनियम, 1952">पुरी श्री जगन्नाथ मंदिर
+                            (प्रशासन) अधिनियम, 1952</span>’ 5 सितंबर 1952 को लागू हुआ। इसके बाद ‘<span class="highlight"
+                            data-tooltip="श्री जगन्नाथ मंदिर अधिनियम, 1955">श्री जगन्नाथ मंदिर अधिनियम, 1955</span>’
+                        पारित किया गया ताकि “पुरी में श्री जगन्नाथ मंदिर और इसके बंदोबस्ती के बेहतर प्रशासन और शासन के
+                        लिए प्रावधान किया जा सके।” यह एक समिति के लिए प्रावधान करता है जिसे “<span class="highlight"
+                            data-tooltip="श्री जगन्नाथ मंदिर प्रबंध समिति">श्री जगन्नाथ मंदिर प्रबंध समिति</span>” कहा
+                        जाता है, जिसमें “मंदिर और इसके बंदोबस्ती का प्रशासन और शासन” निहित है।
+                    </p>
+                    <p>
+                        इस समिति में अब 18 सदस्य हैं, जिनमें पुरी के गजपति महाराज अध्यक्ष के रूप में हैं। समिति का
+                        प्राथमिक कर्तव्य मंदिर अधिनियम के अनुसार सेवा पूजा और मंदिर के दैनिक प्रबंधन की उचित व्यवस्था
+                        करना है।
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="hashtags animate delay-7">
+            <span>#श्रीजगन्नाथ</span>
+            <span>#पुरुषोत्तम</span>
+            <span>#पुरी</span>
+            <span>#गजपति</span>
+            <span>#नवकळेबर</span>
+            <span>#खुरदा</span>
+            <span>#मुगल_काल</span>
+            <span>#ब्रिटिश_शासन</span>
+        </div>
+    </div>
+
+    <div class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
+
+    <div class="cursor-trail"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#FF8A00' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 1, direction: 'none', random: true }
+            },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 1s ease, transform 1s ease';
+                observer.observe(element);
+            });
+
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('#navLinks');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            const cursorTrail = document.querySelector('.cursor-trail');
+            let trailX = 0, trailY = 0;
+            document.addEventListener('mousemove', (e) => {
+                trailX += (e.clientX - trailX) * 0.2;
+                trailY += (e.clientY - trailY) * 0.2;
+                cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            const readMoreLink = document.querySelector('#show-hide-con');
+            const hiddenContent = document.querySelector('.hidden-con');
+            readMoreLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                hiddenContent.classList.toggle('active');
+                readMoreLink.textContent = hiddenContent.classList.contains('active') ? 'कम दिखाएँ' : 'और पढ़ें';
+            });
+        });
+    </script>
+</body>
+
+</html>
